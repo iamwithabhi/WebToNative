@@ -1,0 +1,1443 @@
+{
+  "$schema": "./platform-map.schema.json",
+  "$note": "Data for every web -> iOS / Android mapping. Logic lives in platform-map.js.",
+  "accessibilityRoles": {
+    "button": {
+      "web": {
+        "role": "button"
+      },
+      "ios": {
+        "traits": [
+          "isButton"
+        ]
+      },
+      "android": {
+        "role": "Button"
+      }
+    },
+    "link": {
+      "web": {
+        "role": "link"
+      },
+      "ios": {
+        "traits": [
+          "isLink"
+        ]
+      },
+      "android": {
+        "role": "Button"
+      }
+    },
+    "checkbox": {
+      "web": {
+        "role": "checkbox"
+      },
+      "ios": {
+        "traits": [
+          "isButton"
+        ]
+      },
+      "android": {
+        "role": "Checkbox"
+      }
+    },
+    "radio": {
+      "web": {
+        "role": "radio"
+      },
+      "ios": {
+        "traits": [
+          "isButton"
+        ]
+      },
+      "android": {
+        "role": "RadioButton"
+      }
+    },
+    "switch": {
+      "web": {
+        "role": "switch"
+      },
+      "ios": {
+        "traits": [
+          "isButton"
+        ]
+      },
+      "android": {
+        "role": "Switch"
+      }
+    },
+    "tab": {
+      "web": {
+        "role": "tab"
+      },
+      "ios": {
+        "traits": [
+          "isButton"
+        ]
+      },
+      "android": {
+        "role": "Tab"
+      }
+    },
+    "menuitem": {
+      "web": {
+        "role": "menuitem"
+      },
+      "ios": {
+        "traits": [
+          "isButton"
+        ]
+      },
+      "android": {
+        "role": "Button"
+      }
+    },
+    "option": {
+      "web": {
+        "role": "option"
+      },
+      "ios": {
+        "traits": [
+          "isButton"
+        ]
+      },
+      "android": {
+        "role": "Button"
+      }
+    },
+    "textfield": {
+      "web": {
+        "role": "textbox"
+      },
+      "ios": {
+        "plain": "TextField"
+      },
+      "android": {
+        "plain": "TextField"
+      }
+    },
+    "combobox": {
+      "web": {
+        "role": "combobox"
+      },
+      "ios": {
+        "traits": [
+          "isButton"
+        ]
+      },
+      "android": {
+        "role": "DropdownList"
+      }
+    },
+    "search": {
+      "web": {
+        "role": "search"
+      },
+      "ios": {
+        "traits": [
+          "isSearchField"
+        ]
+      },
+      "android": {
+        "plain": "TextField"
+      }
+    },
+    "slider": {
+      "web": {
+        "role": "slider"
+      },
+      "ios": {
+        "traits": [
+          "adjustable"
+        ],
+        "actions": [
+          "increment",
+          "decrement"
+        ]
+      },
+      "android": {
+        "progressSemantics": true
+      }
+    },
+    "spinbutton": {
+      "web": {
+        "role": "spinbutton"
+      },
+      "ios": {
+        "traits": [
+          "adjustable"
+        ],
+        "actions": [
+          "increment",
+          "decrement"
+        ]
+      },
+      "android": {
+        "semantics": "stateDescription",
+        "actions": [
+          "increment",
+          "decrement"
+        ]
+      }
+    },
+    "progressbar": {
+      "web": {
+        "role": "progressbar"
+      },
+      "ios": {
+        "traits": [
+          "updatesFrequently"
+        ]
+      },
+      "android": {
+        "progressSemantics": true
+      }
+    },
+    "image": {
+      "web": {
+        "role": "img"
+      },
+      "ios": {
+        "traits": [
+          "isImage"
+        ]
+      },
+      "android": {
+        "role": "Image"
+      }
+    },
+    "header": {
+      "web": {
+        "role": "heading"
+      },
+      "ios": {
+        "traits": [
+          "isHeader"
+        ]
+      },
+      "android": {
+        "heading": true
+      }
+    },
+    "separator": {
+      "web": {
+        "role": "separator"
+      },
+      "ios": {
+        "plain": "Divider"
+      },
+      "android": {
+        "plain": "HorizontalDivider"
+      }
+    },
+    "group": {
+      "web": {
+        "role": "group"
+      },
+      "ios": {
+        "container": "contain"
+      },
+      "android": {
+        "container": "mergeDescendants"
+      }
+    },
+    "radiogroup": {
+      "web": {
+        "role": "radiogroup"
+      },
+      "ios": {
+        "container": "contain"
+      },
+      "android": {
+        "container": "selectableGroup"
+      }
+    },
+    "tablist": {
+      "web": {
+        "role": "tablist"
+      },
+      "ios": {
+        "container": "contain"
+      },
+      "android": {
+        "container": "selectableGroup"
+      }
+    },
+    "menu": {
+      "web": {
+        "role": "menu"
+      },
+      "ios": {
+        "container": "contain"
+      },
+      "android": {
+        "container": "mergeDescendants"
+      }
+    },
+    "toolbar": {
+      "web": {
+        "role": "toolbar"
+      },
+      "ios": {
+        "container": "contain"
+      },
+      "android": {
+        "container": "mergeDescendants"
+      }
+    },
+    "region": {
+      "web": {
+        "role": "region"
+      },
+      "ios": {
+        "plain": "view"
+      },
+      "android": {
+        "container": "mergeDescendants"
+      }
+    },
+    "list": {
+      "web": {
+        "role": "list"
+      },
+      "ios": {
+        "container": "contain"
+      },
+      "android": {
+        "collection": true
+      }
+    },
+    "listitem": {
+      "web": {
+        "role": "listitem"
+      },
+      "ios": {
+        "plain": "List row"
+      },
+      "android": {
+        "collectionItem": true
+      }
+    },
+    "dialog": {
+      "web": {
+        "role": "dialog"
+      },
+      "ios": {
+        "traits": [
+          "isModal"
+        ]
+      },
+      "android": {
+        "container": "mergeDescendants"
+      }
+    },
+    "alert": {
+      "web": {
+        "role": "alert"
+      },
+      "ios": {
+        "liveRegion": "assertive"
+      },
+      "android": {
+        "liveRegion": "assertive"
+      }
+    },
+    "status": {
+      "web": {
+        "role": "status"
+      },
+      "ios": {
+        "liveRegion": "polite"
+      },
+      "android": {
+        "liveRegion": "polite"
+      }
+    },
+    "tooltip": {
+      "web": {
+        "role": "tooltip"
+      },
+      "ios": {
+        "plain": "help text"
+      },
+      "android": {
+        "container": "mergeDescendants"
+      }
+    },
+    "none": {
+      "web": {
+        "role": "presentation"
+      },
+      "ios": {
+        "hidden": true
+      },
+      "android": {
+        "hidden": true
+      }
+    }
+  },
+  "accessibilityStates": {
+    "disabled": {
+      "web": {
+        "attribute": "aria-disabled"
+      },
+      "ios": {
+        "trait": "notEnabled"
+      },
+      "android": {
+        "semantics": "disabled()"
+      }
+    },
+    "busy": {
+      "web": {
+        "attribute": "aria-busy",
+        "live": "polite"
+      },
+      "ios": {
+        "property": "accessibilityValue",
+        "announce": "polite"
+      },
+      "android": {
+        "semantics": "stateDescription"
+      }
+    },
+    "expanded": {
+      "web": {
+        "attribute": "aria-expanded"
+      },
+      "ios": {
+        "property": "accessibilityValue"
+      },
+      "android": {
+        "semantics": "stateDescription"
+      }
+    },
+    "selected": {
+      "web": {
+        "attribute": "aria-selected"
+      },
+      "ios": {
+        "trait": "isSelected"
+      },
+      "android": {
+        "semantics": "selected"
+      }
+    },
+    "checked": {
+      "web": {
+        "attribute": "aria-checked"
+      },
+      "ios": {
+        "trait": "isSelected"
+      },
+      "android": {
+        "semantics": "toggleableState"
+      }
+    },
+    "readonly": {
+      "web": {
+        "attribute": "aria-readonly"
+      },
+      "ios": {
+        "property": "accessibilityValue"
+      },
+      "android": {
+        "semantics": "stateDescription"
+      }
+    }
+  },
+  "touchTargets": {
+    "floor": {
+      "web": 44,
+      "ios": 44,
+      "android": 48
+    },
+    "unit": {
+      "web": "px",
+      "ios": "pt",
+      "android": "dp"
+    }
+  },
+  "animatableProperties": {
+    "opacity": {
+      "web": "opacity",
+      "ios": "opacity",
+      "android": "alpha"
+    },
+    "transform": {
+      "web": "transform",
+      "ios": "transformEffect",
+      "android": "graphicsLayer"
+    },
+    "scale": {
+      "web": "transform: scale",
+      "ios": "scaleEffect",
+      "android": "graphicsLayer.scale"
+    },
+    "translateX": {
+      "web": "transform: translateX",
+      "ios": "offset.x",
+      "android": "graphicsLayer.translationX"
+    },
+    "translateY": {
+      "web": "transform: translateY",
+      "ios": "offset.y",
+      "android": "graphicsLayer.translationY"
+    },
+    "rotation": {
+      "web": "transform: rotate",
+      "ios": "rotationEffect",
+      "android": "graphicsLayer.rotationZ"
+    },
+    "fill": {
+      "web": "background-color",
+      "ios": "background",
+      "android": "containerColor"
+    },
+    "labelColor": {
+      "web": "color",
+      "ios": "foregroundColor",
+      "android": "contentColor"
+    },
+    "borderColor": {
+      "web": "border-color",
+      "ios": "border",
+      "android": "borderColor"
+    }
+  },
+  "refusedForMotion": {
+    "blur": "GPU cost and visual result differ substantially per platform",
+    "boxShadow": "Not animatable on Android without overdraw; use elevation instead",
+    "width": "Layout-driven; triggers reflow and behaves differently per platform",
+    "height": "Layout-driven; triggers reflow and behaves differently per platform",
+    "shadow": "Use elevation intent instead of animating shadow directly"
+  },
+  "pointerOnlyStates": [
+    "hover"
+  ],
+  "mechanismPlatforms": {
+    "ripple": [
+      "android"
+    ],
+    "highlight": [
+      "ios",
+      "web"
+    ],
+    "scale": [
+      "web",
+      "ios",
+      "android"
+    ],
+    "opacity": [
+      "web",
+      "ios",
+      "android"
+    ],
+    "tint": [
+      "ios"
+    ],
+    "elevation": [
+      "android"
+    ]
+  },
+  "cssKeywords": [
+    "transparent",
+    "none",
+    "currentcolor",
+    "inherit",
+    "initial",
+    "unset"
+  ],
+  "namedCurves": {
+    "linear": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "ease": [
+      0.25,
+      0.1,
+      0.25,
+      1
+    ],
+    "easeIn": [
+      0.42,
+      0,
+      1,
+      1
+    ],
+    "easeOut": [
+      0,
+      0,
+      0.58,
+      1
+    ],
+    "easeInOut": [
+      0.42,
+      0,
+      0.58,
+      1
+    ],
+    "standard": [
+      0.4,
+      0,
+      0.2,
+      1
+    ],
+    "decelerate": [
+      0,
+      0,
+      0.2,
+      1
+    ],
+    "accelerate": [
+      0.4,
+      0,
+      1,
+      1
+    ]
+  },
+  "curveApi": {
+    "ios": {
+      "key": "timingCurve",
+      "call": "Animation.timingCurve(c0x, c0y, c1x, c1y)"
+    },
+    "android": {
+      "key": "cubicBezierEasing",
+      "call": "CubicBezierEasing(c0x, c0y, c1x, c1y)"
+    },
+    "web": {
+      "key": "cssEasing",
+      "call": "cubic-bezier(...)"
+    }
+  },
+  "springApi": {
+    "ios": {
+      "call": ".spring(response:dampingFraction:)",
+      "params": [
+        "response",
+        "dampingFraction"
+      ],
+      "exact": ".interpolatingSpring(mass:stiffness:damping:)"
+    },
+    "android": {
+      "call": "spring(dampingRatio, stiffness)",
+      "params": [
+        "dampingRatio",
+        "stiffness"
+      ],
+      "note": "Assumes unit mass; stiffness is normalised by mass."
+    },
+    "web": {
+      "call": "spring({ stiffness, damping, mass })",
+      "params": [
+        "stiffness",
+        "damping",
+        "mass"
+      ],
+      "note": "Takes the canonical form directly."
+    }
+  },
+  "source": {
+    "cssPropertyRole": {
+      "background-color": "fill",
+      "background": "fill",
+      "color": "labelColor",
+      "border-color": "borderColor",
+      "border-width": "borderWidth",
+      "border-radius": "radius",
+      "font-size": "fontSize",
+      "font-weight": "fontWeight",
+      "line-height": "lineHeight",
+      "letter-spacing": "letterSpacing",
+      "gap": "gap",
+      "opacity": "opacity"
+    },
+    "visualProperties": {
+      "border-style": "borderStyle",
+      "border-radius": "radius",
+      "width": "width",
+      "height": "height",
+      "min-width": "minWidth",
+      "min-height": "minHeight",
+      "max-width": "maxWidth",
+      "max-height": "maxHeight",
+      "display": "display",
+      "box-sizing": "boxSizing",
+      "align-items": "alignItems",
+      "align-self": "alignSelf",
+      "justify-content": "justifyContent",
+      "flex-direction": "flexDirection",
+      "flex-grow": "flexGrow",
+      "flex-shrink": "flexShrink",
+      "flex-basis": "flexBasis",
+      "position": "position",
+      "top": "top",
+      "left": "left",
+      "content": "content",
+      "transform": "transform",
+      "outline-offset": "outlineOffset",
+      "font-family": "fontFamily",
+      "font-variant-numeric": "fontVariantNumeric",
+      "border-top-width": "borderTopWidth",
+      "border-right-width": "borderRightWidth",
+      "border-bottom-width": "borderBottomWidth",
+      "border-left-width": "borderLeftWidth",
+      "border-top-color": "borderTopColor",
+      "border-right-color": "borderRightColor",
+      "border-bottom-color": "borderBottomColor",
+      "border-left-color": "borderLeftColor",
+      "overflow": "overflow",
+      "text-align": "textAlign",
+      "text-decoration": "textDecoration",
+      "text-overflow": "textOverflow",
+      "white-space": "whiteSpace",
+      "aspect-ratio": "aspectRatio"
+    },
+    "pseudoState": {
+      ":hover": "hover",
+      ":active": "pressed",
+      ":focus-visible": "focused",
+      ":focus": "focused",
+      ":disabled": "disabled",
+      "[aria-busy='true']": "loading",
+      "[aria-busy=\"true\"]": "loading",
+      "[data-loading]": "loading"
+    },
+    "utilityRoles": {
+      "bg": "fill",
+      "text": "labelColor",
+      "border": "borderColor",
+      "ring": "focusRing",
+      "fill": "fill",
+      "px": "padX",
+      "py": "padY",
+      "p": "pad",
+      "gap": "gap",
+      "rounded": "radius",
+      "font": "fontWeight",
+      "leading": "lineHeight"
+    },
+    "nativeActivation": {
+      "Button": {
+        "event": "onClick",
+        "payload": "none"
+      },
+      "Anchor": {
+        "event": "onClick",
+        "payload": "none"
+      },
+      "Input": {
+        "event": "onChange",
+        "payload": "value"
+      },
+      "Select": {
+        "event": "onChange",
+        "payload": "value"
+      },
+      "TextArea": {
+        "event": "onChange",
+        "payload": "value"
+      },
+      "Form": {
+        "event": "onSubmit",
+        "payload": "none"
+      }
+    },
+    "webOnlyProperties": {
+      "cursor": "Pointer cursor; touch platforms have no cursor.",
+      "user-select": "Text selection; not applied to a control on iOS or Android.",
+      "-webkit-user-select": "Vendor prefix of user-select.",
+      "-webkit-tap-highlight-color": "Browser tap flash; native controls draw their own pressed feedback.",
+      "touch-action": "Browser gesture filtering; native gesture handling is separate."
+    }
+  },
+  "roleExpression": {
+    "$note": "Check each field in order; the first one present decides the text. {value} is the field value; {item} is one entry of a list.",
+    "order": [
+      "plain",
+      "hidden",
+      "traits",
+      "role",
+      "container",
+      "semantics",
+      "progressSemantics",
+      "liveRegion",
+      "heading",
+      "collection",
+      "collectionItem"
+    ],
+    "forms": {
+      "plain": {
+        "template": "{value}",
+        "flag": "plain"
+      },
+      "hidden": {
+        "template": "accessibilityHidden",
+        "flag": "hidden"
+      },
+      "traits": {
+        "template": ".{item}",
+        "join": ", "
+      },
+      "role": {
+        "template": "Role.{value}"
+      },
+      "container": {
+        "template": "container({value})"
+      },
+      "semantics": {
+        "template": "{value}"
+      },
+      "progressSemantics": {
+        "template": "progressSemantics"
+      },
+      "liveRegion": {
+        "template": "liveRegion({value})"
+      },
+      "heading": {
+        "template": "heading"
+      },
+      "collection": {
+        "template": "collection"
+      },
+      "collectionItem": {
+        "template": "collectionItem"
+      }
+    },
+    "unmapped": {
+      "text": null,
+      "unmapped": true
+    }
+  },
+  "tokenTypeByRole": {
+    "fill": "color",
+    "labelColor": "color",
+    "borderColor": "color",
+    "focusRing": "color",
+    "fontWeight": "fontWeight",
+    "fontFamily": "fontFamily"
+  },
+  "tokenTypeDefault": "dimension",
+  "semantics": {
+    "$note": "CSS roles read from the component, restated as platform-neutral layout concepts. A role mapped to null is consumed elsewhere (see consumedBy) or has no native effect (see reason); it is listed rather than silently dropped.",
+    "fields": {
+      "display": {
+        "to": "container.kind",
+        "values": "display"
+      },
+      "flexDirection": {
+        "to": "container.axis",
+        "values": "axis"
+      },
+      "alignItems": {
+        "to": "container.crossAlign",
+        "values": "alignment"
+      },
+      "justifyContent": {
+        "to": "container.mainAlign",
+        "values": "alignment"
+      },
+      "gap": {
+        "to": "container.gap"
+      },
+      "alignSelf": {
+        "to": "item.selfAlign",
+        "values": "alignment"
+      },
+      "flexGrow": {
+        "to": "item.grow"
+      },
+      "flexShrink": {
+        "to": "item.shrink"
+      },
+      "flexBasis": {
+        "to": "item.basis"
+      },
+      "width": {
+        "to": "size.width"
+      },
+      "height": {
+        "to": "size.height"
+      },
+      "minWidth": {
+        "to": "size.minWidth"
+      },
+      "minHeight": {
+        "to": "size.minHeight"
+      },
+      "maxWidth": {
+        "to": "size.maxWidth"
+      },
+      "maxHeight": {
+        "to": "size.maxHeight"
+      },
+      "aspectRatio": {
+        "to": "size.aspectRatio"
+      },
+      "boxSizing": {
+        "to": "size.includesBorderAndPadding",
+        "values": "boxSizing"
+      },
+      "padTop": {
+        "to": "padding.top"
+      },
+      "padRight": {
+        "to": "padding.right"
+      },
+      "padBottom": {
+        "to": "padding.bottom"
+      },
+      "padLeft": {
+        "to": "padding.left"
+      },
+      "borderWidth": {
+        "to": "border.width"
+      },
+      "borderStyle": {
+        "to": "border.style"
+      },
+      "borderColor": {
+        "to": "border.color"
+      },
+      "borderTopWidth": {
+        "to": "border.top.width"
+      },
+      "borderRightWidth": {
+        "to": "border.right.width"
+      },
+      "borderBottomWidth": {
+        "to": "border.bottom.width"
+      },
+      "borderLeftWidth": {
+        "to": "border.left.width"
+      },
+      "borderTopColor": {
+        "to": "border.top.color"
+      },
+      "borderRightColor": {
+        "to": "border.right.color"
+      },
+      "borderBottomColor": {
+        "to": "border.bottom.color"
+      },
+      "borderLeftColor": {
+        "to": "border.left.color"
+      },
+      "radius": {
+        "to": "cornerRadius"
+      },
+      "fill": {
+        "to": "background"
+      },
+      "opacity": {
+        "to": "opacity"
+      },
+      "overflow": {
+        "to": "clip",
+        "values": "overflow"
+      },
+      "labelColor": {
+        "to": "foreground",
+        "inherited": true
+      },
+      "typography": {
+        "to": "typography",
+        "inherited": true
+      },
+      "fontFamily": {
+        "to": "text.family",
+        "inherited": true
+      },
+      "fontSize": {
+        "to": "text.size",
+        "inherited": true
+      },
+      "fontWeight": {
+        "to": "text.weight",
+        "inherited": true
+      },
+      "lineHeight": {
+        "to": "text.lineHeight",
+        "inherited": true
+      },
+      "letterSpacing": {
+        "to": "text.letterSpacing",
+        "inherited": true
+      },
+      "fontVariantNumeric": {
+        "to": "text.numericFigures",
+        "values": "numericFigures",
+        "inherited": true
+      },
+      "textAlign": {
+        "to": "text.align",
+        "values": "textAlign",
+        "inherited": true
+      },
+      "whiteSpace": {
+        "to": "text.wrap",
+        "values": "whiteSpace",
+        "inherited": true
+      },
+      "textOverflow": {
+        "to": "text.overflow",
+        "values": "textOverflow"
+      },
+      "textDecoration": {
+        "to": "text.decoration"
+      },
+      "transform": {
+        "to": "transform"
+      },
+      "position": {
+        "to": null,
+        "values": "position",
+        "reason": "relative only anchors absolutely positioned descendants; it has no effect on native layout"
+      },
+      "top": {
+        "to": null,
+        "consumedBy": "hitAreas"
+      },
+      "left": {
+        "to": null,
+        "consumedBy": "hitAreas"
+      },
+      "content": {
+        "to": null,
+        "consumedBy": "hitAreas"
+      },
+      "outlineStyle": {
+        "to": null,
+        "consumedBy": "focusRings"
+      },
+      "outlineWidth": {
+        "to": null,
+        "consumedBy": "focusRings"
+      },
+      "outlineColor": {
+        "to": null,
+        "consumedBy": "focusRings"
+      },
+      "outlineOffset": {
+        "to": null,
+        "consumedBy": "focusRings"
+      },
+      "transitionEnabled": {
+        "to": null,
+        "consumedBy": "animations"
+      },
+      "transitionDurationMs": {
+        "to": null,
+        "consumedBy": "animations"
+      },
+      "animation": {
+        "to": null,
+        "consumedBy": "animations"
+      },
+      "animationDurationMs": {
+        "to": null,
+        "consumedBy": "animations"
+      }
+    },
+    "values": {
+      "display": {
+        "flex": "stack",
+        "inline-flex": "stack",
+        "block": null
+      },
+      "axis": {
+        "row": "horizontal",
+        "column": "vertical"
+      },
+      "alignment": {
+        "center": "center",
+        "flex-start": "start",
+        "start": "start",
+        "flex-end": "end",
+        "end": "end",
+        "stretch": "stretch",
+        "baseline": "baseline",
+        "space-between": "spaceBetween",
+        "space-around": "spaceAround",
+        "space-evenly": "spaceEvenly"
+      },
+      "boxSizing": {
+        "border-box": true,
+        "content-box": false
+      },
+      "overflow": {
+        "hidden": true,
+        "clip": true,
+        "visible": false
+      },
+      "numericFigures": {
+        "tabular-nums": "tabular",
+        "proportional-nums": "proportional",
+        "normal": "default"
+      },
+      "textAlign": {
+        "left": "start",
+        "start": "start",
+        "right": "end",
+        "end": "end",
+        "center": "center",
+        "justify": "justify"
+      },
+      "whiteSpace": {
+        "nowrap": "none",
+        "normal": "wrap"
+      },
+      "textOverflow": {
+        "ellipsis": "ellipsis",
+        "clip": "clip"
+      },
+      "position": {
+        "relative": null
+      }
+    },
+    "typography": {
+      "$note": "A typography token is a composite of one token per text property, named <token>-<css-property>: --semantic-typography-label-l-font-size is one of the tokens that make up semantic-typography-label-l. When every text property a rule or node sets is a token named that way and they all share one composite, the importer records the composite as the role typography, in place of the individual tokens, and declares it in the token vocabulary with type typography. Otherwise nothing is claimed and the properties stay as they are. Keys are the contract's role names; values are the CSS property each role comes from.",
+      "properties": {
+        "fontFamily": "font-family",
+        "fontSize": "font-size",
+        "fontWeight": "font-weight",
+        "lineHeight": "line-height",
+        "letterSpacing": "letter-spacing"
+      },
+      "minimumProperties": 2,
+      "tokenType": "typography"
+    },
+    "events": {
+      "$note": "Web event and feedback names found in the quoted source, and the platform-neutral concept each stands for. A name counts only as a whole word, so onKeyDown is not found inside onKeyDownCapture. This says that the source uses the event; it does not say what the handler does, which is in behaviorSource.",
+      "event.pointerDown": ["onPointerDown", "onMouseDown", "onTouchStart", "pointerdown", "mousedown", "touchstart"],
+      "event.pointerUp": ["onPointerUp", "onMouseUp", "onTouchEnd", "pointerup", "mouseup", "touchend"],
+      "event.pointerCancel": ["onPointerCancel", "onTouchCancel", "pointercancel", "touchcancel"],
+      "event.pointerLeave": ["onPointerLeave", "onMouseLeave", "pointerleave", "mouseleave"],
+      "event.keyDown": ["onKeyDown", "keydown"],
+      "event.click": ["onClick"],
+      "feedback.haptic": ["vibrate"]
+    },
+    "hitArea": {
+      "$note": "A hit area is recognised only when a pseudo-element matches the whole pattern below. A partial match is left as ordinary rules rather than guessed at.",
+      "pseudoElement": "after",
+      "requires": {
+        "position": "absolute",
+        "centered": true,
+        "minimumSizeProperties": [
+          "minWidth",
+          "minHeight"
+        ]
+      },
+      "removedByContent": "none"
+    }
+  },
+  "animation": {
+    "identity": {
+      "scale": 1,
+      "scaleX": 1,
+      "scaleY": 1,
+      "translateX": 0,
+      "translateY": 0,
+      "rotateDeg": 0
+    },
+    "instantBelowMs": 8.3,
+    "instantNote": "A duration shorter than one display frame at 120 Hz (8.3 ms) cannot be seen, so it is effectively an instant change. The literal value is always kept alongside.",
+    "cssDefaultTimingCurve": "ease"
+  },
+  "idioms": {
+    "$note": "Advisory. Authored from framework documentation and NOT compiled in this repository, so treat each entry as a starting point. The data in the spec is authoritative; an idiom never overrides it.",
+    "frameworks": {
+      "ios": "swiftui",
+      "android": "compose"
+    },
+    "concepts": {
+      "container.stack.horizontal": {
+        "swiftui": "HStack(alignment:spacing:)",
+        "compose": "Row(horizontalArrangement, verticalAlignment)",
+        "note": "A spec that states no gap means zero. CSS has no implicit spacing, so state the spacing instead of relying on a platform default.",
+        "notes": {
+          "swiftui": "A stack has a non-zero default spacing, so pass spacing: 0 explicitly.",
+          "compose": "A Row has no implicit spacing."
+        }
+      },
+      "container.stack.vertical": {
+        "swiftui": "VStack(alignment:spacing:)",
+        "compose": "Column(verticalArrangement, horizontalAlignment)",
+        "note": "A spec that states no gap means zero. CSS has no implicit spacing, so state the spacing instead of relying on a platform default.",
+        "notes": {
+          "swiftui": "A stack has a non-zero default spacing, so pass spacing: 0 explicitly.",
+          "compose": "A Column has no implicit spacing."
+        }
+      },
+      "container.crossAlign": {
+        "swiftui": "the stack alignment: parameter",
+        "compose": "Row verticalAlignment / Column horizontalAlignment",
+        "note": "Cross axis is vertical in a horizontal stack, horizontal in a vertical one."
+      },
+      "container.mainAlign": {
+        "swiftui": "Spacer() before and after the children; a stack has no distribution parameter",
+        "compose": "horizontalArrangement / verticalArrangement (Arrangement.Start, Center, End, SpaceBetween ...)"
+      },
+      "container.gap": {
+        "swiftui": "the stack spacing: parameter",
+        "compose": "Arrangement.spacedBy(...)"
+      },
+      "item.flex": {
+        "swiftui": "frame(maxWidth: .infinity) on each flexible sibling (frame(maxHeight:) in a vertical stack)",
+        "compose": "Modifier.weight(grow)",
+        "note": "grow is a proportional share of the space the fixed siblings leave.",
+        "notes": {
+          "swiftui": "Equal frame(maxWidth: .infinity) siblings share equally; unequal ratios need layoutPriority or a custom Layout.",
+          "compose": "Weights express any ratio."
+        }
+      },
+      "size.fixed": {
+        "swiftui": "frame(width:height:)",
+        "compose": "Modifier.width(..) / height(..) / size(..)"
+      },
+      "size.fill": {
+        "swiftui": "frame(maxWidth: .infinity) or frame(maxHeight: .infinity)",
+        "compose": "Modifier.fillMaxWidth() / fillMaxHeight()"
+      },
+      "size.minimum": {
+        "swiftui": "frame(minWidth:minHeight:)",
+        "compose": "Modifier.widthIn(min = ..) / heightIn(min = ..)"
+      },
+      "size.aspectRatio": {
+        "swiftui": "aspectRatio(_:contentMode:)",
+        "compose": "Modifier.aspectRatio(ratio)"
+      },
+      "padding": {
+        "swiftui": "padding(EdgeInsets(top:leading:bottom:trailing:))",
+        "compose": "Modifier.padding(start, top, end, bottom)",
+        "note": "CSS left and right are physical. leading and trailing mirror in right-to-left layouts; use them only if mirroring is intended."
+      },
+      "border.inside": {
+        "swiftui": "overlay(RoundedRectangle(cornerRadius:).strokeBorder(color, lineWidth:))",
+        "compose": "Modifier.border(width, color, shape)",
+        "note": "Both platforms draw the stroke inside the node bounds, but neither shrinks the children. When the spec says includesBorderAndPadding, inset the content by the border width yourself.",
+        "notes": {
+          "swiftui": "Padding on the stack does it.",
+          "compose": "Padding on the Row does it."
+        }
+      },
+      "border.sides": {
+        "swiftui": "no per-side border; draw each edge with overlay shapes",
+        "compose": "no per-side border; draw each edge with drawBehind",
+        "note": "A per-side colour or width (for example one transparent side to make an arc) cannot be expressed with the uniform border modifiers."
+      },
+      "cornerRadius": {
+        "swiftui": "RoundedRectangle(cornerRadius:) as the background, stroke and clip shape",
+        "compose": "RoundedCornerShape(radius) as the background, border and clip shape"
+      },
+      "background": {
+        "swiftui": "background(_:)",
+        "compose": "Modifier.background(color, shape)"
+      },
+      "foreground": {
+        "swiftui": "foregroundStyle(_:) propagates to descendants",
+        "compose": "CompositionLocalProvider(LocalContentColor provides color), or the color / tint parameter of Text and Icon",
+        "note": "In CSS the text colour is inherited by descendants, and an icon drawn with currentColor takes it."
+      },
+      "clip": {
+        "swiftui": "clipped() or clipShape(_:)",
+        "compose": "Modifier.clipToBounds() or clip(shape)"
+      },
+      "opacity": {
+        "swiftui": "opacity(_:)",
+        "compose": "Modifier.alpha(value)"
+      },
+      "text.font": {
+        "swiftui": "font(.system(size:weight:)) or font(.custom(_:size:))",
+        "compose": "TextStyle(fontFamily, fontSize, fontWeight)",
+        "note": "A typographic size scales with the user's text size only if you ask it to. Whether this component should scale is not stated in the source.",
+        "notes": {
+          "swiftui": "Font.custom(_:size:relativeTo:) or @ScaledMetric scale with Dynamic Type.",
+          "compose": "Use sp for text sizes so they scale."
+        }
+      },
+      "text.lineHeight": {
+        "swiftui": "no line-height setter; lineSpacing(_:) adds the difference between this line height and the font natural one",
+        "compose": "TextStyle(lineHeight = ..)"
+      },
+      "text.letterSpacing": {
+        "swiftui": "tracking(_:)",
+        "compose": "TextStyle(letterSpacing = ..)"
+      },
+      "text.numericFigures.tabular": {
+        "swiftui": "monospacedDigit()",
+        "compose": "TextStyle(fontFeatureSettings = \"tnum\")"
+      },
+      "text.truncate": {
+        "swiftui": "lineLimit(1).truncationMode(.tail)",
+        "compose": "Text(maxLines = 1, overflow = TextOverflow.Ellipsis)"
+      },
+      "text.align": {
+        "swiftui": "multilineTextAlignment(_:) and frame(alignment:)",
+        "compose": "TextStyle(textAlign = ..)"
+      },
+      "transform.scale": {
+        "swiftui": "scaleEffect(_:anchor: .center)",
+        "compose": "Modifier.graphicsLayer { scaleX = s; scaleY = s }",
+        "note": "CSS scales about the centre of the node; both defaults match."
+      },
+      "transform.translate": {
+        "swiftui": "offset(x:y:)",
+        "compose": "Modifier.graphicsLayer { translationX = ..; translationY = .. } or Modifier.offset"
+      },
+      "transform.rotate": {
+        "swiftui": "rotationEffect(.degrees(_))",
+        "compose": "Modifier.graphicsLayer { rotationZ = degrees }"
+      },
+      "animation.timing.linear": {
+        "swiftui": "animation(.linear(duration:), value:)",
+        "compose": "tween(durationMillis, easing = LinearEasing)"
+      },
+      "animation.timing.cubicBezier": {
+        "swiftui": "animation(.timingCurve(c0x, c0y, c1x, c1y, duration:), value:)",
+        "compose": "tween(durationMillis, easing = CubicBezierEasing(a, b, c, d))"
+      },
+      "animation.loop": {
+        "swiftui": "animation(.linear(duration:).repeatForever(autoreverses: false), value:)",
+        "compose": "rememberInfiniteTransition() with infiniteRepeatable(tween(..))"
+      },
+      "animation.reducedMotion": {
+        "swiftui": "@Environment(\\.accessibilityReduceMotion)",
+        "compose": "no reduce-motion flag in Compose; the system Remove animations setting sets Settings.Global.ANIMATOR_DURATION_SCALE to 0",
+        "note": "Apply the reduced-motion value in this spec rather than a generic fallback. The end values still apply; only the animation is removed.",
+        "notes": {
+          "compose": "A duration like 0.01ms cannot be written as an integer millisecond tween, so treat anything under a frame as snap()."
+        }
+      },
+      "state.pressed": {
+        "swiftui": "a ButtonStyle reading configuration.isPressed",
+        "compose": "MutableInteractionSource.collectIsPressedAsState()",
+        "note": "The spec states no pressed fill, so add none unless the design asks for one. Drive any change from the pressed state.",
+        "notes": {
+          "compose": "clickable and Button add a Material ripple by default; pass indication = null to remove it."
+        }
+      },
+      "state.focused": {
+        "swiftui": "@FocusState",
+        "compose": "MutableInteractionSource.collectIsFocusedAsState()"
+      },
+      "state.unavailable.focusable": {
+        "swiftui": "keep the control in the focus order and add .disabled(_:) behaviour yourself where needed; disabled(_:) alone stops interaction",
+        "compose": "keep enabled = true for focus and block the action; enabled = false also removes it from interaction",
+        "note": "The source marks the control unavailable with aria-disabled, not the disabled attribute: the control stays in place and the browser does not take it out of focus handling. Whether it is in the keyboard order on this platform is stated per node under accessibility.tabOrder, and what blocks it is in the quoted logic. Do not assume either.",
+        "notes": {
+          "swiftui": "disabled(_:) stops interaction. To keep a control present but blocked, leave it enabled, ignore the action yourself and announce it as unavailable.",
+          "compose": "enabled = false stops interaction. To keep a control present but blocked, leave enabled = true, ignore the action yourself and mark it disabled() in semantics."
+        }
+      },
+      "hitArea": {
+        "swiftui": "contentShape(Rectangle()) on an enlarged frame",
+        "compose": "size the clickable region itself, for example with Modifier.sizeIn(minWidth = .., minHeight = ..) before Modifier.clickable",
+        "note": "Neither platform offers a hit area that leaves layout untouched, so a larger touch area either takes layout space or is compensated for. The spec gives the intended minimum size and centre; how to compensate in layout is the team decision.",
+        "notes": {
+          "compose": "Modifier.minimumInteractiveComponentSize() reserves the space in layout, so it changes the design rather than extending the touch area."
+        }
+      },
+      "event.pointerDown": {
+        "swiftui": "DragGesture(minimumDistance: 0), whose first onChanged is the touch going down",
+        "compose": "Modifier.pointerInput(Unit) { detectTapGestures(onPress = { .. }) }, where onPress runs on touch down"
+      },
+      "event.pointerUp": {
+        "swiftui": "DragGesture(minimumDistance: 0).onEnded",
+        "compose": "the code after tryAwaitRelease() inside detectTapGestures(onPress = ..)"
+      },
+      "event.pointerCancel": {
+        "swiftui": "a @GestureState value that resets itself when the gesture stops, so a touch that is cancelled cannot leave something running",
+        "compose": "tryAwaitRelease() returns false when the press is cancelled instead of released",
+        "note": "A browser sends a distinct cancel event. Whether the native gesture reports it separately is for the team to confirm."
+      },
+      "event.pointerLeave": {
+        "swiftui": "DragGesture reports the touch location while it leaves the view: compare it with the view's frame in onChanged",
+        "compose": "compare the pointer position with the node size inside pointerInput"
+      },
+      "event.keyDown": {
+        "swiftui": "onKeyPress(_:action:) (iOS 17 and later; hardware keyboards)",
+        "compose": "Modifier.onKeyEvent { .. }, or onPreviewKeyEvent to see the key first"
+      },
+      "event.click": {
+        "swiftui": "Button(action:), or onTapGesture",
+        "compose": "Modifier.clickable { .. }",
+        "note": "A click in a browser can come from a pointer, a keyboard or assistive technology. When the source tells them apart (a click with detail 0 did not come from a pointer), the native control's own action already receives the keyboard and assistive-technology activations, so only the pointer path needs a handler of its own."
+      },
+      "feedback.haptic": {
+        "swiftui": "sensoryFeedback(_:trigger:) (iOS 17 and later), or UIImpactFeedbackGenerator",
+        "compose": "LocalHapticFeedback.current.performHapticFeedback(..)",
+        "note": "navigator.vibrate takes a duration in milliseconds. Native haptics are chosen from fixed types, so the duration in the source does not carry over and the team picks the type."
+      },
+      "focusRing": {
+        "swiftui": "an overlay stroke shown while @FocusState is true",
+        "compose": "a border or drawBehind stroke shown while focused",
+        "note": "The offset is measured from the node's edge, positive outward. The ring is a band as thick as its width: its inner edge sits at the offset and its outer edge at the offset plus the width. A negative offset puts the band inside the node. A ring with focusVisible is drawn for keyboard focus only, not for a tap."
+      },
+      "a11y.traits.isButton": {
+        "swiftui": "accessibilityAddTraits(.isButton), implicit on Button",
+        "compose": "Modifier.semantics { role = Role.Button }, implicit on clickable(role = ..)"
+      },
+      "a11y.traits.adjustable": {
+        "swiftui": "accessibilityAdjustableAction { direction in .. } plus accessibilityValue(_:); SwiftUI has no separate adjustable trait",
+        "compose": "Modifier.semantics { stateDescription = ..; customActions = listOf(..) }"
+      },
+      "a11y.traits.notEnabled": {
+        "swiftui": "disabled(_:) applies it; there is no SwiftUI trait of this name",
+        "compose": "Modifier.semantics { disabled() }"
+      },
+      "a11y.role.Button": {
+        "swiftui": "accessibilityAddTraits(.isButton)",
+        "compose": "Modifier.semantics { role = Role.Button }"
+      },
+      "a11y.semantics.stateDescription": {
+        "swiftui": "accessibilityValue(_:)",
+        "compose": "Modifier.semantics { stateDescription = .. }"
+      },
+      "a11y.action.increment": {
+        "swiftui": "accessibilityAdjustableAction, case .increment",
+        "compose": "CustomAccessibilityAction(label) { .. }"
+      },
+      "a11y.action.decrement": {
+        "swiftui": "accessibilityAdjustableAction, case .decrement",
+        "compose": "CustomAccessibilityAction(label) { .. }"
+      },
+      "a11y.traits.isSelected": {
+        "swiftui": "accessibilityAddTraits(.isSelected)",
+        "compose": "Modifier.semantics { selected = true }"
+      },
+      "a11y.property.accessibilityValue": {
+        "swiftui": "accessibilityValue(_:)",
+        "compose": "Modifier.semantics { stateDescription = .. }"
+      },
+      "a11y.range": {
+        "swiftui": "accessibilityValue(_:) for the current value or its text, with accessibilityAdjustableAction(_:) for the steps. SwiftUI has no separate minimum or maximum on a custom control; Stepper, Slider and ProgressView expose a range themselves.",
+        "compose": "Modifier.semantics { progressBarRangeInfo = ProgressBarRangeInfo(current, min..max, steps) }, plus stateDescription for the text.",
+        "note": "now, min, max and text are reported as the source states them. Whether the text replaces the number or sits beside it is the team's decision.",
+        "notes": {
+          "compose": "steps is the number of discrete values between min and max, not counting the two ends. Derive it from the component's own step if it has one; the spec does not state it."
+        }
+      },
+      "a11y.reference": {
+        "swiftui": "accessibilityLabel(_:) with the referenced element's text, or accessibilityLabeledPair(role:id:in:) to link two elements within a namespace.",
+        "compose": "No reference to another element: copy that element's text into contentDescription.",
+        "note": "aria-labelledby and aria-describedby name another element by id. The spec reports the prop that carries the id; what string it becomes on a native platform is the team's decision."
+      },
+      "a11y.semantics.disabled": {
+        "swiftui": "disabled(_:)",
+        "compose": "Modifier.semantics { disabled() }"
+      },
+      "a11y.semantics.selected": {
+        "swiftui": "accessibilityAddTraits(.isSelected)",
+        "compose": "Modifier.semantics { selected = true }"
+      },
+      "a11y.semantics.toggleableState": {
+        "swiftui": "accessibilityValue(_:) carrying on or off, or a Toggle, which exposes it itself",
+        "compose": "Modifier.semantics { toggleableState = ToggleableState.On }"
+      }
+    }
+  }
+}

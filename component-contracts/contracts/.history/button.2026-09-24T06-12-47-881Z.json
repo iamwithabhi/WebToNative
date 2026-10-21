@@ -1,0 +1,667 @@
+{
+  "$schema": "../schema/contract.schema.json",
+  "id": "button",
+  "name": "Button",
+  "description": "",
+  "contractVersion": "0.1.0",
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "tokens": {
+    "component.color.button.default.primary.active.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.primary.active.background.pressed": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.primary.active.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.default.primary.active.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.primary.disabled.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.primary.disabled.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.default.primary.disabled.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.secondary.active.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.secondary.active.background.pressed": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.secondary.active.border": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.secondary.active.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.default.secondary.active.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.secondary.disabled.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.secondary.disabled.border": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.secondary.disabled.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.default.secondary.disabled.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tertiary.active.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tertiary.active.background.pressed": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tertiary.active.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.default.tertiary.active.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tertiary.destructive.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tertiary.destructive.background.disabled": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tertiary.destructive.background.pressed": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tertiary.destructive.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.default.tertiary.destructive.icon.disabled": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.default.tertiary.destructive.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tertiary.destructive.text.disabled": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tertiary.disabled.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tertiary.disabled.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.default.tertiary.disabled.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tonal.active.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tonal.active.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.default.tonal.active.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tonal.disabled.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.default.tonal.disabled.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.default.tonal.disabled.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.primary.active.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.primary.active.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.inverse.primary.active.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.primary.disabled.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.primary.disabled.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.inverse.primary.disabled.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.secondary.active.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.secondary.active.background.pressed": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.secondary.active.border": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.secondary.active.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.inverse.secondary.active.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.secondary.disabled.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.secondary.disabled.border": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.secondary.disabled.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.inverse.secondary.disabled.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.tertiary.active.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.inverse.tertiary.active.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.tertiary.disabled.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.inverse.tertiary.disabled.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.tonal.active.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.tonal.active.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.inverse.tonal.active.text": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.tonal.disabled.background": {
+      "value": null,
+      "type": "color"
+    },
+    "component.color.button.inverse.tonal.disabled.icon": {
+      "value": null,
+      "type": "unknown"
+    },
+    "component.color.button.inverse.tonal.disabled.text": {
+      "value": null,
+      "type": "color"
+    },
+    "semantic.border.radius.12": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.border.radius.full": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.border.width.default": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.color.border.brand": {
+      "value": null,
+      "type": "color"
+    },
+    "semantic.size.32": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.size.40": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.size.48": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.spacing.12": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.spacing.16": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.spacing.2": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.spacing.24": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.spacing.4": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.spacing.8": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.typography.button.l.font.size": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.typography.button.l.font.weight": {
+      "value": null,
+      "type": "fontWeight"
+    },
+    "semantic.typography.button.l.line.height": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.typography.button.m.font.size": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.typography.button.m.font.weight": {
+      "value": null,
+      "type": "fontWeight"
+    },
+    "semantic.typography.button.m.line.height": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.typography.button.s.font.size": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.typography.button.s.font.weight": {
+      "value": null,
+      "type": "fontWeight"
+    },
+    "semantic.typography.button.s.line.height": {
+      "value": null,
+      "type": "dimension"
+    }
+  },
+  "props": {
+    "size": {
+      "kind": "enum",
+      "values": [
+        "sm",
+        "md",
+        "lg"
+      ],
+      "default": "md",
+      "axis": true
+    },
+    "tone": {
+      "kind": "enum",
+      "values": [
+        "default",
+        "inverse"
+      ],
+      "default": "default",
+      "axis": true
+    },
+    "variant": {
+      "kind": "enum",
+      "values": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "tonal",
+        "destructive"
+      ],
+      "default": "primary",
+      "axis": true
+    },
+    "label": {
+      "kind": "string",
+      "required": false
+    },
+    "iconStart": {
+      "kind": "slot",
+      "required": false,
+      "contentType": "node"
+    },
+    "iconEnd": {
+      "kind": "slot",
+      "required": false,
+      "contentType": "node"
+    },
+    "iconOnly": {
+      "kind": "boolean",
+      "required": false,
+      "default": false
+    },
+    "fullWidth": {
+      "kind": "boolean",
+      "required": false,
+      "default": false
+    },
+    "onClick": {
+      "kind": "event",
+      "payload": "none",
+      "required": false,
+      "inheritedFrom": "ButtonHTMLAttributes"
+    }
+  },
+  "states": [
+    "idle",
+    "focused",
+    "pressed",
+    "disabled",
+    "loading"
+  ],
+  "appearance": {
+    "roles": [
+      "borderWidth",
+      "borderColor",
+      "fill",
+      "labelColor"
+    ],
+    "byVariant": {
+      "primary": {
+        "default": {
+          "borderWidth": "{semantic.border.width.default}",
+          "borderColor": "transparent",
+          "fill": "{component.color.button.default.primary.active.background}",
+          "labelColor": "{component.color.button.default.primary.active.text}"
+        },
+        "pressed": {
+          "fill": "{component.color.button.default.primary.active.background.pressed}"
+        },
+        "disabled": {
+          "fill": "{component.color.button.default.primary.disabled.background}",
+          "labelColor": "{component.color.button.default.primary.disabled.text}"
+        }
+      },
+      "secondary": {
+        "default": {
+          "borderWidth": "{semantic.border.width.default}",
+          "borderColor": "{component.color.button.default.secondary.active.border}",
+          "fill": "{component.color.button.default.secondary.active.background}",
+          "labelColor": "{component.color.button.default.secondary.active.text}"
+        },
+        "pressed": {
+          "fill": "{component.color.button.default.secondary.active.background.pressed}"
+        },
+        "disabled": {
+          "fill": "{component.color.button.default.secondary.disabled.background}",
+          "labelColor": "{component.color.button.default.secondary.disabled.text}",
+          "borderColor": "{component.color.button.default.secondary.disabled.border}"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "borderWidth": "{semantic.border.width.default}",
+          "borderColor": "transparent",
+          "fill": "{component.color.button.default.tertiary.active.background}",
+          "labelColor": "{component.color.button.default.tertiary.active.text}"
+        },
+        "pressed": {
+          "fill": "{component.color.button.default.tertiary.active.background.pressed}"
+        },
+        "disabled": {
+          "fill": "{component.color.button.default.tertiary.disabled.background}",
+          "labelColor": "{component.color.button.default.tertiary.disabled.text}"
+        }
+      },
+      "tonal": {
+        "default": {
+          "borderWidth": "{semantic.border.width.default}",
+          "borderColor": "transparent",
+          "fill": "{component.color.button.default.tonal.active.background}",
+          "labelColor": "{component.color.button.default.tonal.active.text}"
+        },
+        "disabled": {
+          "fill": "{component.color.button.default.tonal.disabled.background}",
+          "labelColor": "{component.color.button.default.tonal.disabled.text}"
+        }
+      },
+      "destructive": {
+        "default": {
+          "borderWidth": "{semantic.border.width.default}",
+          "borderColor": "transparent",
+          "fill": "{component.color.button.default.tertiary.destructive.background}",
+          "labelColor": "{component.color.button.default.tertiary.destructive.text}"
+        },
+        "pressed": {
+          "fill": "{component.color.button.default.tertiary.destructive.background.pressed}"
+        },
+        "disabled": {
+          "fill": "{component.color.button.default.tertiary.destructive.background.disabled}",
+          "labelColor": "{component.color.button.default.tertiary.destructive.text.disabled}"
+        }
+      }
+    },
+    "bySize": {
+      "sm": {
+        "gap": "{semantic.spacing.4}",
+        "radius": "{semantic.border.radius.full}",
+        "padY": "{semantic.spacing.4}",
+        "padX": "{semantic.spacing.12}",
+        "minHeight": "{semantic.size.32}",
+        "fontSize": "{semantic.typography.button.s.font.size}",
+        "fontWeight": "{semantic.typography.button.s.font.weight}",
+        "lineHeight": "{semantic.typography.button.s.line.height}"
+      },
+      "md": {
+        "gap": "{semantic.spacing.8}",
+        "radius": "{semantic.border.radius.full}",
+        "padY": "{semantic.spacing.8}",
+        "padX": "{semantic.spacing.16}",
+        "minHeight": "{semantic.size.40}",
+        "fontSize": "{semantic.typography.button.m.font.size}",
+        "fontWeight": "{semantic.typography.button.m.font.weight}",
+        "lineHeight": "{semantic.typography.button.m.line.height}"
+      },
+      "lg": {
+        "gap": "{semantic.spacing.8}",
+        "radius": "{semantic.border.radius.full}",
+        "padY": "{semantic.spacing.12}",
+        "padX": "{semantic.spacing.24}",
+        "minHeight": "{semantic.size.48}",
+        "fontSize": "{semantic.typography.button.l.font.size}",
+        "fontWeight": "{semantic.typography.button.l.font.weight}",
+        "lineHeight": "{semantic.typography.button.l.line.height}"
+      }
+    },
+    "focusRing": {
+      "color": "{semantic.color.border.brand}",
+      "width": "{semantic.border.width.default}",
+      "offset": "{semantic.spacing.2}",
+      "style": "solid"
+    }
+  },
+  "layout": {
+    "childOrder": [
+      "iconStart",
+      "iconEnd",
+      "label",
+      "spinner",
+      "icon"
+    ],
+    "display": "inline-flex",
+    "align": "center",
+    "justify": "center",
+    "direction": "horizontal"
+  },
+  "composition": {
+    "children": {
+      "iconStart": {
+        "contentType": "icon",
+        "boundTo": "prop:iconStart",
+        "required": false,
+        "hiddenIn": [
+          "loading"
+        ]
+      },
+      "iconEnd": {
+        "contentType": "icon",
+        "boundTo": "prop:iconEnd",
+        "required": false,
+        "hiddenIn": [
+          "loading"
+        ]
+      },
+      "label": {
+        "contentType": "text",
+        "boundTo": "prop:label",
+        "required": true
+      },
+      "spinner": {
+        "contentType": "indicator",
+        "required": false,
+        "visibleIn": [
+          "loading"
+        ]
+      },
+      "icon": {
+        "contentType": "icon",
+        "required": false,
+        "hiddenIn": [
+          "loading"
+        ]
+      }
+    }
+  },
+  "behavior": {
+    "initial": null,
+    "guards": {},
+    "states": {}
+  },
+  "motion": {
+    "transitions": [
+      {
+        "on": "*->*",
+        "properties": [
+          "fill"
+        ],
+        "duration": 120,
+        "curve": {
+          "type": "ease"
+        },
+        "interruptible": true,
+        "reducedMotion": "instant"
+      },
+      {
+        "on": "*->*",
+        "properties": [
+          "borderColor"
+        ],
+        "duration": 120,
+        "curve": {
+          "type": "ease"
+        },
+        "interruptible": true,
+        "reducedMotion": "instant"
+      },
+      {
+        "on": "*->*",
+        "properties": [
+          "labelColor"
+        ],
+        "duration": 120,
+        "curve": {
+          "type": "ease"
+        },
+        "interruptible": true,
+        "reducedMotion": "instant"
+      }
+    ],
+    "loops": [
+      {
+        "id": "ds-button-spin",
+        "activeIn": [
+          "loading"
+        ],
+        "property": "rotation",
+        "from": 0,
+        "to": 360,
+        "duration": 700,
+        "curve": {
+          "type": "linear"
+        },
+        "iterations": "infinite",
+        "reducedMotion": "fade"
+      }
+    ]
+  },
+  "a11y": {
+    "role": "button",
+    "state": {
+      "busy": true,
+      "disabled": true
+    },
+    "label": {
+      "source": "prop:label",
+      "required": true
+    },
+    "minTargetSize": "{semantic.size.48}",
+    "focus": {
+      "indicator": "focusRing"
+    },
+    "keyboard": []
+  },
+  "adaptable": {}
+}

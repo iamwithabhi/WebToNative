@@ -1,0 +1,533 @@
+{
+  "$schema": "../schema/contract.schema.json",
+  "id": "button",
+  "name": "Button",
+  "description": "A single-action control. Triggers an operation when activated.",
+  "contractVersion": "1.0.0",
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "tokens": {
+    "border.default": {
+      "value": null,
+      "type": "color"
+    },
+    "brand.500": {
+      "value": null,
+      "type": "color"
+    },
+    "danger.500": {
+      "value": null,
+      "type": "color"
+    },
+    "ds.brand.200": {
+      "value": null,
+      "type": "color"
+    },
+    "ds.brand.600": {
+      "value": null,
+      "type": "color"
+    },
+    "ds.brand.700": {
+      "value": null,
+      "type": "color"
+    },
+    "ds.focus.default": {
+      "value": null,
+      "type": "color"
+    },
+    "ds.text.disabled": {
+      "value": null,
+      "type": "color"
+    },
+    "radius.md": {
+      "value": null,
+      "type": "dimension"
+    },
+    "radius.sm": {
+      "value": null,
+      "type": "dimension"
+    },
+    "space.lg": {
+      "value": null,
+      "type": "dimension"
+    },
+    "space.md": {
+      "value": null,
+      "type": "dimension"
+    },
+    "space.sm": {
+      "value": null,
+      "type": "dimension"
+    },
+    "space.xs": {
+      "value": null,
+      "type": "dimension"
+    },
+    "surface.default": {
+      "value": null,
+      "type": "color"
+    },
+    "text.onBrand": {
+      "value": null,
+      "type": "color"
+    },
+    "text.primary": {
+      "value": null,
+      "type": "color"
+    },
+    "textSize.lg": {
+      "value": null,
+      "type": "dimension"
+    },
+    "textSize.md": {
+      "value": null,
+      "type": "dimension"
+    },
+    "textSize.sm": {
+      "value": null,
+      "type": "dimension"
+    },
+    "surface.muted": {
+      "value": null,
+      "type": "color"
+    },
+    "surface.subtle": {
+      "value": null,
+      "type": "color"
+    },
+    "text.disabled": {
+      "value": null,
+      "type": "color"
+    }
+  },
+  "props": {
+    "variant": {
+      "kind": "enum",
+      "values": [
+        "primary",
+        "secondary",
+        "ghost",
+        "destructive"
+      ],
+      "default": "primary",
+      "axis": true
+    },
+    "size": {
+      "kind": "enum",
+      "values": [
+        "sm",
+        "md",
+        "lg"
+      ],
+      "default": "md",
+      "axis": true
+    },
+    "label": {
+      "kind": "string",
+      "required": true
+    },
+    "iconStart": {
+      "kind": "slot",
+      "required": false,
+      "contentType": "node",
+      "names": {
+        "ios": "leadingIcon",
+        "android": "leadingIcon"
+      }
+    },
+    "fullWidth": {
+      "kind": "boolean",
+      "required": false,
+      "default": false,
+      "platforms": {
+        "web": {
+          "supported": true
+        },
+        "ios": {
+          "supported": false,
+          "as": "modifier",
+          "note": "use .frame(maxWidth: .infinity) at the call site"
+        },
+        "android": {
+          "supported": false,
+          "as": "modifier",
+          "note": "use Modifier.fillMaxWidth() at the call site"
+        }
+      }
+    },
+    "onClick": {
+      "kind": "event",
+      "required": false,
+      "names": {
+        "ios": "action",
+        "android": "onClick"
+      }
+    }
+  },
+  "states": [
+    "idle",
+    "hover",
+    "focused",
+    "pressed",
+    "disabled",
+    "loading"
+  ],
+  "appearance": {
+    "roles": [
+      "fill",
+      "labelColor",
+      "borderColor"
+    ],
+    "byVariant": {
+      "primary": {
+        "default": {
+          "fill": "{brand.500}",
+          "labelColor": "{text.onBrand}",
+          "borderColor": "transparent"
+        },
+        "hover": {
+          "fill": "{ds.brand.600}"
+        },
+        "pressed": {
+          "fill": "{ds.brand.700}"
+        },
+        "disabled": {
+          "fill": "{ds.brand.200}",
+          "labelColor": "{ds.text.disabled}"
+        },
+        "loading": {
+          "fill": "{ds.brand.600}"
+        },
+        "focused": {
+          "fill": "{ds.brand.600}"
+        }
+      },
+      "secondary": {
+        "default": {
+          "fill": "{surface.default}",
+          "labelColor": "{text.primary}",
+          "borderColor": "{border.default}"
+        },
+        "hover": {
+          "fill": "{surface.muted}"
+        },
+        "focused": {
+          "fill": "{surface.muted}"
+        },
+        "pressed": {
+          "fill": "{surface.subtle}"
+        },
+        "disabled": {
+          "labelColor": "{text.disabled}"
+        },
+        "loading": {}
+      },
+      "ghost": {
+        "default": {
+          "fill": "transparent",
+          "labelColor": "{text.primary}",
+          "borderColor": "transparent"
+        },
+        "hover": {
+          "fill": "{surface.muted}"
+        },
+        "focused": {
+          "fill": "{surface.muted}"
+        },
+        "pressed": {
+          "fill": "{surface.subtle}"
+        },
+        "disabled": {
+          "labelColor": "{text.disabled}"
+        },
+        "loading": {}
+      },
+      "destructive": {
+        "default": {
+          "fill": "{danger.500}",
+          "labelColor": "{text.onBrand}",
+          "borderColor": "transparent"
+        },
+        "hover": {
+          "fill": "{surface.muted}"
+        },
+        "focused": {
+          "fill": "{surface.muted}"
+        },
+        "pressed": {
+          "fill": "{surface.subtle}"
+        },
+        "disabled": {
+          "labelColor": "{text.disabled}"
+        },
+        "loading": {}
+      }
+    },
+    "bySize": {
+      "sm": {
+        "padX": "{space.sm}",
+        "padY": "{space.xs}",
+        "gap": "{space.xs}",
+        "radius": "{radius.sm}",
+        "fontSize": "{textSize.sm}"
+      },
+      "md": {
+        "padX": "{space.md}",
+        "padY": "{space.sm}",
+        "gap": "{space.xs}",
+        "radius": "{radius.md}",
+        "fontSize": "{textSize.md}"
+      },
+      "lg": {
+        "padX": "{space.lg}",
+        "padY": "{space.md}",
+        "gap": "{space.sm}",
+        "radius": "{radius.md}",
+        "fontSize": "{textSize.lg}"
+      }
+    },
+    "focusRing": {
+      "color": "{ds.focus.default}",
+      "width": 2,
+      "offset": 2,
+      "style": "solid"
+    }
+  },
+  "layout": {
+    "direction": "horizontal",
+    "align": "center",
+    "justify": "center",
+    "childOrder": [
+      "iconStart",
+      "label",
+      "spinner"
+    ],
+    "sizing": {
+      "width": "hug",
+      "height": "hug"
+    }
+  },
+  "composition": {
+    "children": {
+      "iconStart": {
+        "contentType": "icon",
+        "boundTo": "prop:iconStart",
+        "required": false,
+        "hiddenIn": [
+          "loading"
+        ]
+      },
+      "label": {
+        "contentType": "text",
+        "boundTo": "prop:label",
+        "required": true
+      },
+      "spinner": {
+        "contentType": "indicator",
+        "required": false,
+        "visibleIn": [
+          "loading"
+        ]
+      }
+    }
+  },
+  "behavior": {
+    "initial": "idle",
+    "guards": {
+      "interactive": "!props.disabled && !props.loading"
+    },
+    "states": {
+      "idle": {
+        "on": {
+          "HOVER_IN": {
+            "target": "hover",
+            "platforms": [
+              "web"
+            ]
+          },
+          "FOCUS": {
+            "target": "focused"
+          },
+          "PRESS": {
+            "target": "pressed",
+            "guard": "interactive"
+          }
+        }
+      },
+      "hover": {
+        "on": {
+          "HOVER_OUT": {
+            "target": "idle",
+            "platforms": [
+              "web"
+            ]
+          },
+          "PRESS": {
+            "target": "pressed",
+            "guard": "interactive"
+          }
+        }
+      },
+      "focused": {
+        "on": {
+          "BLUR": {
+            "target": "idle"
+          },
+          "PRESS": {
+            "target": "pressed",
+            "guard": "interactive"
+          }
+        }
+      },
+      "pressed": {
+        "on": {
+          "RELEASE_INSIDE": {
+            "target": "idle",
+            "actions": [
+              "emit:onPress"
+            ]
+          },
+          "RELEASE_OUTSIDE": {
+            "target": "idle"
+          }
+        }
+      },
+      "disabled": {
+        "on": {}
+      },
+      "loading": {
+        "on": {
+          "RESOLVE": {
+            "target": "idle"
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "transitions": [
+      {
+        "on": "idle->hover",
+        "properties": [
+          "fill"
+        ],
+        "duration": 150,
+        "curve": {
+          "type": "cubicBezier",
+          "value": [
+            0.4,
+            0,
+            0.2,
+            1
+          ]
+        },
+        "interruptible": true,
+        "reducedMotion": "instant"
+      },
+      {
+        "on": "*->pressed",
+        "properties": [
+          "scale",
+          "fill"
+        ],
+        "to": {
+          "scale": 0.97
+        },
+        "curve": {
+          "type": "spring",
+          "stiffness": 400,
+          "damping": 30,
+          "mass": 1
+        },
+        "interruptible": true,
+        "reducedMotion": "instant"
+      }
+    ],
+    "loops": [
+      {
+        "id": "ds-spin",
+        "activeIn": [
+          "loading"
+        ],
+        "property": "rotation",
+        "from": 0,
+        "to": 360,
+        "duration": 800,
+        "curve": {
+          "type": "linear"
+        },
+        "iterations": "infinite",
+        "reducedMotion": "fade"
+      }
+    ]
+  },
+  "a11y": {
+    "role": "button",
+    "label": {
+      "source": "prop:label",
+      "required": true
+    },
+    "state": {
+      "busy": true,
+      "disabled": true
+    },
+    "focus": {
+      "focusable": true,
+      "indicator": "focusRing"
+    },
+    "keyboard": [
+      {
+        "key": "Enter",
+        "action": "activate"
+      },
+      {
+        "key": "Space",
+        "action": "activate"
+      }
+    ],
+    "minTargetSize": 44
+  },
+  "adaptable": {
+    "pressFeedback": {
+      "intent": "immediate perceptible response on touch down",
+      "preferred": "platformNative",
+      "envelope": {
+        "allowed": [
+          "ripple",
+          "highlight",
+          "scale"
+        ],
+        "maxDurationMs": 200,
+        "mustPreserveLayout": true,
+        "mustBePerceivable": true
+      },
+      "fallback": {
+        "type": "scale",
+        "to": 0.97
+      }
+    },
+    "loadingIndicator": {
+      "intent": "indeterminate progress shown in place of the leading icon",
+      "preferred": "platformNative",
+      "envelope": {
+        "sizeRange": [
+          16,
+          20
+        ],
+        "colorRole": "labelColor",
+        "position": "leading",
+        "mustPreserveLayout": true
+      },
+      "fallback": {
+        "type": "rotatingArc",
+        "durationMs": 800
+      }
+    }
+  },
+  "hitArea": {
+    "strategy": "expandInvisible",
+    "minPt": 44
+  }
+}

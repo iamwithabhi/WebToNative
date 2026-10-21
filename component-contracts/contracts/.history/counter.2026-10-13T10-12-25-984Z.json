@@ -1,0 +1,1113 @@
+{
+  "$schema": "../schema/contract.schema.json",
+  "id": "counter",
+  "name": "Counter",
+  "description": "",
+  "contractVersion": "0.1.0",
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "tokens": {
+    "semantic.border.radius.8": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.border.width.default": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.color.background.default": {
+      "value": null,
+      "type": "color"
+    },
+    "semantic.color.border.brand": {
+      "value": null,
+      "type": "color"
+    },
+    "semantic.color.border.moderate": {
+      "value": null,
+      "type": "color"
+    },
+    "semantic.color.disabled.icon": {
+      "value": null,
+      "type": "color"
+    },
+    "semantic.color.icon.brand.primary": {
+      "value": null,
+      "type": "color"
+    },
+    "semantic.color.text.primary": {
+      "value": null,
+      "type": "color"
+    },
+    "semantic.size.24": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.size.32": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.size.40": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.size.48": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.spacing.0": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.spacing.2": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.typography.label.l.font.family": {
+      "value": null,
+      "type": "fontFamily"
+    },
+    "semantic.typography.label.l.font.size": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.typography.label.l.font.weight": {
+      "value": null,
+      "type": "fontWeight"
+    },
+    "semantic.typography.label.l.letter.spacing": {
+      "value": null,
+      "type": "dimension"
+    },
+    "semantic.typography.label.l.line.height": {
+      "value": null,
+      "type": "dimension"
+    }
+  },
+  "props": {
+    "value": {
+      "kind": "number",
+      "required": false,
+      "description": "Controlled value. Pair with `onChange`."
+    },
+    "defaultValue": {
+      "kind": "number",
+      "required": false,
+      "default": 0,
+      "description": "Starting value when uncontrolled."
+    },
+    "min": {
+      "kind": "number",
+      "required": false,
+      "default": 0
+    },
+    "max": {
+      "kind": "number",
+      "required": false,
+      "default": 99
+    },
+    "step": {
+      "kind": "number",
+      "required": false,
+      "default": 1
+    },
+    "onChange": {
+      "kind": "event",
+      "required": false,
+      "description": "Fired with the clamped next value on every increment/decrement."
+    },
+    "frozen": {
+      "kind": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Read-only. Exposed as `aria-readonly`; the value stays focusable and readable."
+    },
+    "fullWidth": {
+      "kind": "boolean",
+      "required": false,
+      "default": false
+    },
+    "label": {
+      "kind": "string",
+      "required": false,
+      "default": "Quantity",
+      "description": "Accessible name for the spinbutton, e.g. \"Quantity\". Make it specific when a page has more than one Counter — \"Quantity, Blue T-shirt\" beats \"Quantity\". Ignored when `labelledBy` is set."
+    },
+    "labelledBy": {
+      "kind": "string",
+      "required": false,
+      "description": "`id` of existing visible text to name the spinbutton. Prefer this over `label` when the name is already on screen, so the two cannot drift apart."
+    },
+    "describedBy": {
+      "kind": "string",
+      "required": false,
+      "description": "`id` of supporting text (help, limits, errors) to associate with the value."
+    },
+    "formatValueText": {
+      "kind": "function",
+      "required": false,
+      "description": "Human-readable rendering of the value for assistive tech, e.g. `(n) => \\`${n} items\\``. Maps to `aria-valuetext`. Use when the bare number is ambiguous out of context."
+    },
+    "decrementLabel": {
+      "kind": "string",
+      "required": false,
+      "description": "Overrides the decrement button's name. Defaults to `\"Decrease <label>\"` so the button says what it acts on rather than a bare \"Decrease\"."
+    },
+    "incrementLabel": {
+      "kind": "string",
+      "required": false,
+      "description": "Overrides the increment button's name. Defaults to `\"Increase <label>\"`."
+    },
+    "className": {
+      "kind": "string",
+      "required": false
+    }
+  },
+  "states": [
+    "idle",
+    "focused",
+    "pressed"
+  ],
+  "appearance": {
+    "roles": [
+      "display",
+      "alignItems",
+      "boxSizing",
+      "width",
+      "height",
+      "borderStyle",
+      "borderWidth",
+      "borderColor",
+      "radius",
+      "fill"
+    ],
+    "byVariant": {
+      "default": {
+        "default": {
+          "display": "inline-flex",
+          "alignItems": "center",
+          "boxSizing": "border-box",
+          "width": {
+            "expression": "2 * {semantic.size.40} + {semantic.size.24}",
+            "syntax": "arithmetic"
+          },
+          "height": "{semantic.size.32}",
+          "borderStyle": "solid",
+          "borderWidth": "{semantic.border.width.default}",
+          "borderColor": "{semantic.color.border.moderate}",
+          "radius": "{semantic.border.radius.8}",
+          "fill": "{semantic.color.background.default}"
+        }
+      }
+    },
+    "bySize": {
+      "default": {}
+    }
+  },
+  "layout": {
+    "childOrder": [
+      "button",
+      "value",
+      "button2"
+    ],
+    "display": "inline-flex",
+    "align": "center",
+    "direction": "horizontal"
+  },
+  "composition": {
+    "tree": {
+      "kind": "element",
+      "element": "div",
+      "styleClass": "ds-counter",
+      "attributes": {
+        "data-full-width": "prop:fullWidth",
+        "data-frozen": "expr:frozen || undefined"
+      },
+      "references": [
+        "fullWidth",
+        "frozen"
+      ],
+      "children": [
+        {
+          "kind": "element",
+          "element": "button",
+          "styleClass": "ds-counter__button",
+          "role": "button",
+          "a11y": {
+            "label": "expr:decrementName"
+          },
+          "spreads": [
+            "buttonProps(-step, atMin)"
+          ],
+          "references": [
+            "decrementName",
+            "buttonProps",
+            "step",
+            "atMin"
+          ],
+          "children": [
+            {
+              "kind": "component",
+              "component": "RemoveSmallIcon",
+              "styleClass": "ds-counter__icon",
+              "children": [],
+              "name": "icon",
+              "styles": {
+                "default": {
+                  "display": "block"
+                }
+              }
+            }
+          ],
+          "name": "button",
+          "styles": {
+            "default": {
+              "position": "relative",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "flexBasis": 0,
+              "alignSelf": "stretch",
+              "display": "flex",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "padTop": "{semantic.spacing.0}",
+              "padRight": "{semantic.spacing.0}",
+              "padBottom": "{semantic.spacing.0}",
+              "padLeft": "{semantic.spacing.0}",
+              "borderWidth": 0,
+              "fill": "none",
+              "labelColor": "{semantic.color.icon.brand.primary}"
+            }
+          }
+        },
+        {
+          "kind": "element",
+          "element": "div",
+          "styleClass": "ds-counter__value",
+          "role": "spinbutton",
+          "content": "prop:value",
+          "a11y": {
+            "label": "expr:labelledBy ? undefined : label",
+            "labelledBy": "prop:labelledBy",
+            "describedBy": "prop:describedBy",
+            "readonly": true,
+            "stateWhen": {
+              "readonly": "prop:frozen"
+            },
+            "value": {
+              "now": "prop:value",
+              "min": "prop:min",
+              "max": "prop:max",
+              "text": "expr:formatValueText?.(value)"
+            },
+            "focusable": true
+          },
+          "attributes": {
+            "data-pop": "expr:pop"
+          },
+          "handlers": [
+            "onKeyDown"
+          ],
+          "references": [
+            "spinRef",
+            "spinId",
+            "pop",
+            "labelledBy",
+            "label",
+            "describedBy",
+            "value",
+            "min",
+            "max",
+            "formatValueText",
+            "frozen",
+            "onKeyDown"
+          ],
+          "children": [],
+          "name": "value",
+          "styles": {
+            "default": {
+              "flexGrow": 0,
+              "flexShrink": 0,
+              "flexBasis": "{semantic.size.24}",
+              "width": "{semantic.size.24}",
+              "alignSelf": "stretch",
+              "display": "flex",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "fontFamily": "{semantic.typography.label.l.font.family}",
+              "fontSize": "{semantic.typography.label.l.font.size}",
+              "fontWeight": "{semantic.typography.label.l.font.weight}",
+              "lineHeight": "{semantic.typography.label.l.line.height}",
+              "letterSpacing": "{semantic.typography.label.l.letter.spacing}",
+              "labelColor": "{semantic.color.text.primary}",
+              "fontVariantNumeric": "tabular-nums"
+            }
+          }
+        },
+        {
+          "kind": "element",
+          "element": "button",
+          "styleClass": "ds-counter__button",
+          "role": "button",
+          "a11y": {
+            "label": "expr:incrementName"
+          },
+          "spreads": [
+            "buttonProps(step, atMax)"
+          ],
+          "references": [
+            "incrementName",
+            "buttonProps",
+            "step",
+            "atMax"
+          ],
+          "children": [
+            {
+              "kind": "component",
+              "component": "AddSmallIcon",
+              "styleClass": "ds-counter__icon",
+              "children": [],
+              "name": "icon2",
+              "styles": {
+                "default": {
+                  "display": "block"
+                }
+              }
+            }
+          ],
+          "name": "button2",
+          "styles": {
+            "default": {
+              "position": "relative",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "flexBasis": 0,
+              "alignSelf": "stretch",
+              "display": "flex",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "padTop": "{semantic.spacing.0}",
+              "padRight": "{semantic.spacing.0}",
+              "padBottom": "{semantic.spacing.0}",
+              "padLeft": "{semantic.spacing.0}",
+              "borderWidth": 0,
+              "fill": "none",
+              "labelColor": "{semantic.color.icon.brand.primary}"
+            }
+          }
+        }
+      ],
+      "name": "root",
+      "styles": {
+        "default": {
+          "display": "inline-flex",
+          "alignItems": "center",
+          "boxSizing": "border-box",
+          "width": {
+            "expression": "2 * {semantic.size.40} + {semantic.size.24}",
+            "syntax": "arithmetic"
+          },
+          "height": "{semantic.size.32}",
+          "borderStyle": "solid",
+          "borderWidth": "{semantic.border.width.default}",
+          "borderColor": "{semantic.color.border.moderate}",
+          "radius": "{semantic.border.radius.8}",
+          "fill": "{semantic.color.background.default}"
+        }
+      }
+    },
+    "children": {}
+  },
+  "behavior": {
+    "initial": null,
+    "guards": {},
+    "states": {}
+  },
+  "motion": {
+    "transitions": [],
+    "loops": []
+  },
+  "a11y": {
+    "label": {
+      "source": "prop:label",
+      "required": true
+    },
+    "minTargetSize": "{semantic.size.48}",
+    "focus": {
+      "indicator": "focusRing"
+    },
+    "keyboard": [],
+    "state": {}
+  },
+  "adaptable": {},
+  "stateDocs": {},
+  "visualRules": [
+    {
+      "selector": ".ds-counter",
+      "targetClass": "ds-counter",
+      "pseudoElement": null,
+      "conditions": [],
+      "media": [],
+      "properties": {
+        "display": "inline-flex",
+        "alignItems": "center",
+        "boxSizing": "border-box",
+        "width": {
+          "expression": "2 * {semantic.size.40} + {semantic.size.24}",
+          "syntax": "arithmetic"
+        },
+        "height": "{semantic.size.32}",
+        "borderStyle": "solid",
+        "borderWidth": "{semantic.border.width.default}",
+        "borderColor": "{semantic.color.border.moderate}",
+        "radius": "{semantic.border.radius.8}",
+        "fill": "{semantic.color.background.default}"
+      },
+      "transitions": [],
+      "order": 0
+    },
+    {
+      "selector": ".ds-counter[data-full-width='true']",
+      "targetClass": "ds-counter",
+      "pseudoElement": null,
+      "conditions": [
+        {
+          "subject": "self",
+          "className": "ds-counter",
+          "attribute": "data-full-width",
+          "equals": "true"
+        }
+      ],
+      "media": [],
+      "properties": {
+        "width": {
+          "value": 100,
+          "unit": "%"
+        }
+      },
+      "transitions": [],
+      "order": 1
+    },
+    {
+      "selector": ".ds-counter__button",
+      "targetClass": "ds-counter__button",
+      "pseudoElement": null,
+      "conditions": [],
+      "media": [],
+      "properties": {
+        "position": "relative",
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "flexBasis": 0,
+        "alignSelf": "stretch",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "padTop": "{semantic.spacing.0}",
+        "padRight": "{semantic.spacing.0}",
+        "padBottom": "{semantic.spacing.0}",
+        "padLeft": "{semantic.spacing.0}",
+        "borderWidth": 0,
+        "fill": "none",
+        "labelColor": "{semantic.color.icon.brand.primary}"
+      },
+      "transitions": [],
+      "order": 2
+    },
+    {
+      "selector": ".ds-counter__button::after",
+      "targetClass": "ds-counter__button",
+      "pseudoElement": "after",
+      "conditions": [],
+      "media": [],
+      "properties": {
+        "content": "''",
+        "position": "absolute",
+        "top": {
+          "value": 50,
+          "unit": "%"
+        },
+        "left": {
+          "value": 50,
+          "unit": "%"
+        },
+        "width": {
+          "value": 100,
+          "unit": "%"
+        },
+        "height": {
+          "value": 100,
+          "unit": "%"
+        },
+        "minWidth": "{semantic.size.48}",
+        "minHeight": "{semantic.size.48}",
+        "transform": {
+          "translateX": {
+            "value": -50,
+            "unit": "%"
+          },
+          "translateY": {
+            "value": -50,
+            "unit": "%"
+          }
+        }
+      },
+      "transitions": [],
+      "order": 3
+    },
+    {
+      "selector": ".ds-counter__button[aria-disabled='true']::after",
+      "targetClass": "ds-counter__button",
+      "pseudoElement": "after",
+      "conditions": [
+        {
+          "subject": "self",
+          "className": "ds-counter__button",
+          "attribute": "aria-disabled",
+          "equals": "true"
+        }
+      ],
+      "media": [],
+      "properties": {
+        "content": "none"
+      },
+      "transitions": [],
+      "order": 4
+    },
+    {
+      "selector": ".ds-counter__button[aria-disabled='true']",
+      "targetClass": "ds-counter__button",
+      "pseudoElement": null,
+      "conditions": [
+        {
+          "subject": "self",
+          "className": "ds-counter__button",
+          "attribute": "aria-disabled",
+          "equals": "true"
+        }
+      ],
+      "media": [],
+      "properties": {
+        "labelColor": "{semantic.color.disabled.icon}"
+      },
+      "transitions": [],
+      "order": 5
+    },
+    {
+      "selector": ".ds-counter__button:focus-visible",
+      "targetClass": "ds-counter__button",
+      "pseudoElement": null,
+      "conditions": [
+        {
+          "subject": "self",
+          "className": "ds-counter__button",
+          "state": "focused"
+        }
+      ],
+      "media": [],
+      "properties": {
+        "outlineStyle": "solid",
+        "outlineWidth": {
+          "expression": "2 * {semantic.border.width.default}",
+          "syntax": "arithmetic"
+        },
+        "outlineColor": "{semantic.color.border.brand}",
+        "outlineOffset": {
+          "expression": "-1 * ({semantic.border.width.default} + {semantic.spacing.2})",
+          "syntax": "arithmetic"
+        },
+        "radius": {
+          "expression": "{semantic.border.radius.8} - {semantic.spacing.2}",
+          "syntax": "arithmetic"
+        }
+      },
+      "transitions": [],
+      "order": 6
+    },
+    {
+      "selector": ".ds-counter__value:focus-visible",
+      "targetClass": "ds-counter__value",
+      "pseudoElement": null,
+      "conditions": [
+        {
+          "subject": "self",
+          "className": "ds-counter__value",
+          "state": "focused"
+        }
+      ],
+      "media": [],
+      "properties": {
+        "outlineStyle": "solid",
+        "outlineWidth": {
+          "expression": "2 * {semantic.border.width.default}",
+          "syntax": "arithmetic"
+        },
+        "outlineColor": "{semantic.color.border.brand}",
+        "outlineOffset": {
+          "expression": "-1 * ({semantic.border.width.default} + {semantic.spacing.2})",
+          "syntax": "arithmetic"
+        },
+        "radius": {
+          "expression": "{semantic.border.radius.8} - {semantic.spacing.2}",
+          "syntax": "arithmetic"
+        }
+      },
+      "transitions": [],
+      "order": 7
+    },
+    {
+      "selector": ".ds-counter__icon",
+      "targetClass": "ds-counter__icon",
+      "pseudoElement": null,
+      "conditions": [],
+      "media": [],
+      "properties": {
+        "display": "block"
+      },
+      "transitions": [
+        {
+          "property": "transform",
+          "durationMs": 100,
+          "delayMs": 0,
+          "curve": {
+            "type": "linear"
+          }
+        }
+      ],
+      "order": 8
+    },
+    {
+      "selector": ".ds-counter__button:active:not([aria-disabled='true']) .ds-counter__icon",
+      "targetClass": "ds-counter__icon",
+      "pseudoElement": null,
+      "conditions": [
+        {
+          "subject": "ancestor",
+          "className": "ds-counter__button",
+          "attribute": "aria-disabled",
+          "equals": "true",
+          "negate": true
+        },
+        {
+          "subject": "ancestor",
+          "className": "ds-counter__button",
+          "state": "pressed"
+        }
+      ],
+      "media": [],
+      "properties": {
+        "transform": {
+          "scale": 0.9
+        }
+      },
+      "transitions": [],
+      "order": 9
+    },
+    {
+      "selector": ".ds-counter__value",
+      "targetClass": "ds-counter__value",
+      "pseudoElement": null,
+      "conditions": [],
+      "media": [],
+      "properties": {
+        "flexGrow": 0,
+        "flexShrink": 0,
+        "flexBasis": "{semantic.size.24}",
+        "width": "{semantic.size.24}",
+        "alignSelf": "stretch",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "fontFamily": "{semantic.typography.label.l.font.family}",
+        "fontSize": "{semantic.typography.label.l.font.size}",
+        "fontWeight": "{semantic.typography.label.l.font.weight}",
+        "lineHeight": "{semantic.typography.label.l.line.height}",
+        "letterSpacing": "{semantic.typography.label.l.letter.spacing}",
+        "labelColor": "{semantic.color.text.primary}",
+        "fontVariantNumeric": "tabular-nums"
+      },
+      "transitions": [
+        {
+          "property": "transform",
+          "durationMs": 100,
+          "delayMs": 0,
+          "curve": {
+            "type": "linear"
+          }
+        }
+      ],
+      "order": 10
+    },
+    {
+      "selector": ".ds-counter__value[data-pop='true']",
+      "targetClass": "ds-counter__value",
+      "pseudoElement": null,
+      "conditions": [
+        {
+          "subject": "self",
+          "className": "ds-counter__value",
+          "attribute": "data-pop",
+          "equals": "true"
+        }
+      ],
+      "media": [],
+      "properties": {
+        "transform": {
+          "scale": 1.1
+        }
+      },
+      "transitions": [],
+      "order": 11
+    },
+    {
+      "selector": ".ds-counter__icon",
+      "targetClass": "ds-counter__icon",
+      "pseudoElement": null,
+      "conditions": [],
+      "media": [
+        "(prefers-reduced-motion: reduce)"
+      ],
+      "properties": {
+        "transitionDurationMs": 0.01
+      },
+      "transitions": [],
+      "order": 12
+    },
+    {
+      "selector": ".ds-counter__value",
+      "targetClass": "ds-counter__value",
+      "pseudoElement": null,
+      "conditions": [],
+      "media": [
+        "(prefers-reduced-motion: reduce)"
+      ],
+      "properties": {
+        "transitionDurationMs": 0.01
+      },
+      "transitions": [],
+      "order": 13
+    }
+  ],
+  "keyframes": {},
+  "ignoredProperties": {
+    "webOnly": [
+      "-webkit-tap-highlight-color",
+      "-webkit-user-select",
+      "cursor",
+      "touch-action",
+      "user-select"
+    ],
+    "unrecognised": []
+  },
+  "sourceNotes": [
+    "pop: activation triggers and guards require manual translation from source; no event or prop-change semantics inferred."
+  ],
+  "sourceConstants": [
+    {
+      "name": "HOLD_INTERVAL_MS",
+      "kind": "number",
+      "value": 150,
+      "description": "Repeat interval while a button is held.",
+      "source": "const HOLD_INTERVAL_MS = 150;"
+    },
+    {
+      "name": "POP_MS",
+      "kind": "number",
+      "value": 100,
+      "description": "How long the value stays scaled up after a change.",
+      "source": "const POP_MS = 100;"
+    },
+    {
+      "name": "HAPTIC_MS",
+      "kind": "number",
+      "value": 8,
+      "description": "Haptic pulse length on supporting devices.",
+      "source": "const HAPTIC_MS = 8;"
+    },
+    {
+      "name": "LARGE_STEP_FACTOR",
+      "kind": "number",
+      "value": 10,
+      "description": "PageUp/PageDown multiplier.",
+      "source": "const LARGE_STEP_FACTOR = 10;"
+    }
+  ],
+  "logic": [
+    {
+      "name": "clamp",
+      "kind": "function",
+      "scope": "module",
+      "source": "const clamp = (n: number, min: number, max: number) => Math.min(max, Math.max(min, n));",
+      "uses": []
+    },
+    {
+      "name": "isControlled",
+      "kind": "value",
+      "scope": "component",
+      "source": "const isControlled = controlledValue !== undefined;",
+      "uses": []
+    },
+    {
+      "name": "uncontrolled",
+      "kind": "state",
+      "scope": "component",
+      "hook": "useState",
+      "also": [
+        "setUncontrolled"
+      ],
+      "source": "const [uncontrolled, setUncontrolled] = useState(() => clamp(defaultValue, min, max));",
+      "uses": [
+        "clamp"
+      ]
+    },
+    {
+      "name": "value",
+      "kind": "value",
+      "scope": "component",
+      "source": "const value = clamp(isControlled ? controlledValue : uncontrolled, min, max);",
+      "uses": [
+        "clamp",
+        "isControlled",
+        "uncontrolled"
+      ]
+    },
+    {
+      "name": "pop",
+      "kind": "state",
+      "scope": "component",
+      "hook": "useState",
+      "also": [
+        "setPop"
+      ],
+      "source": "const [pop, setPop] = useState(false);",
+      "uses": []
+    },
+    {
+      "name": "popTimer",
+      "kind": "state",
+      "scope": "component",
+      "hook": "useRef",
+      "source": "const popTimer = useRef<ReturnType<typeof setTimeout>>(undefined);",
+      "uses": []
+    },
+    {
+      "name": "holdTimer",
+      "kind": "state",
+      "scope": "component",
+      "hook": "useRef",
+      "source": "const holdTimer = useRef<ReturnType<typeof setInterval>>(undefined);",
+      "uses": []
+    },
+    {
+      "name": "spinRef",
+      "kind": "state",
+      "scope": "component",
+      "hook": "useRef",
+      "source": "const spinRef = useRef<HTMLDivElement>(null);",
+      "uses": []
+    },
+    {
+      "name": "valueRef",
+      "kind": "state",
+      "scope": "component",
+      "hook": "useRef",
+      "source": "const valueRef = useRef(value);",
+      "uses": [
+        "value"
+      ]
+    },
+    {
+      "name": "valueRef.current",
+      "kind": "assignment",
+      "scope": "component",
+      "source": "valueRef.current = value;",
+      "uses": [
+        "value",
+        "valueRef"
+      ]
+    },
+    {
+      "name": "stopHold",
+      "kind": "function",
+      "scope": "component",
+      "source": "const stopHold = useCallback(() => {\n    clearInterval(holdTimer.current);\n    holdTimer.current = undefined;\n  }, []);",
+      "uses": [
+        "holdTimer"
+      ]
+    },
+    {
+      "name": "useEffect#1",
+      "kind": "effect",
+      "scope": "component",
+      "source": "useEffect(\n    () => () => {\n      clearInterval(holdTimer.current);\n      clearTimeout(popTimer.current);\n    },\n    [],\n  );",
+      "uses": [
+        "holdTimer",
+        "popTimer"
+      ]
+    },
+    {
+      "name": "useEffect#2",
+      "kind": "effect",
+      "scope": "component",
+      "source": "useEffect(() => {\n    if (frozen) return;\n    window.addEventListener('pointerup', stopHold);\n    window.addEventListener('pointercancel', stopHold);\n    return () => {\n      window.removeEventListener('pointerup', stopHold);\n      window.removeEventListener('pointercancel', stopHold);\n    };\n  }, [frozen, stopHold]);",
+      "uses": [
+        "stopHold"
+      ]
+    },
+    {
+      "name": "setValue",
+      "kind": "function",
+      "scope": "component",
+      "source": "const setValue = useCallback(\n    (next: number) => {\n      const clamped = clamp(next, min, max);\n      if (clamped === valueRef.current) {\n        stopHold();\n        return;\n      }\n\n      valueRef.current = clamped;\n      if (!isControlled) setUncontrolled(clamped);\n      onChange?.(clamped);\n\n      setPop(true);\n      clearTimeout(popTimer.current);\n      popTimer.current = setTimeout(() => setPop(false), POP_MS);\n\n      navigator.vibrate?.(HAPTIC_MS);\n    },\n    [isControlled, max, min, onChange, stopHold],\n  );",
+      "uses": [
+        "clamp",
+        "isControlled",
+        "pop",
+        "popTimer",
+        "stopHold",
+        "uncontrolled",
+        "valueRef"
+      ]
+    },
+    {
+      "name": "nudge",
+      "kind": "function",
+      "scope": "component",
+      "source": "const nudge = useCallback((delta: number) => setValue(valueRef.current + delta), [setValue]);",
+      "uses": [
+        "setValue",
+        "valueRef"
+      ]
+    },
+    {
+      "name": "startHold",
+      "kind": "function",
+      "scope": "component",
+      "source": "const startHold = useCallback(\n    (delta: number) => {\n      nudge(delta);\n      stopHold();\n      holdTimer.current = setInterval(() => nudge(delta), HOLD_INTERVAL_MS);\n    },\n    [nudge, stopHold],\n  );",
+      "uses": [
+        "holdTimer",
+        "nudge",
+        "stopHold"
+      ]
+    },
+    {
+      "name": "focusSpin",
+      "kind": "function",
+      "scope": "component",
+      "source": "const focusSpin = () => spinRef.current?.focus();",
+      "uses": [
+        "spinRef"
+      ]
+    },
+    {
+      "name": "onKeyDown",
+      "kind": "function",
+      "scope": "component",
+      "source": "const onKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {\n    if (frozen) return;\n    const large = step * LARGE_STEP_FACTOR;\n    const actions: Record<string, () => void> = {\n      ArrowUp: () => nudge(step),\n      ArrowRight: () => nudge(step),\n      ArrowDown: () => nudge(-step),\n      ArrowLeft: () => nudge(-step),\n      PageUp: () => nudge(large),\n      PageDown: () => nudge(-large),\n      Home: () => setValue(min),\n      End: () => setValue(max),\n    };\n    const action = actions[e.key];\n    if (!action) return;\n    e.preventDefault();\n    action();\n  };",
+      "uses": [
+        "nudge",
+        "setValue"
+      ]
+    },
+    {
+      "name": "atMin",
+      "kind": "value",
+      "scope": "component",
+      "source": "const atMin = value <= min;",
+      "uses": [
+        "value"
+      ]
+    },
+    {
+      "name": "atMax",
+      "kind": "value",
+      "scope": "component",
+      "source": "const atMax = value >= max;",
+      "uses": [
+        "value"
+      ]
+    },
+    {
+      "name": "spinId",
+      "kind": "state",
+      "scope": "component",
+      "hook": "useId",
+      "source": "const spinId = useId();",
+      "uses": []
+    },
+    {
+      "name": "nameForActions",
+      "kind": "value",
+      "scope": "component",
+      "source": "const nameForActions = labelledBy ? null : label;",
+      "uses": []
+    },
+    {
+      "name": "decrementName",
+      "kind": "value",
+      "scope": "component",
+      "source": "const decrementName = decrementLabel ?? (nameForActions ? `Decrease ${nameForActions}` : 'Decrease');",
+      "uses": [
+        "nameForActions"
+      ]
+    },
+    {
+      "name": "incrementName",
+      "kind": "value",
+      "scope": "component",
+      "source": "const incrementName = incrementLabel ?? (nameForActions ? `Increase ${nameForActions}` : 'Increase');",
+      "uses": [
+        "nameForActions"
+      ]
+    },
+    {
+      "name": "buttonProps",
+      "kind": "function",
+      "scope": "component",
+      "source": "const buttonProps = (delta: number, unavailable: boolean) => {\n    const blocked = frozen || unavailable;\n    return {\n      tabIndex: -1,\n      'aria-disabled': blocked || undefined,\n      ...(blocked\n        ? {}\n        : {\n            onPointerDown: () => {\n              focusSpin();\n              startHold(delta);\n            },\n            onPointerLeave: stopHold,\n            // detail === 0 means keyboard activation, which emits no pointer events.\n            onClick: (e: MouseEvent) => {\n              if (e.detail === 0) nudge(delta);\n            },\n          }),\n    };\n  };",
+      "uses": [
+        "focusSpin",
+        "nudge",
+        "startHold",
+        "stopHold"
+      ]
+    }
+  ],
+  "interactionBindings": [
+    {
+      "attribute": "data-pop",
+      "state": "pop",
+      "setter": "setPop",
+      "initial": false,
+      "source": {
+        "state": "const [pop, setPop] = useState(false)",
+        "attribute": "data-pop={pop}"
+      },
+      "activations": [
+        {
+          "value": true,
+          "expression": "setPop(true)",
+          "containingFunction": "setValue",
+          "contextExpression": "(next: number) => {\n      const clamped = clamp(next, min, max);\n      if (clamped === valueRef.current) {\n        stopHold();\n        return;\n      }\n\n      valueRef.current = clamped;\n      if (!isControlled) setUncontrolled(clamped);\n      onChange?.(clamped);\n\n      setPop(true);\n      clearTimeout(popTimer.current);\n      popTimer.current = setTimeout(() => setPop(false), POP_MS);\n\n      navigator.vibrate?.(HAPTIC_MS);\n    }",
+          "trigger": {
+            "expression": "setPop(true)",
+            "manualTranslation": true
+          }
+        }
+      ],
+      "reset": {
+        "value": false,
+        "delayMs": 100,
+        "expression": "setTimeout(() => setPop(false), POP_MS)",
+        "setterExpression": "setPop(false)",
+        "delayExpression": "POP_MS",
+        "delayEvidence": "const POP_MS = 100;",
+        "containingFunction": "setValue",
+        "contextExpression": "(next: number) => {\n      const clamped = clamp(next, min, max);\n      if (clamped === valueRef.current) {\n        stopHold();\n        return;\n      }\n\n      valueRef.current = clamped;\n      if (!isControlled) setUncontrolled(clamped);\n      onChange?.(clamped);\n\n      setPop(true);\n      clearTimeout(popTimer.current);\n      popTimer.current = setTimeout(() => setPop(false), POP_MS);\n\n      navigator.vibrate?.(HAPTIC_MS);\n    }"
+      }
+    }
+  ],
+  "hitArea": {}
+}

@@ -1,0 +1,62 @@
+.ds-icon {
+  display: inline-block;
+  flex: none;
+  width: var(--ds-icon-size);
+  height: var(--ds-icon-size);
+  color: var(--ds-icon-color);
+}
+
+/* Sizes map onto the semantic size scale, never raw px. */
+.ds-icon[data-size='xs'] {
+  --ds-icon-size: var(--semantic-size-12);
+}
+.ds-icon[data-size='sm'] {
+  --ds-icon-size: var(--semantic-size-16);
+}
+.ds-icon[data-size='md'] {
+  --ds-icon-size: var(--semantic-size-20);
+}
+.ds-icon[data-size='lg'] {
+  --ds-icon-size: var(--semantic-size-24);
+}
+.ds-icon[data-size='xl'] {
+  --ds-icon-size: var(--semantic-size-32);
+}
+
+/* Tones map onto Semantic.Color.Icon.* */
+.ds-icon[data-tone='inherit'] {
+  --ds-icon-color: currentColor;
+}
+.ds-icon[data-tone='brand'] {
+  --ds-icon-color: var(--semantic-color-icon-brand-primary);
+}
+.ds-icon[data-tone='bold'] {
+  --ds-icon-color: var(--semantic-color-icon-bold);
+}
+.ds-icon[data-tone='rich'] {
+  --ds-icon-color: var(--semantic-color-icon-rich);
+}
+.ds-icon[data-tone='emphasis'] {
+  --ds-icon-color: var(--semantic-color-icon-emphasis);
+}
+.ds-icon[data-tone='muted'] {
+  --ds-icon-color: var(--semantic-color-icon-muted);
+}
+.ds-icon[data-tone='soft'] {
+  --ds-icon-color: var(--semantic-color-icon-soft);
+}
+.ds-icon[data-tone='inverse'] {
+  --ds-icon-color: var(--semantic-color-icon-inverse);
+}
+.ds-icon[data-tone='success'] {
+  --ds-icon-color: var(--semantic-color-success-icon-bold);
+}
+.ds-icon[data-tone='warning'] {
+  --ds-icon-color: var(--semantic-color-warning-icon-bold);
+}
+.ds-icon[data-tone='danger'] {
+  --ds-icon-color: var(--semantic-color-danger-icon-bold);
+}
+.ds-icon[data-tone='info'] {
+  --ds-icon-color: var(--semantic-color-info-icon-bold);
+}

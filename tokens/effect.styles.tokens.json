@@ -1,0 +1,145 @@
+{
+  "Semantic": {
+    "Elevation": {
+      "None": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "offsetX": "0px",
+            "offsetY": "0px",
+            "blur": "0px",
+            "spread": "0px",
+            "color": "{Base.Color.Neutral.Black_A00}"
+          }
+        ]
+      },
+      "Top": {
+        "S": {
+          "$type": "shadow",
+          "$value": [
+            {
+              "offsetX": "0px",
+              "offsetY": "-2px",
+              "blur": "8px",
+              "spread": "0px",
+              "color": "{Base.Color.Neutral.Black_A05}"
+            }
+          ]
+        },
+        "M": {
+          "$type": "shadow",
+          "$value": [
+            {
+              "offsetX": "0px",
+              "offsetY": "-4px",
+              "blur": "12px",
+              "spread": "0px",
+              "color": "{Base.Color.Neutral.Black_A05}"
+            }
+          ]
+        },
+        "L": {
+          "$type": "shadow",
+          "$value": [
+            {
+              "offsetX": "0px",
+              "offsetY": "-4px",
+              "blur": "16px",
+              "spread": "0px",
+              "color": "{Base.Color.Neutral.Black_A15}"
+            }
+          ]
+        }
+      },
+      "Center": {
+        "S": {
+          "$type": "shadow",
+          "$value": [
+            {
+              "offsetX": "0px",
+              "offsetY": "0px",
+              "blur": "8px",
+              "spread": "0px",
+              "color": "{Base.Color.Neutral.Black_A05}"
+            }
+          ]
+        },
+        "M": {
+          "$type": "shadow",
+          "$value": [
+            {
+              "offsetX": "0px",
+              "offsetY": "0px",
+              "blur": "12px",
+              "spread": "0px",
+              "color": "{Base.Color.Neutral.Black_A05}"
+            }
+          ]
+        },
+        "L": {
+          "$type": "shadow",
+          "$value": [
+            {
+              "offsetX": "0px",
+              "offsetY": "0px",
+              "blur": "16px",
+              "spread": "0px",
+              "color": "{Base.Color.Neutral.Black_A15}"
+            }
+          ]
+        }
+      },
+      "Bottom": {
+        "S": {
+          "$type": "shadow",
+          "$value": [
+            {
+              "offsetX": "0px",
+              "offsetY": "2px",
+              "blur": "8px",
+              "spread": "0px",
+              "color": "{Base.Color.Neutral.Black_A05}"
+            }
+          ]
+        },
+        "M": {
+          "$type": "shadow",
+          "$description": "Used in Snackbar and Tabs.",
+          "$value": [
+            {
+              "offsetX": "0px",
+              "offsetY": "4px",
+              "blur": "12px",
+              "spread": "0px",
+              "color": "{Base.Color.Neutral.Black_A05}"
+            }
+          ]
+        },
+        "L": {
+          "$type": "shadow",
+          "$value": [
+            {
+              "offsetX": "0px",
+              "offsetY": "4px",
+              "blur": "16px",
+              "spread": "0px",
+              "color": "{Base.Color.Neutral.Black_A15}"
+            }
+          ]
+        }
+      }
+    },
+    "Blur": {
+      "Overlay": {
+        "$type": "shadow",
+        "$description": "Blur",
+        "$value": [
+          {
+            "backgroundBlur": true,
+            "blur": "8px"
+          }
+        ]
+      }
+    }
+  }
+}

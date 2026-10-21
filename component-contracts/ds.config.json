@@ -1,0 +1,24 @@
+{
+  "tokens": {
+    "_comment": "cssPrefix is optional. Left unset, any custom property the component reads but does not declare is treated as a design token. Token values are never resolved — they live in the design system — so the spec emits the token path and the consuming team maps it."
+  },
+  "contractsDir": "./contracts",
+  "outDir": "./platform-specs",
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "emit": {
+    "ios": [
+      "json"
+    ],
+    "android": [
+      "json"
+    ]
+  },
+  "frameworks": {
+    "ios": "swiftui",
+    "android": "compose"
+  },
+  "frameworksNote": "Optional. Names the UI framework each platform team builds in, so each spec includes an advisory implementationHints block of framework idioms for the concepts it uses. Remove a platform to leave its spec framework-agnostic."
+}

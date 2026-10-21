@@ -1,0 +1,30 @@
+{
+  "name": "Design Tokens",
+  "collections": {
+    "Base": {
+      "modes": {
+        "value": [
+          "Base.value.tokens.json"
+        ]
+      }
+    },
+    "🔒 Theme": {
+      "modes": {
+        "Light": [
+          "🔒 Theme.Light.tokens.json"
+        ],
+        "Dark": [
+          "🔒 Theme.Dark.tokens.json"
+        ]
+      }
+    }
+  },
+  "styles": {
+    "text": [
+      "text.styles.tokens.json"
+    ],
+    "effect": [
+      "effect.styles.tokens.json"
+    ]
+  }
+}

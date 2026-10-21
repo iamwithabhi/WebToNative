@@ -1,0 +1,2614 @@
+{
+  "$schema": "https://component-contracts.dev/schema/platform-spec-1.json",
+  "$note": "Platform-specific, framework-agnostic. Values in {braces} are token paths — resolve them through your own token accessor. Everything else is literal.",
+  "component": "counter",
+  "name": "Counter",
+  "description": null,
+  "platform": "ios",
+  "contractVersion": "0.1.0",
+  "generatedBy": "component-contracts v0.1.0",
+  "guide": {
+    "buildFrom": [
+      "props",
+      "axes",
+      "styles",
+      "nodes",
+      "animations",
+      "hitAreas",
+      "focusRings",
+      "accessibility",
+      "sourceConstants",
+      "behaviorSource"
+    ],
+    "precedence": "nodes hold the layout and appearance to build. An entry in a node's conditional list changes that node while every condition in its `when` holds. evidence is the raw source those were derived from: use it to trace a value, not to build from. Behaviour that is logic rather than style (when a control is disabled, what holding it does, which keys act on it) is in behaviorSource, quoted verbatim for you to translate.",
+    "values": [
+      "A value in {braces} is a design-token path. Resolve it through your own token accessor; this file never knows a token value.",
+      "A bare number in a length position is in logical units: points on iOS, density-independent pixels on Android. {value, unit} states the unit.",
+      "{expression, syntax: \"arithmetic\"} is a calc() with every token operand kept. Resolve the tokens, then evaluate.",
+      "\"none\" and \"transparent\" as a background mean no fill.",
+      "size modes are relative to the parent stack: fixed, fill, hug, percentOfParent, or flex with grow, shrink and basis.",
+      "A condition with attribute and equals is true when that attribute has that value. `driver` says what sets it: a prop, a source-backed state with its activation, a source expression, or a spread of a helper (driver.spread and driver.logic point at the behaviorSource entries to translate).",
+      "includesBorderAndPadding: true means width and height include the border and padding, so children are laid out INSIDE the border. Where a platform draws a border without taking layout space (a stroke overlay), inset the content by the border width.",
+      "appearance.typography is the text token: one composite token, for example {semantic.typography.label.l}, that stands for the font family, size, weight, line height and letter spacing together. Resolve it through your own token accessor like any other token. The individual tokens it stands for are not listed. When a node's text properties do not all come from one such token, they are stated one by one under appearance.text instead. Other text properties (tabular figures, truncation) are always under appearance.text.",
+      "tokens[].usedAs says what each token is used as (text.size, padding.top, border.color), derived from where it appears. A declared type alone only says dimension.",
+      "A gap, padding or margin that is not stated is zero. CSS has no implicit spacing; a native stack may, so state zero explicitly rather than relying on its default.",
+      "A focus ring is a band as thick as its width. The offset is measured from the node edge, positive outward: the band's inner edge sits at the offset and its outer edge at offset + width. A negative offset puts the band inside the node. focusVisible: true means the source draws it on :focus-visible, which is keyboard focus and not a pointer press; whether a platform has an equivalent is the team's decision.",
+      "A condition with state (focused, pressed) is true while the control is in that interaction state, which the platform tracks itself. It has no attribute because nothing in the markup sets it.",
+      "A hit area is a positioned element, so where it overlaps a sibling that is not positioned it receives the pointer first. centered: its centre is the node centre. atLeastNodeBox: it is never smaller than the node, and min is the floor above that. affectsLayout: false is how the source behaves (it takes no layout space); whether a platform can do the same is the team's decision. removedWhen is a list of alternatives: the hit area is removed when ANY one of them holds, and an alternative is itself a list of conditions that must ALL hold.",
+      "A prop or constant description is the author's own comment, quoted as written and not checked against the code. Where it disagrees with behaviorSource or an animation timeline, the quoted logic is the behaviour.",
+      "accessibility.labelSource is the prop a component takes its name from by default. How each node is actually named, including when another element names it (labelledBy), is stated on the node under accessibility.",
+      "accessibility.labelRequired is whether the consumer must supply the label, taken from the declared prop. A node can still be named by a default in the quoted logic.",
+      "tabOrder.included says whether a node is in the keyboard tab order, from a tabIndex on the markup or a literal in a spread helper. false (tabIndex -1) leaves the node focusable by script or pointer; it is not \"cannot be focused\".",
+      "reducedMotion is what the stylesheet does to that animation when the user asks for reduced motion. The end values still apply and only the animation changes. Whether the change should still happen at all is a design decision the source does not state.",
+      "An animation timeline states the activation, the reset and holdAtChangedMs (zero means it rises and falls with no plateau at the changed value). resetDelayExpression is the delay as the source writes it, so it can be traced to sourceConstants.",
+      "A value read from the markup (a content, a label, a range, a condition) is one of: {prop} a prop the component declares; {derived} a value the component computes itself, whose statement is in behaviorSource; {expression} source text for translation, with uses naming the derived values it reads; {literal}. A derived value that shares a prop's name is the derived value, not the prop. A {prop} that is not listed in props is modelled as a state (loading, disabled): find it in axes.state.",
+      "accessibility.valueRange is the range a control announces (now, min, max, text), each as one of the forms above. labelledBy and describedBy name another element by id in the source; neither platform has that, so each is the prop that carries the id and the string it becomes is the team's decision.",
+      "An announced state marked wording: \"not stated in the source\" takes a string on this platform. The source says the control is in that state, not what to say.",
+      "props[].kind \"number\" is a JavaScript number: the source states no integer constraint, so whether to accept fractions is not given.",
+      "behaviorSource.events lists the web events and feedback the source uses and where, by name. It does not say what a handler does: that is the quoted statement."
+    ],
+    "unresolved": "unresolvedConditions names conditions whose cause is set inside the component and was not extracted. Read the source for those; do not assume.",
+    "coverage": "coverage.unplaced lists any stylesheet rule that could not be placed on a node. Empty means every rule is accounted for; droppedByDesign lists what this platform legitimately lacks."
+  },
+  "props": [
+    {
+      "name": "value",
+      "kind": "number",
+      "required": false,
+      "description": "Controlled value. Pair with `onChange`."
+    },
+    {
+      "name": "defaultValue",
+      "kind": "number",
+      "required": false,
+      "default": 0,
+      "description": "Starting value when uncontrolled."
+    },
+    {
+      "name": "min",
+      "kind": "number",
+      "required": false,
+      "default": 0
+    },
+    {
+      "name": "max",
+      "kind": "number",
+      "required": false,
+      "default": 99
+    },
+    {
+      "name": "step",
+      "kind": "number",
+      "required": false,
+      "default": 1
+    },
+    {
+      "name": "onChange",
+      "kind": "event",
+      "required": false,
+      "description": "Fired with the clamped next value on every increment/decrement."
+    },
+    {
+      "name": "frozen",
+      "kind": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Read-only. Exposed as `aria-readonly`; the value stays focusable and readable."
+    },
+    {
+      "name": "fullWidth",
+      "kind": "boolean",
+      "required": false,
+      "default": false
+    },
+    {
+      "name": "label",
+      "kind": "string",
+      "required": false,
+      "default": "Quantity",
+      "description": "Accessible name for the spinbutton, e.g. \"Quantity\". Make it specific when a page has more than one Counter — \"Quantity, Blue T-shirt\" beats \"Quantity\". Ignored when `labelledBy` is set."
+    },
+    {
+      "name": "labelledBy",
+      "kind": "string",
+      "required": false,
+      "description": "`id` of existing visible text to name the spinbutton. Prefer this over `label` when the name is already on screen, so the two cannot drift apart."
+    },
+    {
+      "name": "describedBy",
+      "kind": "string",
+      "required": false,
+      "description": "`id` of supporting text (help, limits, errors) to associate with the value."
+    },
+    {
+      "name": "formatValueText",
+      "kind": "function",
+      "required": false,
+      "description": "Human-readable rendering of the value for assistive tech, e.g. `(n) => \\`${n} items\\``. Maps to `aria-valuetext`. Use when the bare number is ambiguous out of context."
+    },
+    {
+      "name": "decrementLabel",
+      "kind": "string",
+      "required": false,
+      "description": "Overrides the decrement button's name. Defaults to `\"Decrease <label>\"` so the button says what it acts on rather than a bare \"Decrease\"."
+    },
+    {
+      "name": "incrementLabel",
+      "kind": "string",
+      "required": false,
+      "description": "Overrides the increment button's name. Defaults to `\"Increase <label>\"`."
+    },
+    {
+      "name": "className",
+      "kind": "string",
+      "required": false
+    }
+  ],
+  "axes": {
+    "state": [
+      "idle",
+      "focused",
+      "pressed"
+    ]
+  },
+  "sourceConstants": [
+    {
+      "name": "HOLD_INTERVAL_MS",
+      "kind": "number",
+      "value": 150,
+      "description": "Repeat interval while a button is held.",
+      "source": "const HOLD_INTERVAL_MS = 150;"
+    },
+    {
+      "name": "POP_MS",
+      "kind": "number",
+      "value": 100,
+      "description": "How long the value stays scaled up after a change.",
+      "source": "const POP_MS = 100;"
+    },
+    {
+      "name": "HAPTIC_MS",
+      "kind": "number",
+      "value": 8,
+      "description": "Haptic pulse length on supporting devices.",
+      "source": "const HAPTIC_MS = 8;"
+    },
+    {
+      "name": "LARGE_STEP_FACTOR",
+      "kind": "number",
+      "value": 10,
+      "description": "PageUp/PageDown multiplier.",
+      "source": "const LARGE_STEP_FACTOR = 10;"
+    }
+  ],
+  "styles": [
+    {
+      "variant": "default",
+      "size": "default",
+      "state": "idle",
+      "display": "inline-flex",
+      "alignItems": "center",
+      "boxSizing": "border-box",
+      "width": {
+        "expression": "2 * {semantic.size.40} + {semantic.size.24}",
+        "syntax": "arithmetic"
+      },
+      "height": "{semantic.size.32}",
+      "borderStyle": "solid",
+      "borderWidth": "{semantic.border.width.default}",
+      "borderColor": "{semantic.color.border.moderate}",
+      "radius": "{semantic.border.radius.8}",
+      "fill": "{semantic.color.background.default}",
+      "opacity": 1,
+      "children": {}
+    },
+    {
+      "variant": "default",
+      "size": "default",
+      "state": "focused",
+      "display": "inline-flex",
+      "alignItems": "center",
+      "boxSizing": "border-box",
+      "width": {
+        "expression": "2 * {semantic.size.40} + {semantic.size.24}",
+        "syntax": "arithmetic"
+      },
+      "height": "{semantic.size.32}",
+      "borderStyle": "solid",
+      "borderWidth": "{semantic.border.width.default}",
+      "borderColor": "{semantic.color.border.moderate}",
+      "radius": "{semantic.border.radius.8}",
+      "fill": "{semantic.color.background.default}",
+      "opacity": 1,
+      "children": {}
+    },
+    {
+      "variant": "default",
+      "size": "default",
+      "state": "pressed",
+      "display": "inline-flex",
+      "alignItems": "center",
+      "boxSizing": "border-box",
+      "width": {
+        "expression": "2 * {semantic.size.40} + {semantic.size.24}",
+        "syntax": "arithmetic"
+      },
+      "height": "{semantic.size.32}",
+      "borderStyle": "solid",
+      "borderWidth": "{semantic.border.width.default}",
+      "borderColor": "{semantic.color.border.moderate}",
+      "radius": "{semantic.border.radius.8}",
+      "fill": "{semantic.color.background.default}",
+      "opacity": 1,
+      "children": {}
+    }
+  ],
+  "stylesNote": "Every row has the same values, so this table varies nothing by the axes. A change that depends on a state is not here: it is under nodes[].conditional and animations.",
+  "requiredFields": [
+    "display",
+    "alignItems",
+    "boxSizing",
+    "width",
+    "height",
+    "borderStyle",
+    "borderWidth",
+    "borderColor",
+    "radius",
+    "fill",
+    "opacity"
+  ],
+  "nodes": [
+    {
+      "name": "root",
+      "parent": null,
+      "kind": "element",
+      "element": "div",
+      "children": [
+        "button",
+        "value",
+        "button2"
+      ],
+      "layout": {
+        "container": {
+          "kind": "stack",
+          "crossAlign": "center",
+          "axis": "horizontal"
+        },
+        "size": {
+          "width": {
+            "mode": "fixed",
+            "value": {
+              "expression": "2 * {semantic.size.40} + {semantic.size.24}",
+              "syntax": "arithmetic"
+            }
+          },
+          "height": {
+            "mode": "fixed",
+            "value": "{semantic.size.32}"
+          },
+          "includesBorderAndPadding": true
+        }
+      },
+      "appearance": {
+        "border": {
+          "style": "solid",
+          "width": "{semantic.border.width.default}",
+          "color": "{semantic.color.border.moderate}"
+        },
+        "cornerRadius": "{semantic.border.radius.8}",
+        "background": "{semantic.color.background.default}"
+      },
+      "conditional": [
+        {
+          "when": [
+            {
+              "node": "root",
+              "attribute": "data-full-width",
+              "equals": "true",
+              "driver": {
+                "prop": "fullWidth"
+              }
+            }
+          ],
+          "layout": {
+            "size": {
+              "width": {
+                "mode": "fill"
+              }
+            }
+          },
+          "source": ".ds-counter[data-full-width='true']",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "parent": "root",
+      "kind": "element",
+      "element": "button",
+      "role": "button",
+      "logic": [
+        "decrementName",
+        "buttonProps",
+        "atMin"
+      ],
+      "children": [
+        "icon"
+      ],
+      "layout": {
+        "container": {
+          "kind": "stack",
+          "crossAlign": "center",
+          "mainAlign": "center",
+          "axis": "horizontal"
+        },
+        "padding": {
+          "top": "{semantic.spacing.0}",
+          "right": "{semantic.spacing.0}",
+          "bottom": "{semantic.spacing.0}",
+          "left": "{semantic.spacing.0}"
+        },
+        "size": {
+          "width": {
+            "mode": "flex",
+            "grow": 1,
+            "shrink": 1,
+            "basis": 0
+          },
+          "height": {
+            "mode": "fill"
+          }
+        }
+      },
+      "appearance": {
+        "border": {
+          "width": 0
+        },
+        "background": "none",
+        "foreground": "{semantic.color.icon.brand.primary}"
+      },
+      "conditional": [
+        {
+          "when": [
+            {
+              "node": "button",
+              "attribute": "aria-disabled",
+              "equals": "true",
+              "driver": {
+                "spread": "buttonProps(-step, atMin)",
+                "logic": [
+                  "buttonProps",
+                  "atMin"
+                ]
+              }
+            }
+          ],
+          "appearance": {
+            "foreground": "{semantic.color.disabled.icon}"
+          },
+          "source": ".ds-counter__button[aria-disabled='true']",
+          "order": 5
+        }
+      ],
+      "accessibility": {
+        "kind": "traits",
+        "concept": [
+          "isButton"
+        ],
+        "actions": [],
+        "label": {
+          "derived": "decrementName"
+        },
+        "tabOrder": {
+          "included": false,
+          "setBy": {
+            "spread": "buttonProps(-step, atMin)",
+            "logic": [
+              "buttonProps",
+              "atMin"
+            ]
+          },
+          "literal": "tabIndex: -1"
+        },
+        "states": [
+          {
+            "state": "disabled",
+            "when": {
+              "spread": "buttonProps(-step, atMin)",
+              "logic": [
+                "buttonProps",
+                "atMin"
+              ]
+            },
+            "kind": "trait",
+            "concept": "notEnabled"
+          }
+        ]
+      },
+      "notApplied": [
+        {
+          "role": "position",
+          "reason": "relative only anchors absolutely positioned descendants; it has no effect on native layout"
+        }
+      ]
+    },
+    {
+      "name": "icon",
+      "parent": "button",
+      "kind": "component",
+      "component": "RemoveSmallIcon",
+      "children": [],
+      "layout": {
+        "size": {
+          "width": {
+            "mode": "hug"
+          },
+          "height": {
+            "mode": "hug"
+          }
+        }
+      },
+      "appearance": {},
+      "conditional": [
+        {
+          "when": [
+            {
+              "node": "button",
+              "attribute": "aria-disabled",
+              "equals": "true",
+              "negate": true,
+              "driver": {
+                "spread": "buttonProps(-step, atMin)",
+                "logic": [
+                  "buttonProps",
+                  "atMin"
+                ]
+              }
+            },
+            {
+              "node": "button",
+              "state": "pressed"
+            }
+          ],
+          "appearance": {
+            "transform": {
+              "scale": 0.9
+            }
+          },
+          "source": ".ds-counter__button:active:not([aria-disabled='true']) .ds-counter__icon",
+          "order": 9,
+          "animatedBy": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "value",
+      "parent": "root",
+      "kind": "element",
+      "element": "div",
+      "role": "spinbutton",
+      "content": {
+        "derived": "value"
+      },
+      "logic": [
+        "spinRef",
+        "spinId",
+        "pop",
+        "value",
+        "onKeyDown"
+      ],
+      "children": [],
+      "layout": {
+        "container": {
+          "kind": "stack",
+          "crossAlign": "center",
+          "mainAlign": "center",
+          "axis": "horizontal"
+        },
+        "size": {
+          "width": {
+            "mode": "fixed",
+            "value": "{semantic.size.24}"
+          },
+          "height": {
+            "mode": "fill"
+          }
+        }
+      },
+      "appearance": {
+        "typography": "{semantic.typography.label.l}",
+        "foreground": "{semantic.color.text.primary}",
+        "text": {
+          "numericFigures": "tabular"
+        }
+      },
+      "conditional": [
+        {
+          "when": [
+            {
+              "node": "value",
+              "attribute": "data-pop",
+              "equals": "true",
+              "driver": {
+                "state": "pop",
+                "activatedIn": [
+                  "setValue"
+                ],
+                "activation": "setPop(true)",
+                "resetAfterMs": 100,
+                "resetDelayExpression": "POP_MS"
+              }
+            }
+          ],
+          "appearance": {
+            "transform": {
+              "scale": 1.1
+            }
+          },
+          "source": ".ds-counter__value[data-pop='true']",
+          "order": 11,
+          "animatedBy": [
+            2
+          ]
+        }
+      ],
+      "accessibility": {
+        "kind": "traits",
+        "concept": [
+          "adjustable"
+        ],
+        "actions": [
+          "increment",
+          "decrement"
+        ],
+        "label": {
+          "expression": "labelledBy ? undefined : label"
+        },
+        "valueRange": {
+          "now": {
+            "derived": "value"
+          },
+          "min": {
+            "prop": "min"
+          },
+          "max": {
+            "prop": "max"
+          },
+          "text": {
+            "expression": "formatValueText?.(value)",
+            "uses": [
+              "value"
+            ]
+          }
+        },
+        "tabOrder": {
+          "included": true,
+          "setBy": {
+            "attribute": "tabIndex"
+          }
+        },
+        "labelledBy": {
+          "prop": "labelledBy"
+        },
+        "describedBy": {
+          "prop": "describedBy"
+        },
+        "states": [
+          {
+            "state": "readonly",
+            "when": {
+              "prop": "frozen"
+            },
+            "kind": "property",
+            "concept": "accessibilityValue",
+            "wording": "not stated in the source"
+          }
+        ]
+      }
+    },
+    {
+      "name": "button2",
+      "parent": "root",
+      "kind": "element",
+      "element": "button",
+      "role": "button",
+      "logic": [
+        "incrementName",
+        "buttonProps",
+        "atMax"
+      ],
+      "children": [
+        "icon2"
+      ],
+      "layout": {
+        "container": {
+          "kind": "stack",
+          "crossAlign": "center",
+          "mainAlign": "center",
+          "axis": "horizontal"
+        },
+        "padding": {
+          "top": "{semantic.spacing.0}",
+          "right": "{semantic.spacing.0}",
+          "bottom": "{semantic.spacing.0}",
+          "left": "{semantic.spacing.0}"
+        },
+        "size": {
+          "width": {
+            "mode": "flex",
+            "grow": 1,
+            "shrink": 1,
+            "basis": 0
+          },
+          "height": {
+            "mode": "fill"
+          }
+        }
+      },
+      "appearance": {
+        "border": {
+          "width": 0
+        },
+        "background": "none",
+        "foreground": "{semantic.color.icon.brand.primary}"
+      },
+      "conditional": [
+        {
+          "when": [
+            {
+              "node": "button2",
+              "attribute": "aria-disabled",
+              "equals": "true",
+              "driver": {
+                "spread": "buttonProps(step, atMax)",
+                "logic": [
+                  "buttonProps",
+                  "atMax"
+                ]
+              }
+            }
+          ],
+          "appearance": {
+            "foreground": "{semantic.color.disabled.icon}"
+          },
+          "source": ".ds-counter__button[aria-disabled='true']",
+          "order": 5
+        }
+      ],
+      "accessibility": {
+        "kind": "traits",
+        "concept": [
+          "isButton"
+        ],
+        "actions": [],
+        "label": {
+          "derived": "incrementName"
+        },
+        "tabOrder": {
+          "included": false,
+          "setBy": {
+            "spread": "buttonProps(step, atMax)",
+            "logic": [
+              "buttonProps",
+              "atMax"
+            ]
+          },
+          "literal": "tabIndex: -1"
+        },
+        "states": [
+          {
+            "state": "disabled",
+            "when": {
+              "spread": "buttonProps(step, atMax)",
+              "logic": [
+                "buttonProps",
+                "atMax"
+              ]
+            },
+            "kind": "trait",
+            "concept": "notEnabled"
+          }
+        ]
+      },
+      "notApplied": [
+        {
+          "role": "position",
+          "reason": "relative only anchors absolutely positioned descendants; it has no effect on native layout"
+        }
+      ]
+    },
+    {
+      "name": "icon2",
+      "parent": "button2",
+      "kind": "component",
+      "component": "AddSmallIcon",
+      "children": [],
+      "layout": {
+        "size": {
+          "width": {
+            "mode": "hug"
+          },
+          "height": {
+            "mode": "hug"
+          }
+        }
+      },
+      "appearance": {},
+      "conditional": [
+        {
+          "when": [
+            {
+              "node": "button2",
+              "attribute": "aria-disabled",
+              "equals": "true",
+              "negate": true,
+              "driver": {
+                "spread": "buttonProps(step, atMax)",
+                "logic": [
+                  "buttonProps",
+                  "atMax"
+                ]
+              }
+            },
+            {
+              "node": "button2",
+              "state": "pressed"
+            }
+          ],
+          "appearance": {
+            "transform": {
+              "scale": 0.9
+            }
+          },
+          "source": ".ds-counter__button:active:not([aria-disabled='true']) .ds-counter__icon",
+          "order": 9,
+          "animatedBy": [
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "id": 0,
+      "kind": "transition",
+      "node": "icon",
+      "property": "transform",
+      "rest": {
+        "value": {
+          "scale": 1
+        },
+        "from": "identity (CSS transform: none)"
+      },
+      "changes": [
+        {
+          "when": [
+            {
+              "node": "button",
+              "attribute": "aria-disabled",
+              "equals": "true",
+              "negate": true,
+              "driver": {
+                "spread": "buttonProps(-step, atMin)",
+                "logic": [
+                  "buttonProps",
+                  "atMin"
+                ]
+              }
+            },
+            {
+              "node": "button",
+              "state": "pressed"
+            }
+          ],
+          "to": {
+            "scale": 0.9
+          },
+          "source": ".ds-counter__button:active:not([aria-disabled='true']) .ds-counter__icon"
+        }
+      ],
+      "direction": "both",
+      "timing": {
+        "durationMs": 100,
+        "delayMs": 0,
+        "curve": {
+          "type": "cubicBezier",
+          "value": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "named": "linear"
+        },
+        "effectivelyInstant": false
+      },
+      "reducedMotion": {
+        "durationMs": 0.01,
+        "effectivelyInstant": true,
+        "source": ".ds-counter__icon"
+      },
+      "source": ".ds-counter__icon"
+    },
+    {
+      "id": 1,
+      "kind": "transition",
+      "node": "icon2",
+      "property": "transform",
+      "rest": {
+        "value": {
+          "scale": 1
+        },
+        "from": "identity (CSS transform: none)"
+      },
+      "changes": [
+        {
+          "when": [
+            {
+              "node": "button2",
+              "attribute": "aria-disabled",
+              "equals": "true",
+              "negate": true,
+              "driver": {
+                "spread": "buttonProps(step, atMax)",
+                "logic": [
+                  "buttonProps",
+                  "atMax"
+                ]
+              }
+            },
+            {
+              "node": "button2",
+              "state": "pressed"
+            }
+          ],
+          "to": {
+            "scale": 0.9
+          },
+          "source": ".ds-counter__button:active:not([aria-disabled='true']) .ds-counter__icon"
+        }
+      ],
+      "direction": "both",
+      "timing": {
+        "durationMs": 100,
+        "delayMs": 0,
+        "curve": {
+          "type": "cubicBezier",
+          "value": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "named": "linear"
+        },
+        "effectivelyInstant": false
+      },
+      "reducedMotion": {
+        "durationMs": 0.01,
+        "effectivelyInstant": true,
+        "source": ".ds-counter__icon"
+      },
+      "source": ".ds-counter__icon"
+    },
+    {
+      "id": 2,
+      "kind": "transition",
+      "node": "value",
+      "property": "transform",
+      "rest": {
+        "value": {
+          "scale": 1
+        },
+        "from": "identity (CSS transform: none)"
+      },
+      "changes": [
+        {
+          "when": [
+            {
+              "node": "value",
+              "attribute": "data-pop",
+              "equals": "true",
+              "driver": {
+                "state": "pop",
+                "activatedIn": [
+                  "setValue"
+                ],
+                "activation": "setPop(true)",
+                "resetAfterMs": 100,
+                "resetDelayExpression": "POP_MS"
+              }
+            }
+          ],
+          "to": {
+            "scale": 1.1
+          },
+          "source": ".ds-counter__value[data-pop='true']",
+          "timeline": {
+            "singleShot": [
+              {
+                "atMs": 0,
+                "flag": true,
+                "animate": "rest to changed value",
+                "overMs": 100
+              },
+              {
+                "atMs": 100,
+                "flag": false,
+                "animate": "changed value back to rest",
+                "overMs": 100
+              }
+            ],
+            "holdAtChangedMs": 0,
+            "resetDelayExpression": "POP_MS",
+            "shape": "rises over the transition and falls straight back: there is no plateau at the changed value",
+            "note": "What re-triggers it before the reset, and any guard on activation, are not extracted as data. They are in the quoted logic: read the entries named by activatedIn."
+          }
+        }
+      ],
+      "direction": "both",
+      "timing": {
+        "durationMs": 100,
+        "delayMs": 0,
+        "curve": {
+          "type": "cubicBezier",
+          "value": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "named": "linear"
+        },
+        "effectivelyInstant": false
+      },
+      "reducedMotion": {
+        "durationMs": 0.01,
+        "effectivelyInstant": true,
+        "source": ".ds-counter__value"
+      },
+      "source": ".ds-counter__value"
+    }
+  ],
+  "hitAreas": [
+    {
+      "node": "button",
+      "min": {
+        "width": "{semantic.size.48}",
+        "height": "{semantic.size.48}"
+      },
+      "centered": true,
+      "atLeastNodeBox": true,
+      "affectsLayout": false,
+      "removedWhen": [
+        [
+          {
+            "node": "button",
+            "attribute": "aria-disabled",
+            "equals": "true",
+            "driver": {
+              "spread": "buttonProps(-step, atMin)",
+              "logic": [
+                "buttonProps",
+                "atMin"
+              ]
+            }
+          }
+        ]
+      ],
+      "source": [
+        ".ds-counter__button::after",
+        ".ds-counter__button[aria-disabled='true']::after"
+      ]
+    },
+    {
+      "node": "button2",
+      "min": {
+        "width": "{semantic.size.48}",
+        "height": "{semantic.size.48}"
+      },
+      "centered": true,
+      "atLeastNodeBox": true,
+      "affectsLayout": false,
+      "removedWhen": [
+        [
+          {
+            "node": "button2",
+            "attribute": "aria-disabled",
+            "equals": "true",
+            "driver": {
+              "spread": "buttonProps(step, atMax)",
+              "logic": [
+                "buttonProps",
+                "atMax"
+              ]
+            }
+          }
+        ]
+      ],
+      "source": [
+        ".ds-counter__button::after",
+        ".ds-counter__button[aria-disabled='true']::after"
+      ]
+    }
+  ],
+  "focusRings": [
+    {
+      "node": "button",
+      "trigger": "focused",
+      "focusVisible": true,
+      "color": "{semantic.color.border.brand}",
+      "width": {
+        "expression": "2 * {semantic.border.width.default}",
+        "syntax": "arithmetic"
+      },
+      "style": "solid",
+      "offset": {
+        "expression": "-1 * {semantic.border.width.default}",
+        "syntax": "arithmetic"
+      },
+      "cornerRadiusWhileFocused": "{semantic.border.radius.8}",
+      "source": ".ds-counter__button:focus-visible"
+    },
+    {
+      "node": "button2",
+      "trigger": "focused",
+      "focusVisible": true,
+      "color": "{semantic.color.border.brand}",
+      "width": {
+        "expression": "2 * {semantic.border.width.default}",
+        "syntax": "arithmetic"
+      },
+      "style": "solid",
+      "offset": {
+        "expression": "-1 * {semantic.border.width.default}",
+        "syntax": "arithmetic"
+      },
+      "cornerRadiusWhileFocused": "{semantic.border.radius.8}",
+      "source": ".ds-counter__button:focus-visible"
+    },
+    {
+      "node": "value",
+      "trigger": "focused",
+      "focusVisible": true,
+      "color": "{semantic.color.border.brand}",
+      "width": {
+        "expression": "2 * {semantic.border.width.default}",
+        "syntax": "arithmetic"
+      },
+      "style": "solid",
+      "offset": {
+        "expression": "-1 * {semantic.border.width.default}",
+        "syntax": "arithmetic"
+      },
+      "cornerRadiusWhileFocused": "{semantic.border.radius.8}",
+      "source": ".ds-counter__value:focus-visible"
+    }
+  ],
+  "behaviorSource": {
+    "note": "Source statements the markup depends on, quoted exactly as written for you to translate. A node lists the ones its own markup refers to under logic; each entry lists what it uses. Nothing here has been evaluated or summarised.",
+    "language": "typescript",
+    "entries": [
+      {
+        "name": "clamp",
+        "kind": "function",
+        "scope": "module",
+        "source": "const clamp = (n: number, min: number, max: number) => Math.min(max, Math.max(min, n));",
+        "uses": []
+      },
+      {
+        "name": "isControlled",
+        "kind": "value",
+        "scope": "component",
+        "source": "const isControlled = controlledValue !== undefined;",
+        "uses": []
+      },
+      {
+        "name": "uncontrolled",
+        "kind": "state",
+        "scope": "component",
+        "hook": "useState",
+        "also": [
+          "setUncontrolled"
+        ],
+        "source": "const [uncontrolled, setUncontrolled] = useState(() => clamp(defaultValue, min, max));",
+        "uses": [
+          "clamp"
+        ]
+      },
+      {
+        "name": "value",
+        "kind": "value",
+        "scope": "component",
+        "source": "const value = clamp(isControlled ? controlledValue : uncontrolled, min, max);",
+        "uses": [
+          "clamp",
+          "isControlled",
+          "uncontrolled"
+        ]
+      },
+      {
+        "name": "pop",
+        "kind": "state",
+        "scope": "component",
+        "hook": "useState",
+        "also": [
+          "setPop"
+        ],
+        "source": "const [pop, setPop] = useState(false);",
+        "uses": []
+      },
+      {
+        "name": "popTimer",
+        "kind": "state",
+        "scope": "component",
+        "hook": "useRef",
+        "source": "const popTimer = useRef<ReturnType<typeof setTimeout>>(undefined);",
+        "uses": []
+      },
+      {
+        "name": "holdTimer",
+        "kind": "state",
+        "scope": "component",
+        "hook": "useRef",
+        "source": "const holdTimer = useRef<ReturnType<typeof setInterval>>(undefined);",
+        "uses": []
+      },
+      {
+        "name": "spinRef",
+        "kind": "state",
+        "scope": "component",
+        "hook": "useRef",
+        "source": "const spinRef = useRef<HTMLDivElement>(null);",
+        "uses": []
+      },
+      {
+        "name": "valueRef",
+        "kind": "state",
+        "scope": "component",
+        "hook": "useRef",
+        "source": "const valueRef = useRef(value);",
+        "uses": [
+          "value"
+        ]
+      },
+      {
+        "name": "valueRef.current",
+        "kind": "assignment",
+        "scope": "component",
+        "source": "valueRef.current = value;",
+        "uses": [
+          "value",
+          "valueRef"
+        ]
+      },
+      {
+        "name": "stopHold",
+        "kind": "function",
+        "scope": "component",
+        "source": "const stopHold = useCallback(() => {\n    clearInterval(holdTimer.current);\n    holdTimer.current = undefined;\n  }, []);",
+        "uses": [
+          "holdTimer"
+        ]
+      },
+      {
+        "name": "useEffect#1",
+        "kind": "effect",
+        "scope": "component",
+        "source": "useEffect(\n    () => () => {\n      clearInterval(holdTimer.current);\n      clearTimeout(popTimer.current);\n    },\n    [],\n  );",
+        "uses": [
+          "holdTimer",
+          "popTimer"
+        ]
+      },
+      {
+        "name": "useEffect#2",
+        "kind": "effect",
+        "scope": "component",
+        "source": "useEffect(() => {\n    if (frozen) return;\n    window.addEventListener('pointerup', stopHold);\n    window.addEventListener('pointercancel', stopHold);\n    return () => {\n      window.removeEventListener('pointerup', stopHold);\n      window.removeEventListener('pointercancel', stopHold);\n    };\n  }, [frozen, stopHold]);",
+        "uses": [
+          "stopHold"
+        ]
+      },
+      {
+        "name": "setValue",
+        "kind": "function",
+        "scope": "component",
+        "source": "const setValue = useCallback(\n    (next: number) => {\n      const clamped = clamp(next, min, max);\n      if (clamped === valueRef.current) {\n        stopHold();\n        return;\n      }\n\n      valueRef.current = clamped;\n      if (!isControlled) setUncontrolled(clamped);\n      onChange?.(clamped);\n\n      setPop(true);\n      clearTimeout(popTimer.current);\n      popTimer.current = setTimeout(() => setPop(false), POP_MS);\n\n      navigator.vibrate?.(HAPTIC_MS);\n    },\n    [isControlled, max, min, onChange, stopHold],\n  );",
+        "uses": [
+          "clamp",
+          "isControlled",
+          "pop",
+          "popTimer",
+          "stopHold",
+          "uncontrolled",
+          "valueRef"
+        ]
+      },
+      {
+        "name": "nudge",
+        "kind": "function",
+        "scope": "component",
+        "source": "const nudge = useCallback((delta: number) => setValue(valueRef.current + delta), [setValue]);",
+        "uses": [
+          "setValue",
+          "valueRef"
+        ]
+      },
+      {
+        "name": "startHold",
+        "kind": "function",
+        "scope": "component",
+        "source": "const startHold = useCallback(\n    (delta: number) => {\n      nudge(delta);\n      stopHold();\n      holdTimer.current = setInterval(() => nudge(delta), HOLD_INTERVAL_MS);\n    },\n    [nudge, stopHold],\n  );",
+        "uses": [
+          "holdTimer",
+          "nudge",
+          "stopHold"
+        ]
+      },
+      {
+        "name": "focusSpin",
+        "kind": "function",
+        "scope": "component",
+        "source": "const focusSpin = () => spinRef.current?.focus();",
+        "uses": [
+          "spinRef"
+        ]
+      },
+      {
+        "name": "onKeyDown",
+        "kind": "function",
+        "scope": "component",
+        "source": "const onKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {\n    if (frozen) return;\n    const large = step * LARGE_STEP_FACTOR;\n    const actions: Record<string, () => void> = {\n      ArrowUp: () => nudge(step),\n      ArrowRight: () => nudge(step),\n      ArrowDown: () => nudge(-step),\n      ArrowLeft: () => nudge(-step),\n      PageUp: () => nudge(large),\n      PageDown: () => nudge(-large),\n      Home: () => setValue(min),\n      End: () => setValue(max),\n    };\n    const action = actions[e.key];\n    if (!action) return;\n    e.preventDefault();\n    action();\n  };",
+        "uses": [
+          "nudge",
+          "setValue"
+        ]
+      },
+      {
+        "name": "atMin",
+        "kind": "value",
+        "scope": "component",
+        "source": "const atMin = value <= min;",
+        "uses": [
+          "value"
+        ]
+      },
+      {
+        "name": "atMax",
+        "kind": "value",
+        "scope": "component",
+        "source": "const atMax = value >= max;",
+        "uses": [
+          "value"
+        ]
+      },
+      {
+        "name": "spinId",
+        "kind": "state",
+        "scope": "component",
+        "hook": "useId",
+        "source": "const spinId = useId();",
+        "uses": []
+      },
+      {
+        "name": "nameForActions",
+        "kind": "value",
+        "scope": "component",
+        "source": "const nameForActions = labelledBy ? null : label;",
+        "uses": []
+      },
+      {
+        "name": "decrementName",
+        "kind": "value",
+        "scope": "component",
+        "source": "const decrementName = decrementLabel ?? (nameForActions ? `Decrease ${nameForActions}` : 'Decrease');",
+        "uses": [
+          "nameForActions"
+        ]
+      },
+      {
+        "name": "incrementName",
+        "kind": "value",
+        "scope": "component",
+        "source": "const incrementName = incrementLabel ?? (nameForActions ? `Increase ${nameForActions}` : 'Increase');",
+        "uses": [
+          "nameForActions"
+        ]
+      },
+      {
+        "name": "buttonProps",
+        "kind": "function",
+        "scope": "component",
+        "source": "const buttonProps = (delta: number, unavailable: boolean) => {\n    const blocked = frozen || unavailable;\n    return {\n      tabIndex: -1,\n      'aria-disabled': blocked || undefined,\n      ...(blocked\n        ? {}\n        : {\n            onPointerDown: () => {\n              focusSpin();\n              startHold(delta);\n            },\n            onPointerLeave: stopHold,\n            // detail === 0 means keyboard activation, which emits no pointer events.\n            onClick: (e: MouseEvent) => {\n              if (e.detail === 0) nudge(delta);\n            },\n          }),\n    };\n  };",
+        "uses": [
+          "focusSpin",
+          "nudge",
+          "startHold",
+          "stopHold"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "concept": "event.pointerDown",
+        "names": [
+          "onPointerDown"
+        ],
+        "foundIn": [
+          "buttonProps"
+        ]
+      },
+      {
+        "concept": "event.pointerUp",
+        "names": [
+          "pointerup"
+        ],
+        "foundIn": [
+          "useEffect#2"
+        ]
+      },
+      {
+        "concept": "event.pointerCancel",
+        "names": [
+          "pointercancel"
+        ],
+        "foundIn": [
+          "useEffect#2"
+        ]
+      },
+      {
+        "concept": "event.pointerLeave",
+        "names": [
+          "onPointerLeave"
+        ],
+        "foundIn": [
+          "buttonProps"
+        ]
+      },
+      {
+        "concept": "event.keyDown",
+        "names": [
+          "onKeyDown"
+        ],
+        "foundIn": [
+          "onKeyDown",
+          "node:value"
+        ]
+      },
+      {
+        "concept": "event.click",
+        "names": [
+          "onClick"
+        ],
+        "foundIn": [
+          "buttonProps"
+        ]
+      },
+      {
+        "concept": "feedback.haptic",
+        "names": [
+          "vibrate"
+        ],
+        "foundIn": [
+          "setValue"
+        ]
+      }
+    ],
+    "eventsNote": "The web events and feedback the source uses, found by name in the quoted statements and the markup. This says the source listens for them, not what it does with them: that is the quoted statement. A concept here has an idiom under implementationHints."
+  },
+  "accessibility": {
+    "labelSource": "prop:label",
+    "labelRequired": false,
+    "focusable": true,
+    "focusIndicator": "focusRing",
+    "touchTarget": {
+      "stated": "{semantic.size.48}",
+      "platformGuidance": {
+        "value": 44,
+        "unit": "pt"
+      },
+      "buildTo": "stated"
+    }
+  },
+  "behavior": {
+    "initial": "idle",
+    "guards": {},
+    "states": {}
+  },
+  "adaptable": {},
+  "unresolvedConditions": [],
+  "externalComponents": {
+    "nodes": [
+      {
+        "node": "icon",
+        "component": "RemoveSmallIcon"
+      },
+      {
+        "node": "icon2",
+        "component": "AddSmallIcon"
+      }
+    ],
+    "why": "These nodes render a component that is defined elsewhere. Its glyph or content, its intrinsic size and whether it takes the surrounding foreground colour are not in this spec: use the platform equivalent your design system provides."
+  },
+  "implementationNotes": [
+    "pop: activation triggers and guards require manual translation from source; no event or prop-change semantics inferred."
+  ],
+  "coverage": {
+    "sourceRules": 14,
+    "placed": 14,
+    "droppedByDesign": [],
+    "unplaced": []
+  },
+  "droppedProperties": {
+    "webOnly": [
+      "-webkit-tap-highlight-color",
+      "-webkit-user-select",
+      "cursor",
+      "touch-action",
+      "user-select"
+    ],
+    "unrecognised": []
+  },
+  "conformance": [
+    {
+      "id": "axis.state",
+      "tier": "exact",
+      "kind": "enumExact",
+      "message": "The state axis must have exactly these values",
+      "params": {
+        "axis": "state",
+        "values": "idle,focused,pressed"
+      }
+    },
+    {
+      "id": "prop.value",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"value\" must exist and be optional",
+      "params": {
+        "name": "value",
+        "kind": "number",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.defaultValue",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"defaultValue\" must exist and be optional",
+      "params": {
+        "name": "defaultValue",
+        "kind": "number",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.min",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"min\" must exist and be optional",
+      "params": {
+        "name": "min",
+        "kind": "number",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.max",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"max\" must exist and be optional",
+      "params": {
+        "name": "max",
+        "kind": "number",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.step",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"step\" must exist and be optional",
+      "params": {
+        "name": "step",
+        "kind": "number",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.onChange",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"onChange\" must exist and be optional",
+      "params": {
+        "name": "onChange",
+        "kind": "event",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.frozen",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"frozen\" must exist and be optional",
+      "params": {
+        "name": "frozen",
+        "kind": "boolean",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.fullWidth",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"fullWidth\" must exist and be optional",
+      "params": {
+        "name": "fullWidth",
+        "kind": "boolean",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.label",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"label\" must exist and be optional",
+      "params": {
+        "name": "label",
+        "kind": "string",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.labelledBy",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"labelledBy\" must exist and be optional",
+      "params": {
+        "name": "labelledBy",
+        "kind": "string",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.describedBy",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"describedBy\" must exist and be optional",
+      "params": {
+        "name": "describedBy",
+        "kind": "string",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.formatValueText",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"formatValueText\" must exist and be optional",
+      "params": {
+        "name": "formatValueText",
+        "kind": "function",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.decrementLabel",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"decrementLabel\" must exist and be optional",
+      "params": {
+        "name": "decrementLabel",
+        "kind": "string",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.incrementLabel",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"incrementLabel\" must exist and be optional",
+      "params": {
+        "name": "incrementLabel",
+        "kind": "string",
+        "required": "false"
+      }
+    },
+    {
+      "id": "prop.className",
+      "tier": "exact",
+      "kind": "propExists",
+      "message": "Property \"className\" must exist and be optional",
+      "params": {
+        "name": "className",
+        "kind": "string",
+        "required": "false"
+      }
+    },
+    {
+      "id": "style.total",
+      "tier": "exact",
+      "kind": "styleTableTotal",
+      "message": "The style lookup must cover all 3 combinations with no default branch",
+      "params": {
+        "rows": "3",
+        "table": "styles"
+      }
+    },
+    {
+      "id": "animation.0",
+      "tier": "exact",
+      "kind": "animationApplied",
+      "message": "Transition of transform on icon must follow animations[0]",
+      "params": {
+        "node": "icon",
+        "property": "transform",
+        "kind": "transition",
+        "durationMs": "100",
+        "reducedMotion": "{\"durationMs\":0.01,\"effectivelyInstant\":true,\"source\":\".ds-counter__icon\"}"
+      }
+    },
+    {
+      "id": "animation.1",
+      "tier": "exact",
+      "kind": "animationApplied",
+      "message": "Transition of transform on icon2 must follow animations[1]",
+      "params": {
+        "node": "icon2",
+        "property": "transform",
+        "kind": "transition",
+        "durationMs": "100",
+        "reducedMotion": "{\"durationMs\":0.01,\"effectivelyInstant\":true,\"source\":\".ds-counter__icon\"}"
+      }
+    },
+    {
+      "id": "animation.2",
+      "tier": "exact",
+      "kind": "animationApplied",
+      "message": "Transition of transform on value must follow animations[2]",
+      "params": {
+        "node": "value",
+        "property": "transform",
+        "kind": "transition",
+        "durationMs": "100",
+        "reducedMotion": "{\"durationMs\":0.01,\"effectivelyInstant\":true,\"source\":\".ds-counter__value\"}"
+      }
+    },
+    {
+      "id": "hitArea.button",
+      "tier": "exact",
+      "kind": "hitAreaMinimum",
+      "message": "The interactive region of button must be at least the stated minimum, centred on it",
+      "params": {
+        "node": "button",
+        "minWidth": "\"{semantic.size.48}\"",
+        "minHeight": "\"{semantic.size.48}\""
+      }
+    },
+    {
+      "id": "hitArea.button2",
+      "tier": "exact",
+      "kind": "hitAreaMinimum",
+      "message": "The interactive region of button2 must be at least the stated minimum, centred on it",
+      "params": {
+        "node": "button2",
+        "minWidth": "\"{semantic.size.48}\"",
+        "minHeight": "\"{semantic.size.48}\""
+      }
+    },
+    {
+      "id": "focusRing.button",
+      "tier": "exact",
+      "kind": "focusRingDrawn",
+      "message": "button must draw its focus ring while focused, as stated in focusRings",
+      "params": {
+        "node": "button"
+      }
+    },
+    {
+      "id": "focusRing.button2",
+      "tier": "exact",
+      "kind": "focusRingDrawn",
+      "message": "button2 must draw its focus ring while focused, as stated in focusRings",
+      "params": {
+        "node": "button2"
+      }
+    },
+    {
+      "id": "focusRing.value",
+      "tier": "exact",
+      "kind": "focusRingDrawn",
+      "message": "value must draw its focus ring while focused, as stated in focusRings",
+      "params": {
+        "node": "value"
+      }
+    },
+    {
+      "id": "a11y.minTarget",
+      "tier": "exact",
+      "kind": "minTouchTarget",
+      "message": "The touch target must be at least {semantic.size.48}",
+      "params": {
+        "expect": "{semantic.size.48}",
+        "buildTo": "stated",
+        "platformGuidance": "44pt"
+      }
+    },
+    {
+      "id": "a11y.node.button",
+      "tier": "exact",
+      "kind": "a11yNodeRole",
+      "message": "\"button\" must be exposed as traits: isButton",
+      "params": {
+        "node": "button",
+        "kind": "traits",
+        "expect": "isButton",
+        "actions": ""
+      }
+    },
+    {
+      "id": "a11y.node.value",
+      "tier": "exact",
+      "kind": "a11yNodeRole",
+      "message": "\"value\" must be exposed as traits: adjustable",
+      "params": {
+        "node": "value",
+        "kind": "traits",
+        "expect": "adjustable",
+        "actions": "increment,decrement"
+      }
+    },
+    {
+      "id": "a11y.node.button2",
+      "tier": "exact",
+      "kind": "a11yNodeRole",
+      "message": "\"button2\" must be exposed as traits: isButton",
+      "params": {
+        "node": "button2",
+        "kind": "traits",
+        "expect": "isButton",
+        "actions": ""
+      }
+    }
+  ],
+  "tokens": {
+    "semantic.border.radius.8": {
+      "type": "dimension",
+      "value": null,
+      "usedAs": [
+        "cornerRadius",
+        "focusRing.cornerRadiusWhileFocused"
+      ]
+    },
+    "semantic.border.width.default": {
+      "type": "dimension",
+      "value": null,
+      "usedAs": [
+        "border.width",
+        "focusRing.offset",
+        "focusRing.width"
+      ]
+    },
+    "semantic.color.background.default": {
+      "type": "color",
+      "value": null,
+      "usedAs": [
+        "background"
+      ]
+    },
+    "semantic.color.border.brand": {
+      "type": "color",
+      "value": null,
+      "usedAs": [
+        "focusRing.color"
+      ]
+    },
+    "semantic.color.border.moderate": {
+      "type": "color",
+      "value": null,
+      "usedAs": [
+        "border.color"
+      ]
+    },
+    "semantic.color.disabled.icon": {
+      "type": "color",
+      "value": null,
+      "usedAs": [
+        "foreground"
+      ]
+    },
+    "semantic.color.icon.brand.primary": {
+      "type": "color",
+      "value": null,
+      "usedAs": [
+        "foreground"
+      ]
+    },
+    "semantic.color.text.primary": {
+      "type": "color",
+      "value": null,
+      "usedAs": [
+        "foreground"
+      ]
+    },
+    "semantic.size.24": {
+      "type": "dimension",
+      "value": null,
+      "usedAs": [
+        "size.width"
+      ]
+    },
+    "semantic.size.32": {
+      "type": "dimension",
+      "value": null,
+      "usedAs": [
+        "size.height"
+      ]
+    },
+    "semantic.size.40": {
+      "type": "dimension",
+      "value": null,
+      "usedAs": [
+        "size.width"
+      ]
+    },
+    "semantic.size.48": {
+      "type": "dimension",
+      "value": null,
+      "usedAs": [
+        "hitArea.min.height",
+        "hitArea.min.width"
+      ]
+    },
+    "semantic.spacing.0": {
+      "type": "dimension",
+      "value": null,
+      "usedAs": [
+        "padding.bottom",
+        "padding.left",
+        "padding.right",
+        "padding.top"
+      ]
+    },
+    "semantic.typography.label.l": {
+      "type": "typography",
+      "value": null,
+      "usedAs": [
+        "typography"
+      ]
+    }
+  },
+  "implementationHints": {
+    "framework": "swiftui",
+    "advisory": "Advisory. Authored from framework documentation and NOT compiled in this repository, so treat each entry as a starting point. The data in the spec is authoritative; an idiom never overrides it.",
+    "concepts": {
+      "a11y.action.decrement": {
+        "idiom": "accessibilityAdjustableAction, case .decrement"
+      },
+      "a11y.action.increment": {
+        "idiom": "accessibilityAdjustableAction, case .increment"
+      },
+      "a11y.property.accessibilityValue": {
+        "idiom": "accessibilityValue(_:)"
+      },
+      "a11y.range": {
+        "idiom": "accessibilityValue(_:) for the current value or its text, with accessibilityAdjustableAction(_:) for the steps. SwiftUI has no separate minimum or maximum on a custom control; Stepper, Slider and ProgressView expose a range themselves.",
+        "note": "now, min, max and text are reported as the source states them. Whether the text replaces the number or sits beside it is the team's decision."
+      },
+      "a11y.reference": {
+        "idiom": "accessibilityLabel(_:) with the referenced element's text, or accessibilityLabeledPair(role:id:in:) to link two elements within a namespace.",
+        "note": "aria-labelledby and aria-describedby name another element by id. The spec reports the prop that carries the id; what string it becomes on a native platform is the team's decision."
+      },
+      "a11y.traits.adjustable": {
+        "idiom": "accessibilityAdjustableAction { direction in .. } plus accessibilityValue(_:); SwiftUI has no separate adjustable trait"
+      },
+      "a11y.traits.isButton": {
+        "idiom": "accessibilityAddTraits(.isButton), implicit on Button"
+      },
+      "a11y.traits.notEnabled": {
+        "idiom": "disabled(_:) applies it; there is no SwiftUI trait of this name"
+      },
+      "animation.reducedMotion": {
+        "idiom": "@Environment(\\.accessibilityReduceMotion)",
+        "note": "Apply the reduced-motion value in this spec rather than a generic fallback. The end values still apply; only the animation is removed."
+      },
+      "animation.timing.linear": {
+        "idiom": "animation(.linear(duration:), value:)"
+      },
+      "background": {
+        "idiom": "background(_:)"
+      },
+      "border.inside": {
+        "idiom": "overlay(RoundedRectangle(cornerRadius:).strokeBorder(color, lineWidth:))",
+        "note": "Both platforms draw the stroke inside the node bounds, but neither shrinks the children. When the spec says includesBorderAndPadding, inset the content by the border width yourself.",
+        "frameworkNote": "Padding on the stack does it."
+      },
+      "container.crossAlign": {
+        "idiom": "the stack alignment: parameter",
+        "note": "Cross axis is vertical in a horizontal stack, horizontal in a vertical one."
+      },
+      "container.mainAlign": {
+        "idiom": "Spacer() before and after the children; a stack has no distribution parameter"
+      },
+      "container.stack.horizontal": {
+        "idiom": "HStack(alignment:spacing:)",
+        "note": "A spec that states no gap means zero. CSS has no implicit spacing, so state the spacing instead of relying on a platform default.",
+        "frameworkNote": "A stack has a non-zero default spacing, so pass spacing: 0 explicitly."
+      },
+      "cornerRadius": {
+        "idiom": "RoundedRectangle(cornerRadius:) as the background, stroke and clip shape"
+      },
+      "event.click": {
+        "idiom": "Button(action:), or onTapGesture",
+        "note": "A click in a browser can come from a pointer, a keyboard or assistive technology. When the source tells them apart (a click with detail 0 did not come from a pointer), the native control's own action already receives the keyboard and assistive-technology activations, so only the pointer path needs a handler of its own."
+      },
+      "event.keyDown": {
+        "idiom": "onKeyPress(_:action:) (iOS 17 and later; hardware keyboards)"
+      },
+      "event.pointerCancel": {
+        "idiom": "a @GestureState value that resets itself when the gesture stops, so a touch that is cancelled cannot leave something running",
+        "note": "A browser sends a distinct cancel event. Whether the native gesture reports it separately is for the team to confirm."
+      },
+      "event.pointerDown": {
+        "idiom": "DragGesture(minimumDistance: 0), whose first onChanged is the touch going down"
+      },
+      "event.pointerLeave": {
+        "idiom": "DragGesture reports the touch location while it leaves the view: compare it with the view's frame in onChanged"
+      },
+      "event.pointerUp": {
+        "idiom": "DragGesture(minimumDistance: 0).onEnded"
+      },
+      "feedback.haptic": {
+        "idiom": "sensoryFeedback(_:trigger:) (iOS 17 and later), or UIImpactFeedbackGenerator",
+        "note": "navigator.vibrate takes a duration in milliseconds. Native haptics are chosen from fixed types, so the duration in the source does not carry over and the team picks the type."
+      },
+      "focusRing": {
+        "idiom": "an overlay stroke shown while @FocusState is true",
+        "note": "The offset is measured from the node's edge, positive outward. The ring is a band as thick as its width: its inner edge sits at the offset and its outer edge at the offset plus the width. A negative offset puts the band inside the node. A ring with focusVisible is drawn for keyboard focus only, not for a tap."
+      },
+      "foreground": {
+        "idiom": "foregroundStyle(_:) propagates to descendants",
+        "note": "In CSS the text colour is inherited by descendants, and an icon drawn with currentColor takes it."
+      },
+      "hitArea": {
+        "idiom": "contentShape(Rectangle()) on an enlarged frame",
+        "note": "Neither platform offers a hit area that leaves layout untouched, so a larger touch area either takes layout space or is compensated for. The spec gives the intended minimum size and centre; how to compensate in layout is the team decision."
+      },
+      "item.flex": {
+        "idiom": "frame(maxWidth: .infinity) on each flexible sibling (frame(maxHeight:) in a vertical stack)",
+        "note": "grow is a proportional share of the space the fixed siblings leave.",
+        "frameworkNote": "Equal frame(maxWidth: .infinity) siblings share equally; unequal ratios need layoutPriority or a custom Layout."
+      },
+      "padding": {
+        "idiom": "padding(EdgeInsets(top:leading:bottom:trailing:))",
+        "note": "CSS left and right are physical. leading and trailing mirror in right-to-left layouts; use them only if mirroring is intended."
+      },
+      "size.fill": {
+        "idiom": "frame(maxWidth: .infinity) or frame(maxHeight: .infinity)"
+      },
+      "size.fixed": {
+        "idiom": "frame(width:height:)"
+      },
+      "state.focused": {
+        "idiom": "@FocusState"
+      },
+      "state.pressed": {
+        "idiom": "a ButtonStyle reading configuration.isPressed",
+        "note": "The spec states no pressed fill, so add none unless the design asks for one. Drive any change from the pressed state."
+      },
+      "state.unavailable.focusable": {
+        "idiom": "keep the control in the focus order and add .disabled(_:) behaviour yourself where needed; disabled(_:) alone stops interaction",
+        "note": "The source marks the control unavailable with aria-disabled, not the disabled attribute: the control stays in place and the browser does not take it out of focus handling. Whether it is in the keyboard order on this platform is stated per node under accessibility.tabOrder, and what blocks it is in the quoted logic. Do not assume either.",
+        "frameworkNote": "disabled(_:) stops interaction. To keep a control present but blocked, leave it enabled, ignore the action yourself and announce it as unavailable."
+      },
+      "text.font": {
+        "idiom": "font(.system(size:weight:)) or font(.custom(_:size:))",
+        "note": "A typographic size scales with the user's text size only if you ask it to. Whether this component should scale is not stated in the source.",
+        "frameworkNote": "Font.custom(_:size:relativeTo:) or @ScaledMetric scale with Dynamic Type."
+      },
+      "text.letterSpacing": {
+        "idiom": "tracking(_:)"
+      },
+      "text.lineHeight": {
+        "idiom": "no line-height setter; lineSpacing(_:) adds the difference between this line height and the font natural one"
+      },
+      "text.numericFigures.tabular": {
+        "idiom": "monospacedDigit()"
+      },
+      "transform.scale": {
+        "idiom": "scaleEffect(_:anchor: .center)",
+        "note": "CSS scales about the centre of the node; both defaults match."
+      }
+    }
+  },
+  "evidence": {
+    "note": "The raw rules the sections above were derived from. Trace a value here; do not build from it.",
+    "visualRules": [
+      {
+        "node": "root",
+        "pseudoElement": null,
+        "conditions": [],
+        "media": [],
+        "properties": {
+          "display": "inline-flex",
+          "alignItems": "center",
+          "boxSizing": "border-box",
+          "width": {
+            "expression": "2 * {semantic.size.40} + {semantic.size.24}",
+            "syntax": "arithmetic"
+          },
+          "height": "{semantic.size.32}",
+          "borderStyle": "solid",
+          "borderWidth": "{semantic.border.width.default}",
+          "borderColor": "{semantic.color.border.moderate}",
+          "radius": "{semantic.border.radius.8}",
+          "fill": "{semantic.color.background.default}"
+        },
+        "transitions": [],
+        "source": ".ds-counter",
+        "order": 0
+      },
+      {
+        "node": "root",
+        "pseudoElement": null,
+        "conditions": [
+          {
+            "subject": "self",
+            "className": "ds-counter",
+            "attribute": "data-full-width",
+            "equals": "true",
+            "node": "root"
+          }
+        ],
+        "media": [],
+        "properties": {
+          "width": {
+            "value": 100,
+            "unit": "%"
+          }
+        },
+        "transitions": [],
+        "source": ".ds-counter[data-full-width='true']",
+        "order": 1
+      },
+      {
+        "node": "button",
+        "pseudoElement": null,
+        "conditions": [],
+        "media": [],
+        "properties": {
+          "position": "relative",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "flexBasis": 0,
+          "alignSelf": "stretch",
+          "display": "flex",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "padTop": "{semantic.spacing.0}",
+          "padRight": "{semantic.spacing.0}",
+          "padBottom": "{semantic.spacing.0}",
+          "padLeft": "{semantic.spacing.0}",
+          "borderWidth": 0,
+          "fill": "none",
+          "labelColor": "{semantic.color.icon.brand.primary}"
+        },
+        "transitions": [],
+        "source": ".ds-counter__button",
+        "order": 2
+      },
+      {
+        "node": "button2",
+        "pseudoElement": null,
+        "conditions": [],
+        "media": [],
+        "properties": {
+          "position": "relative",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "flexBasis": 0,
+          "alignSelf": "stretch",
+          "display": "flex",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "padTop": "{semantic.spacing.0}",
+          "padRight": "{semantic.spacing.0}",
+          "padBottom": "{semantic.spacing.0}",
+          "padLeft": "{semantic.spacing.0}",
+          "borderWidth": 0,
+          "fill": "none",
+          "labelColor": "{semantic.color.icon.brand.primary}"
+        },
+        "transitions": [],
+        "source": ".ds-counter__button",
+        "order": 2
+      },
+      {
+        "node": "button",
+        "pseudoElement": "after",
+        "conditions": [],
+        "media": [],
+        "properties": {
+          "content": "''",
+          "position": "absolute",
+          "top": {
+            "value": 50,
+            "unit": "%"
+          },
+          "left": {
+            "value": 50,
+            "unit": "%"
+          },
+          "width": {
+            "value": 100,
+            "unit": "%"
+          },
+          "height": {
+            "value": 100,
+            "unit": "%"
+          },
+          "minWidth": "{semantic.size.48}",
+          "minHeight": "{semantic.size.48}",
+          "transform": {
+            "translateX": {
+              "value": -50,
+              "unit": "%"
+            },
+            "translateY": {
+              "value": -50,
+              "unit": "%"
+            }
+          }
+        },
+        "transitions": [],
+        "source": ".ds-counter__button::after",
+        "order": 3
+      },
+      {
+        "node": "button2",
+        "pseudoElement": "after",
+        "conditions": [],
+        "media": [],
+        "properties": {
+          "content": "''",
+          "position": "absolute",
+          "top": {
+            "value": 50,
+            "unit": "%"
+          },
+          "left": {
+            "value": 50,
+            "unit": "%"
+          },
+          "width": {
+            "value": 100,
+            "unit": "%"
+          },
+          "height": {
+            "value": 100,
+            "unit": "%"
+          },
+          "minWidth": "{semantic.size.48}",
+          "minHeight": "{semantic.size.48}",
+          "transform": {
+            "translateX": {
+              "value": -50,
+              "unit": "%"
+            },
+            "translateY": {
+              "value": -50,
+              "unit": "%"
+            }
+          }
+        },
+        "transitions": [],
+        "source": ".ds-counter__button::after",
+        "order": 3
+      },
+      {
+        "node": "button",
+        "pseudoElement": "after",
+        "conditions": [
+          {
+            "subject": "self",
+            "className": "ds-counter__button",
+            "attribute": "aria-disabled",
+            "equals": "true",
+            "node": "button"
+          }
+        ],
+        "media": [],
+        "properties": {
+          "content": "none"
+        },
+        "transitions": [],
+        "source": ".ds-counter__button[aria-disabled='true']::after",
+        "order": 4
+      },
+      {
+        "node": "button2",
+        "pseudoElement": "after",
+        "conditions": [
+          {
+            "subject": "self",
+            "className": "ds-counter__button",
+            "attribute": "aria-disabled",
+            "equals": "true",
+            "node": "button2"
+          }
+        ],
+        "media": [],
+        "properties": {
+          "content": "none"
+        },
+        "transitions": [],
+        "source": ".ds-counter__button[aria-disabled='true']::after",
+        "order": 4
+      },
+      {
+        "node": "button",
+        "pseudoElement": null,
+        "conditions": [
+          {
+            "subject": "self",
+            "className": "ds-counter__button",
+            "attribute": "aria-disabled",
+            "equals": "true",
+            "node": "button"
+          }
+        ],
+        "media": [],
+        "properties": {
+          "labelColor": "{semantic.color.disabled.icon}"
+        },
+        "transitions": [],
+        "source": ".ds-counter__button[aria-disabled='true']",
+        "order": 5
+      },
+      {
+        "node": "button2",
+        "pseudoElement": null,
+        "conditions": [
+          {
+            "subject": "self",
+            "className": "ds-counter__button",
+            "attribute": "aria-disabled",
+            "equals": "true",
+            "node": "button2"
+          }
+        ],
+        "media": [],
+        "properties": {
+          "labelColor": "{semantic.color.disabled.icon}"
+        },
+        "transitions": [],
+        "source": ".ds-counter__button[aria-disabled='true']",
+        "order": 5
+      },
+      {
+        "node": "button",
+        "pseudoElement": null,
+        "conditions": [
+          {
+            "subject": "self",
+            "className": "ds-counter__button",
+            "state": "focused",
+            "focusVisible": true,
+            "node": "button"
+          }
+        ],
+        "media": [],
+        "properties": {
+          "outlineStyle": "solid",
+          "outlineWidth": {
+            "expression": "2 * {semantic.border.width.default}",
+            "syntax": "arithmetic"
+          },
+          "outlineColor": "{semantic.color.border.brand}",
+          "outlineOffset": {
+            "expression": "-1 * {semantic.border.width.default}",
+            "syntax": "arithmetic"
+          },
+          "radius": "{semantic.border.radius.8}"
+        },
+        "transitions": [],
+        "source": ".ds-counter__button:focus-visible",
+        "order": 6
+      },
+      {
+        "node": "button2",
+        "pseudoElement": null,
+        "conditions": [
+          {
+            "subject": "self",
+            "className": "ds-counter__button",
+            "state": "focused",
+            "focusVisible": true,
+            "node": "button2"
+          }
+        ],
+        "media": [],
+        "properties": {
+          "outlineStyle": "solid",
+          "outlineWidth": {
+            "expression": "2 * {semantic.border.width.default}",
+            "syntax": "arithmetic"
+          },
+          "outlineColor": "{semantic.color.border.brand}",
+          "outlineOffset": {
+            "expression": "-1 * {semantic.border.width.default}",
+            "syntax": "arithmetic"
+          },
+          "radius": "{semantic.border.radius.8}"
+        },
+        "transitions": [],
+        "source": ".ds-counter__button:focus-visible",
+        "order": 6
+      },
+      {
+        "node": "value",
+        "pseudoElement": null,
+        "conditions": [
+          {
+            "subject": "self",
+            "className": "ds-counter__value",
+            "state": "focused",
+            "focusVisible": true,
+            "node": "value"
+          }
+        ],
+        "media": [],
+        "properties": {
+          "outlineStyle": "solid",
+          "outlineWidth": {
+            "expression": "2 * {semantic.border.width.default}",
+            "syntax": "arithmetic"
+          },
+          "outlineColor": "{semantic.color.border.brand}",
+          "outlineOffset": {
+            "expression": "-1 * {semantic.border.width.default}",
+            "syntax": "arithmetic"
+          },
+          "radius": "{semantic.border.radius.8}"
+        },
+        "transitions": [],
+        "source": ".ds-counter__value:focus-visible",
+        "order": 7
+      },
+      {
+        "node": "icon",
+        "pseudoElement": null,
+        "conditions": [],
+        "media": [],
+        "properties": {
+          "display": "block"
+        },
+        "transitions": [
+          {
+            "property": "transform",
+            "durationMs": 100,
+            "delayMs": 0,
+            "curve": {
+              "type": "linear"
+            }
+          }
+        ],
+        "source": ".ds-counter__icon",
+        "order": 8
+      },
+      {
+        "node": "icon2",
+        "pseudoElement": null,
+        "conditions": [],
+        "media": [],
+        "properties": {
+          "display": "block"
+        },
+        "transitions": [
+          {
+            "property": "transform",
+            "durationMs": 100,
+            "delayMs": 0,
+            "curve": {
+              "type": "linear"
+            }
+          }
+        ],
+        "source": ".ds-counter__icon",
+        "order": 8
+      },
+      {
+        "node": "icon",
+        "pseudoElement": null,
+        "conditions": [
+          {
+            "subject": "ancestor",
+            "className": "ds-counter__button",
+            "attribute": "aria-disabled",
+            "equals": "true",
+            "negate": true,
+            "node": "button"
+          },
+          {
+            "subject": "ancestor",
+            "className": "ds-counter__button",
+            "state": "pressed",
+            "node": "button"
+          }
+        ],
+        "media": [],
+        "properties": {
+          "transform": {
+            "scale": 0.9
+          }
+        },
+        "transitions": [],
+        "source": ".ds-counter__button:active:not([aria-disabled='true']) .ds-counter__icon",
+        "order": 9
+      },
+      {
+        "node": "icon2",
+        "pseudoElement": null,
+        "conditions": [
+          {
+            "subject": "ancestor",
+            "className": "ds-counter__button",
+            "attribute": "aria-disabled",
+            "equals": "true",
+            "negate": true,
+            "node": "button2"
+          },
+          {
+            "subject": "ancestor",
+            "className": "ds-counter__button",
+            "state": "pressed",
+            "node": "button2"
+          }
+        ],
+        "media": [],
+        "properties": {
+          "transform": {
+            "scale": 0.9
+          }
+        },
+        "transitions": [],
+        "source": ".ds-counter__button:active:not([aria-disabled='true']) .ds-counter__icon",
+        "order": 9
+      },
+      {
+        "node": "value",
+        "pseudoElement": null,
+        "conditions": [],
+        "media": [],
+        "properties": {
+          "flexGrow": 0,
+          "flexShrink": 0,
+          "flexBasis": "{semantic.size.24}",
+          "width": "{semantic.size.24}",
+          "alignSelf": "stretch",
+          "display": "flex",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "typography": "{semantic.typography.label.l}",
+          "labelColor": "{semantic.color.text.primary}",
+          "fontVariantNumeric": "tabular-nums"
+        },
+        "transitions": [
+          {
+            "property": "transform",
+            "durationMs": 100,
+            "delayMs": 0,
+            "curve": {
+              "type": "linear"
+            }
+          }
+        ],
+        "source": ".ds-counter__value",
+        "order": 10
+      },
+      {
+        "node": "value",
+        "pseudoElement": null,
+        "conditions": [
+          {
+            "subject": "self",
+            "className": "ds-counter__value",
+            "attribute": "data-pop",
+            "equals": "true",
+            "node": "value"
+          }
+        ],
+        "media": [],
+        "properties": {
+          "transform": {
+            "scale": 1.1
+          }
+        },
+        "transitions": [],
+        "source": ".ds-counter__value[data-pop='true']",
+        "order": 11
+      },
+      {
+        "node": "icon",
+        "pseudoElement": null,
+        "conditions": [],
+        "media": [
+          "(prefers-reduced-motion: reduce)"
+        ],
+        "properties": {
+          "transitionDurationMs": 0.01
+        },
+        "transitions": [],
+        "source": ".ds-counter__icon",
+        "order": 12
+      },
+      {
+        "node": "icon2",
+        "pseudoElement": null,
+        "conditions": [],
+        "media": [
+          "(prefers-reduced-motion: reduce)"
+        ],
+        "properties": {
+          "transitionDurationMs": 0.01
+        },
+        "transitions": [],
+        "source": ".ds-counter__icon",
+        "order": 12
+      },
+      {
+        "node": "value",
+        "pseudoElement": null,
+        "conditions": [],
+        "media": [
+          "(prefers-reduced-motion: reduce)"
+        ],
+        "properties": {
+          "transitionDurationMs": 0.01
+        },
+        "transitions": [],
+        "source": ".ds-counter__value",
+        "order": 13
+      }
+    ],
+    "interactionBindings": [
+      {
+        "attribute": "data-pop",
+        "state": "pop",
+        "setter": "setPop",
+        "initial": false,
+        "source": {
+          "state": "const [pop, setPop] = useState(false)",
+          "attribute": "data-pop={pop}"
+        },
+        "activations": [
+          {
+            "value": true,
+            "expression": "setPop(true)",
+            "containingFunction": "setValue",
+            "contextExpression": "(next: number) => {\n      const clamped = clamp(next, min, max);\n      if (clamped === valueRef.current) {\n        stopHold();\n        return;\n      }\n\n      valueRef.current = clamped;\n      if (!isControlled) setUncontrolled(clamped);\n      onChange?.(clamped);\n\n      setPop(true);\n      clearTimeout(popTimer.current);\n      popTimer.current = setTimeout(() => setPop(false), POP_MS);\n\n      navigator.vibrate?.(HAPTIC_MS);\n    }",
+            "trigger": {
+              "expression": "setPop(true)",
+              "manualTranslation": true
+            }
+          }
+        ],
+        "reset": {
+          "value": false,
+          "delayMs": 100,
+          "expression": "setTimeout(() => setPop(false), POP_MS)",
+          "setterExpression": "setPop(false)",
+          "delayExpression": "POP_MS",
+          "delayEvidence": "const POP_MS = 100;",
+          "containingFunction": "setValue",
+          "contextExpression": "(next: number) => {\n      const clamped = clamp(next, min, max);\n      if (clamped === valueRef.current) {\n        stopHold();\n        return;\n      }\n\n      valueRef.current = clamped;\n      if (!isControlled) setUncontrolled(clamped);\n      onChange?.(clamped);\n\n      setPop(true);\n      clearTimeout(popTimer.current);\n      popTimer.current = setTimeout(() => setPop(false), POP_MS);\n\n      navigator.vibrate?.(HAPTIC_MS);\n    }"
+        }
+      }
+    ]
+  }
+}

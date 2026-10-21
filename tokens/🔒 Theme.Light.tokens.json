@@ -1,0 +1,3886 @@
+{
+  "Semantic": {
+    "Color": {
+      "Brand": {
+        "Primary": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.700}"
+        },
+        "Secondary": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.400}"
+        },
+        "PrimaryLightBG": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.50}"
+        },
+        "PrimaryDarkBG": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.900}"
+        }
+      },
+      "CTA": {
+        "Background": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.700}",
+          "$description": "Primary CTA"
+        },
+        "BackgroundSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.50}",
+          "$description": "Tonal CTA"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Border.Brand}",
+          "$description": "Used for Secondary CTA"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Text.Brand}",
+          "$description": "Used for secodary, tertiary and inverse CTA"
+        },
+        "Icon": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Icon.BrandPrimary}",
+          "$description": "Used for tertiary CTA"
+        }
+      },
+      "Surface": {
+        "AppBackground": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "PrimaryLayer": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "ElevatedLayer": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "ElevatedLayerPlus": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "BackgroundOverlay": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A70}"
+        },
+        "BackgroundOverlayInverse": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A80}"
+        }
+      },
+      "Background": {
+        "Brand": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.700}"
+        },
+        "Default": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "Subtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.25}"
+        },
+        "Subtle2": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}",
+          "$description": "Action Menu bg"
+        },
+        "Soft": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}"
+        },
+        "Pale": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.200}"
+        },
+        "Muted": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.300}"
+        },
+        "Emphasis": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.450}"
+        },
+        "Deep": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.1000}"
+        },
+        "BrandLightSoft": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.50}"
+        },
+        "Transparent": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A00}"
+        },
+        "Inverse": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        }
+      },
+      "Text": {
+        "Brand": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.700}"
+        },
+        "Primary": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.1000}"
+        },
+        "Secondary": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.600}"
+        },
+        "Muted": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.450}"
+        },
+        "Moderate": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.300}",
+          "$description": "Used for less empahsis text on dark background in the Light mode."
+        },
+        "Soft": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.100}"
+        },
+        "Inverse": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}",
+          "$description": "Use for styling text on darker backgrounds. Will inverse in dark mode."
+        },
+        "AlwaysLight": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}",
+          "$description": "Use this for text that should remain light in both light and dark modes"
+        },
+        "AlwaysLightSecondary": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.400}"
+        },
+        "AlwaysDark": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.1000}"
+        }
+      },
+      "Icon": {
+        "BrandPrimary": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.700}"
+        },
+        "Bold": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.1000}"
+        },
+        "Rich": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.600}"
+        },
+        "Emphasis": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.450}"
+        },
+        "Muted": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.300}"
+        },
+        "Soft": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.100}"
+        },
+        "Inverse": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}",
+          "$description": "Use for styling icons on darker backgrounds. Will inverse in dark mode."
+        },
+        "AlwaysLight": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}",
+          "$description": "Use this for icons that should remain light in both light and dark modes"
+        },
+        "AlwaysDark": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.1000}"
+        }
+      },
+      "Border": {
+        "Brand": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.700}"
+        },
+        "BrandLight": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.100_A70}"
+        },
+        "Emphasis": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.400}"
+        },
+        "Moderate": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.300}"
+        },
+        "Muted": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.200}"
+        },
+        "Pale": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.100}",
+          "$description": "Less emphasis"
+        },
+        "Inverse": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        }
+      },
+      "Success": {
+        "BackgroundBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.600}"
+        },
+        "BackgroundSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.50}"
+        },
+        "TextBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.600}"
+        },
+        "TextSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "BorderBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.600}"
+        },
+        "BorderSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.100_A70}"
+        },
+        "IconBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.600}"
+        },
+        "IconSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        }
+      },
+      "Warning": {
+        "BackgroundBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.450}"
+        },
+        "BackgroundSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.50}"
+        },
+        "TextBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.450}"
+        },
+        "TextSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "BorderBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.450}"
+        },
+        "BorderSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.100_A70}"
+        },
+        "IconBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.450}"
+        },
+        "IconSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        }
+      },
+      "Danger": {
+        "BackgroundBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.600}"
+        },
+        "BackgroundSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.50}"
+        },
+        "TextBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.600}"
+        },
+        "TextSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "BorderBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.600}"
+        },
+        "BorderSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.100_A70}"
+        },
+        "IconBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.600}"
+        },
+        "IconSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        }
+      },
+      "Info": {
+        "BackgroundBold": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.700}"
+        },
+        "BackgroundSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.50}"
+        },
+        "TextBold": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.700}"
+        },
+        "TextSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "BorderBold": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.700}"
+        },
+        "BorderSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.100_A70}"
+        },
+        "IconBold": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.700}"
+        },
+        "IconSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        }
+      },
+      "Selection": {
+        "BackgroundBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.600}"
+        },
+        "BackgroundSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.50}"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.600}"
+        },
+        "BorderSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.100}"
+        },
+        "Icon": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.600}"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.600}"
+        }
+      },
+      "Disabled": {
+        "Background": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.300}"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.400}"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.400}"
+        },
+        "Icon": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.400}"
+        }
+      },
+      "Neutral": {
+        "Black": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black}"
+        },
+        "White": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        }
+      },
+      "Accent": {
+        "CyanBackgroundBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Cyan.900}"
+        },
+        "GeekBlueBackgroundSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.50}"
+        },
+        "BrownBackgroundSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Brown.50}"
+        },
+        "BrownTextBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Brown.600}"
+        },
+        "Accent1": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.600}"
+        },
+        "Accent2": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.50}"
+        },
+        "Accent3": {
+          "$type": "color",
+          "$value": "{Base.Color.Yellow.300}"
+        },
+        "Accent4": {
+          "$type": "color",
+          "$value": "{Base.Color.Yellow.50}"
+        },
+        "Accent5": {
+          "$type": "color",
+          "$value": "{Base.Color.Yellow.25}"
+        },
+        "Accent6": {
+          "$type": "color",
+          "$value": "{Base.Color.Yellow.50}"
+        },
+        "Accent7": {
+          "$type": "color",
+          "$value": "{Base.Color.Yellow.600}"
+        },
+        "Accent8": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.700}"
+        },
+        "Accent9": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.50}"
+        },
+        "Accent10": {
+          "$type": "color",
+          "$value": "{Base.Color.LimeGreen.500}"
+        },
+        "Accent11": {
+          "$type": "color",
+          "$value": "{Base.Color.LimeGreen.50}"
+        },
+        "Accent12": {
+          "$type": "color",
+          "$value": "{Base.Color.Brown.600}"
+        },
+        "Accent13": {
+          "$type": "color",
+          "$value": "{Base.Color.Brown.50}"
+        },
+        "Accent14": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.1000}"
+        },
+        "Accent15": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.500}"
+        },
+        "Accent16": {
+          "$type": "color",
+          "$value": "{Base.Color.Cyan.500}"
+        },
+        "Accent17": {
+          "$type": "color",
+          "$value": "{Base.Color.Cyan.50}"
+        },
+        "Accent18": {
+          "$type": "color",
+          "$value": "{Base.Color.SteelBlue.600}"
+        },
+        "Accent19": {
+          "$type": "color",
+          "$value": "{Base.Color.SteelBlue.50}"
+        },
+        "Accent20": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.400}"
+        },
+        "Accent21": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.50}"
+        },
+        "Accent22": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.450}"
+        },
+        "Accent23": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.50}"
+        },
+        "Accent24": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.1000}"
+        },
+        "Accent25": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A15}"
+        },
+        "Accent26": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A15}"
+        },
+        "AccentNeutral": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.450}"
+        },
+        "AccentNeutralSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.100}"
+        }
+      }
+    },
+    "Size": {
+      "0": {
+        "$type": "dimension",
+        "$value": "{Base.Size.0}"
+      },
+      "1": {
+        "$type": "dimension",
+        "$value": "{Base.Size.1}"
+      },
+      "2": {
+        "$type": "dimension",
+        "$value": "{Base.Size.2}"
+      },
+      "4": {
+        "$type": "dimension",
+        "$value": "{Base.Size.4}"
+      },
+      "6": {
+        "$type": "dimension",
+        "$value": "{Base.Size.6}"
+      },
+      "8": {
+        "$type": "dimension",
+        "$value": "{Base.Size.8}"
+      },
+      "10": {
+        "$type": "dimension",
+        "$value": "{Base.Size.10}"
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": "{Base.Size.12}"
+      },
+      "14": {
+        "$type": "dimension",
+        "$value": "{Base.Size.14}"
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": "{Base.Size.16}"
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": "{Base.Size.20}"
+      },
+      "24": {
+        "$type": "dimension",
+        "$value": "{Base.Size.24}"
+      },
+      "32": {
+        "$type": "dimension",
+        "$value": "{Base.Size.32}"
+      },
+      "40": {
+        "$type": "dimension",
+        "$value": "{Base.Size.40}"
+      },
+      "48": {
+        "$type": "dimension",
+        "$value": "{Base.Size.48}"
+      },
+      "56": {
+        "$type": "dimension",
+        "$value": "{Base.Size.56}"
+      },
+      "64": {
+        "$type": "dimension",
+        "$value": "{Base.Size.64}"
+      },
+      "72": {
+        "$type": "dimension",
+        "$value": "{Base.Size.72}"
+      },
+      "80": {
+        "$type": "dimension",
+        "$value": "{Base.Size.80}"
+      },
+      "96": {
+        "$type": "dimension",
+        "$value": "{Base.Size.96}"
+      },
+      "112": {
+        "$type": "dimension",
+        "$value": "{Base.Size.112}"
+      },
+      "128": {
+        "$type": "dimension",
+        "$value": "{Base.Size.128}"
+      }
+    },
+    "Spacing": {
+      "0": {
+        "$type": "dimension",
+        "$value": "{Base.Spacing.0}"
+      },
+      "2": {
+        "$type": "dimension",
+        "$value": "{Base.Spacing.2}"
+      },
+      "4": {
+        "$type": "dimension",
+        "$value": "{Base.Spacing.4}"
+      },
+      "8": {
+        "$type": "dimension",
+        "$value": "{Base.Spacing.8}"
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": "{Base.Spacing.12}"
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": "{Base.Spacing.16}"
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": "{Base.Spacing.20}"
+      },
+      "24": {
+        "$type": "dimension",
+        "$value": "{Base.Spacing.24}"
+      },
+      "32": {
+        "$type": "dimension",
+        "$value": "{Base.Spacing.32}"
+      },
+      "40": {
+        "$type": "dimension",
+        "$value": "{Base.Spacing.40}"
+      },
+      "48": {
+        "$type": "dimension",
+        "$value": "{Base.Spacing.48}"
+      },
+      "56": {
+        "$type": "dimension",
+        "$value": "{Base.Spacing.56}"
+      }
+    },
+    "FontFamily": {
+      "Default": {
+        "$type": "string",
+        "$value": "{Base.FontFamily.Default}"
+      },
+      "Merch": {
+        "$type": "string",
+        "$value": "{Base.FontFamily.ClashGrotesk}"
+      }
+    },
+    "FontSize": {
+      "8": {
+        "$type": "dimension",
+        "$value": "{Base.FontSize.8}"
+      },
+      "10": {
+        "$type": "dimension",
+        "$value": "{Base.FontSize.10}"
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": "{Base.FontSize.12}"
+      },
+      "14": {
+        "$type": "dimension",
+        "$value": "{Base.FontSize.14}"
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": "{Base.FontSize.16}"
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": "{Base.FontSize.20}"
+      },
+      "24": {
+        "$type": "dimension",
+        "$value": "{Base.FontSize.24}"
+      },
+      "32": {
+        "$type": "dimension",
+        "$value": "{Base.FontSize.32}"
+      },
+      "40": {
+        "$type": "dimension",
+        "$value": "{Base.FontSize.40}"
+      },
+      "56": {
+        "$type": "dimension",
+        "$value": "{Base.FontSize.56}"
+      },
+      "120": {
+        "$type": "dimension",
+        "$value": "{Base.FontSize.120}"
+      }
+    },
+    "FontWeight": {
+      "Bold": {
+        "$type": "string",
+        "$value": "{Base.FontWeight.Bold}"
+      },
+      "SemiBold": {
+        "$type": "string",
+        "$value": "{Base.FontWeight.SemiBold}"
+      },
+      "Medium": {
+        "$type": "string",
+        "$value": "{Base.FontWeight.Medium}"
+      },
+      "Regular": {
+        "$type": "string",
+        "$value": "{Base.FontWeight.Regular}"
+      }
+    },
+    "BorderRadius": {
+      "0": {
+        "$type": "dimension",
+        "$value": "{Base.BorderRadius.0}"
+      },
+      "4": {
+        "$type": "dimension",
+        "$value": "{Base.BorderRadius.4}",
+        "$description": "Used for smallest components like - \nAvatars (Smallest size)\nCheckbox"
+      },
+      "8": {
+        "$type": "dimension",
+        "$value": "{Base.BorderRadius.8}",
+        "$description": "Used for components like - \nButtons\nAvatars(Smaller size)\nInput Field"
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": "{Base.BorderRadius.12}",
+        "$description": "Used for components like - \nCards\nSnack bars\nAction Menu\nAvatar"
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": "{Base.BorderRadius.16}",
+        "$description": "Used for container components like -\nBottom sheet\nDialog Box"
+      },
+      "24": {
+        "$type": "dimension",
+        "$value": "{Base.BorderRadius.24}",
+        "$description": "Used for container components like -\nBottom sheet\nDialog Box"
+      },
+      "100%": {
+        "$type": "dimension",
+        "$value": "{Base.BorderRadius.100%}",
+        "$description": "Used for components that needs to standout like - \nChips\nSearch Bar"
+      }
+    },
+    "BorderWidth": {
+      "Default": {
+        "$type": "dimension",
+        "$value": "{Base.BorderWidth.Default}",
+        "$description": "Used for default input fields,etc."
+      },
+      "Medium": {
+        "$type": "dimension",
+        "$value": "{Base.BorderWidth.Medium}"
+      },
+      "Heavy": {
+        "$type": "dimension",
+        "$value": "{Base.BorderWidth.Heavy}"
+      }
+    },
+    "Opacity": {
+      "0%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.0%}"
+      },
+      "5%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.5%}"
+      },
+      "10%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.10%}"
+      },
+      "15%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.15%}"
+      },
+      "20%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.20%}"
+      },
+      "25%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.25%}",
+        "$description": "This opacity value is used for Scan and pay layer for iOs"
+      },
+      "30%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.30%}"
+      },
+      "40%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.40%}"
+      },
+      "50%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.50%}"
+      },
+      "60%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.60%}"
+      },
+      "70%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.70%}"
+      },
+      "80%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.80%}"
+      },
+      "90%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.90%}"
+      },
+      "100%": {
+        "$type": "dimension",
+        "$value": "{Base.Opacity.100%}"
+      }
+    }
+  },
+  "Component": {
+    "Color": {
+      "Avatar": {
+        "Text": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "Background01": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Accent.Accent1}"
+        },
+        "Background02": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Accent.Accent16}"
+        },
+        "Background03": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.800}"
+        },
+        "Background04": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Accent.Accent3}"
+        },
+        "Background05": {
+          "$type": "color",
+          "$value": "{Base.Color.LimeGreen.450}"
+        },
+        "Background06": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Accent.AccentNeutral}"
+        },
+        "Background07": {
+          "$type": "color",
+          "$value": "{Base.Color.SteelBlue.900}"
+        },
+        "BackgroundChild": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Surface.PrimaryLayer}"
+        },
+        "BorderDefault": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A05}"
+        },
+        "BorderChild": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Border.Moderate}"
+        },
+        "BorderInverse": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Border.Inverse}",
+          "$description": "Applied only to Stack avatars"
+        }
+      },
+      "Alert": {
+        "Overlay": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A80}"
+        },
+        "BackgroundNeutral": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}"
+        },
+        "BackgroundWarning": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.50}"
+        },
+        "BackgroundDanger": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.50}"
+        },
+        "BackgroundSuccess": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.50}"
+        },
+        "BorderNeutral": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.100}"
+        },
+        "BorderWarning": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.100_A70}"
+        },
+        "BorderSuccess": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.100_A70}"
+        },
+        "BorderDanger": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.100_A70}"
+        },
+        "ContentNeutral": {
+          "$type": "color",
+          "$value": "{Base.Color.SteelBlue.700}"
+        },
+        "BackgroundBubble": {
+          "$type": "color",
+          "$value": "{Base.Color.SteelBlue.900}"
+        }
+      },
+      "Bento": {
+        "Background": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}"
+        },
+        "BackgroundPressed": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.100}"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.200}"
+        },
+        "BackgroundElevated": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "BackgroundElevatedPressed": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.25}"
+        },
+        "ElevatedBorder": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.100}"
+        },
+        "TagBGSubtle": {
+          "$type": "color",
+          "$value": "#e1d4ff"
+        },
+        "TagTextSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.800}"
+        }
+      },
+      "BrandLogos": {
+        "BorderDefault": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Border.Moderate}"
+        }
+      },
+      "BottomSheet": {
+        "BackgroundDrawer": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Surface.ElevatedLayer}"
+        }
+      },
+      "Button": {
+        "Default": {
+          "Primary": {
+            "Active": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Semantic.Color.CTA.Background}"
+              },
+              "BackgroundPressed": {
+                "$type": "color",
+                "$value": "{Base.Color.Purple.800}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.White}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.White}"
+              }
+            },
+            "Disabled": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Base.Color.Grey.100}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Text}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Icon}"
+              }
+            }
+          },
+          "Secondary": {
+            "Active": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Base.Color.Purple.50}"
+              },
+              "BackgroundPressed": {
+                "$type": "color",
+                "$value": "{Base.Color.Purple.100}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.CTA.Text}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.CTA.Icon}"
+              },
+              "Border": {
+                "$type": "color",
+                "$value": "{Semantic.Color.CTA.Border}"
+              }
+            },
+            "Disabled": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Base.Color.Grey.100}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Icon}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Text}"
+              },
+              "Border": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Border}"
+              }
+            }
+          },
+          "Tertiary": {
+            "Active": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.Black_A00}"
+              },
+              "BackgroundPressed": {
+                "$type": "color",
+                "$value": "{Base.Color.Purple.50}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.CTA.Icon}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.CTA.Text}"
+              }
+            },
+            "Disabled": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.Black_A00}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Icon}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Text}"
+              }
+            },
+            "Destructive": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Danger.BackgroundSubtle}"
+              },
+              "BackgroundPressed": {
+                "$type": "color",
+                "$value": "{Base.Color.Red.100}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Danger.TextBold}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Danger.IconBold}"
+              },
+              "BackgroundDisabled": {
+                "$type": "color",
+                "$value": "{Base.Color.Grey.100}"
+              },
+              "TextDisabled": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Text}"
+              },
+              "IconDisabled": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Icon}"
+              }
+            }
+          },
+          "Tonal": {
+            "Active": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Semantic.Color.CTA.BackgroundSubtle}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.CTA.Icon}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.CTA.Text}"
+              }
+            },
+            "Disabled": {
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Text}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Icon}"
+              },
+              "Background": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Background.Soft}"
+              }
+            }
+          },
+          "FAB": {
+            "Active": {
+              "BorderColor": {
+                "$type": "color",
+                "$value": "{Base.Color.Grey.300}"
+              },
+              "BackgroundColor": {
+                "$type": "color",
+                "$value": "{Base.Color.Grey.1000}"
+              }
+            }
+          }
+        },
+        "IconOnly": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.Black_A00}"
+          },
+          "BackgroundContainer": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.Black_A60}"
+          },
+          "BackgroundPressed": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.Black_A10}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "IconInverse": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.White}"
+          },
+          "IconDisabled": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Icon}"
+          },
+          "BackgroundPressedInverse": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.White_A10}"
+          }
+        },
+        "Inverse": {
+          "Primary": {
+            "Active": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Background.Inverse}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.CTA.Text}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.CTA.Icon}"
+              }
+            },
+            "Disabled": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Background}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Text}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Icon}"
+              }
+            }
+          },
+          "Secondary": {
+            "Active": {
+              "Border": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.White}"
+              },
+              "Background": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.White}"
+              },
+              "BackgroundPressed": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.White}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Base.Color.Purple.700}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Base.Color.Purple.700}"
+              }
+            },
+            "Disabled": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Base.Color.Grey.25}"
+              },
+              "Border": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Border}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Text}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Icon}"
+              }
+            }
+          },
+          "Tertiary": {
+            "Active": {
+              "Text": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.White}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.White}"
+              }
+            },
+            "Disabled": {
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Text}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Icon}"
+              }
+            }
+          },
+          "Tonal": {
+            "Active": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.Black_A10}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.White}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.White}"
+              }
+            },
+            "Disabled": {
+              "Background": {
+                "$type": "color",
+                "$value": "{Base.Color.Neutral.Black_A05}"
+              },
+              "Text": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Text}"
+              },
+              "Icon": {
+                "$type": "color",
+                "$value": "{Semantic.Color.Disabled.Icon}"
+              }
+            }
+          }
+        }
+      },
+      "BottomNavigationItem": {
+        "Default": {
+          "Text": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.600}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.600}"
+          },
+          "IconBackground": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Background.Default}"
+          }
+        },
+        "Active": {
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Brand}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.BrandPrimary}"
+          },
+          "IconBackground": {
+            "$type": "color",
+            "$value": "{Base.Color.Purple.25}"
+          }
+        }
+      },
+      "BottomNavigationBar": {
+        "Background": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Surface.ElevatedLayer}"
+        }
+      },
+      "CarouselIndicator": {
+        "Default": {
+          "BackgroundActive": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.1000}"
+          },
+          "BackgroundInactive": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.Black_A15}"
+          }
+        },
+        "Inverse": {
+          "BackgroundActive": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.White}"
+          },
+          "BackgroundInactive": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.White_A15}"
+          }
+        }
+      },
+      "Checkbox": {
+        "Active": {
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.IconBold}"
+          }
+        },
+        "Default": {
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          }
+        },
+        "Disabled": {
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Icon}"
+          }
+        },
+        "Error": {
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.IconBold}"
+          }
+        }
+      },
+      "CategorySection": {
+        "Background": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}"
+        },
+        "BackgroundPressed": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.200}"
+        },
+        "Border": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A05}"
+        },
+        "TagText": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.25}"
+        },
+        "TagBG": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.1000}"
+        },
+        "TagBorder": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}"
+        }
+      },
+      "Coachmark": {
+        "Overlay": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A70}",
+          "$description": "Grey-700 A50"
+        },
+        "Spotlight": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A00}"
+        }
+      },
+      "Chips": {
+        "BorderAIGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.100}",
+          "$description": "Value from new base colors"
+        },
+        "BorderAIGradStop02": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.100}",
+          "$description": "Value from new base colors"
+        },
+        "SingleSelect": {
+          "Default": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.White}"
+            },
+            "Border": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Border.Muted}"
+            },
+            "Icon": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Icon.Bold}"
+            },
+            "Text": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Text.Primary}"
+            }
+          },
+          "Active": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Base.Color.Purple.50}"
+            },
+            "Border": {
+              "$type": "color",
+              "$value": "{Base.Color.Purple.200}"
+            },
+            "Icon": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Icon.Bold}"
+            },
+            "Text": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Text.Primary}"
+            }
+          },
+          "Disabled": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Background.Soft}"
+            },
+            "Border": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Border.Muted}"
+            },
+            "Icon": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Icon.Muted}"
+            },
+            "Text": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Text.Moderate}"
+            }
+          }
+        },
+        "MultiSelect": {
+          "Default": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Background.Default}"
+            },
+            "Border": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Border.Pale}"
+            },
+            "Icon": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Icon.Bold}"
+            },
+            "Text": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Text.Primary}"
+            }
+          },
+          "Active": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Success.BackgroundSubtle}"
+            },
+            "Border": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Success.BorderSubtle}"
+            },
+            "Icon": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Icon.Bold}"
+            },
+            "Text": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Text.Primary}"
+            }
+          }
+        }
+      },
+      "ChatBubble": {
+        "SideIndicator": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Accent.Accent12}"
+        },
+        "BackgroundSender": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.75}"
+        },
+        "BackgroundSenderReply": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.50}"
+        },
+        "BackgroundReceiver": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.100}"
+        },
+        "BackgroundReceiverReply": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.25}"
+        },
+        "Transaction": {
+          "BackgroundReceiver": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.100}"
+          },
+          "BackgroundSender": {
+            "$type": "color",
+            "$value": "{Base.Color.Purple.75}"
+          },
+          "PatternReceiver": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.300_A60}"
+          },
+          "PatternSender": {
+            "$type": "color",
+            "$value": "{Base.Color.Purple.200_A40}"
+          },
+          "CornerPatternReceiver": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.500_A07}"
+          },
+          "CornerPatternSender": {
+            "$type": "color",
+            "$value": "{Base.Color.Purple.450_A08}"
+          },
+          "RupeePatternReceiver": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.White_A50}"
+          },
+          "RupeePatternSender": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.White_A30}"
+          },
+          "BorderReceiver": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.50}"
+          },
+          "BorderSender": {
+            "$type": "color",
+            "$value": "{Base.Color.Purple.50}"
+          },
+          "AmountShadow": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.450}"
+          }
+        }
+      },
+      "IconGrid": {
+        "ItemBackground": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "ItemBorder": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.200}"
+        }
+      },
+      "Progress": {
+        "Foreground": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.600}"
+        },
+        "ForegroundInactive": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.450}"
+        },
+        "TextMuted": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Text.Secondary}"
+        },
+        "TextActive": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Success.TextBold}"
+        },
+        "Background": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.200}"
+        }
+      },
+      "RadioButton": {
+        "Active": {
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Selection.Icon}"
+          }
+        },
+        "Default": {
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          }
+        },
+        "Disabled": {
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Icon}"
+          }
+        }
+      },
+      "Ribbon": {
+        "Success": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.BackgroundBold}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.TextSubtle}"
+          }
+        },
+        "Warning": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Warning.BackgroundBold}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Warning.TextSubtle}"
+          }
+        },
+        "Danger": {
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.TextSubtle}"
+          },
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.BackgroundBold}"
+          }
+        }
+      },
+      "Notes": {
+        "TextLink": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Text.Brand}"
+        },
+        "TextBody": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Text.Secondary}"
+        },
+        "TextTitle": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.500}"
+        },
+        "Indicator": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.500}"
+        }
+      },
+      "NotificationBadge": {
+        "Border": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "Background": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.600}"
+        }
+      },
+      "FAB": {
+        "Background": {
+          "$type": "color",
+          "$value": "{Semantic.Color.CTA.Background}"
+        },
+        "BackgroundPressed": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.800}"
+        },
+        "Text": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "Icon": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "BackgroundNeutral": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.1000}"
+        },
+        "BackgroundNeutralPressed": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.800}"
+        },
+        "BorderNeutral": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.300}"
+        }
+      },
+      "Snackbar": {
+        "Text": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Text.Inverse}"
+        },
+        "TextLink": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Brand.PrimaryLightBG}"
+        },
+        "Icon": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Icon.Inverse}"
+        },
+        "Background": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Background.Deep}"
+        },
+        "ButtonText": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.300}"
+        },
+        "ButtonBackgroundPressed": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A10}"
+        }
+      },
+      "Tooltip": {
+        "Text": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Text.Inverse}"
+        },
+        "Background": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Background.Deep}"
+        }
+      },
+      "Filter": {
+        "Default": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Surface.PrimaryLayer}"
+          },
+          "Border": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Border.Moderate}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          }
+        },
+        "Active": {
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "Border": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Selection.Border}"
+          },
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Selection.BackgroundSubtle}"
+          }
+        },
+        "Disabled": {
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Text}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Icon}"
+          },
+          "Border": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Background}"
+          },
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Background}"
+          }
+        }
+      },
+      "Search": {
+        "Default": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Base.Color.Purple.25}"
+          },
+          "Border": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Border.Moderate}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Muted}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "Divider": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.Black_A05}"
+          },
+          "BackgroundPressed": {
+            "$type": "color",
+            "$value": "{Base.Color.Purple.50}"
+          }
+        },
+        "Active": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Base.Color.Purple.25}"
+          },
+          "Border": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.White_A00}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "IconBackground": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Background.Inverse}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "Cursor": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Brand}"
+          }
+        },
+        "Disabled": {
+          "Border": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Background.Pale}"
+          },
+          "TextPlaceholder": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Text}"
+          },
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Background.Pale}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Icon}"
+          }
+        }
+      },
+      "SectionMessage": {
+        "Success": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.BackgroundSubtle}"
+          },
+          "TextTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.TextBold}"
+          },
+          "IconActive": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "Separator": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.BorderSubtle}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.IconBold}"
+          },
+          "TextBody": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "ButtonBG": {
+            "$type": "color",
+            "$value": "{Base.Color.Green.100}"
+          }
+        },
+        "Warning": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Warning.BackgroundSubtle}"
+          },
+          "TextTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Warning.TextBold}"
+          },
+          "Separator": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Warning.BorderSubtle}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Warning.IconBold}"
+          },
+          "IconActive": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "TextBody": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "ButtonBG": {
+            "$type": "color",
+            "$value": "{Base.Color.Orange.100}"
+          }
+        },
+        "Info": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Info.BackgroundSubtle}"
+          },
+          "TextTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Info.TextBold}"
+          },
+          "Separator": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Info.BorderSubtle}"
+          },
+          "IconActive": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Info.IconBold}"
+          },
+          "TextBody": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "ButtonBG": {
+            "$type": "color",
+            "$value": "{Base.Color.GeekBlue.100}"
+          }
+        },
+        "Danger": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.BackgroundSubtle}"
+          },
+          "Separator": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.BorderSubtle}"
+          },
+          "TextBody": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "IconActive": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.IconBold}"
+          },
+          "TextTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.TextBold}"
+          },
+          "ButtonBG": {
+            "$type": "color",
+            "$value": "{Base.Color.Red.100}"
+          }
+        },
+        "Neutral": {
+          "IconActive": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "TextTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "TextBody": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Secondary}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "Separator": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Border.Muted}"
+          },
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Background.Soft}"
+          }
+        }
+      },
+      "Slider": {
+        "Track": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.200}"
+        },
+        "TrackActive": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.600}"
+        },
+        "Indicator": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A30}"
+        },
+        "IndicatorActive": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.100}"
+        },
+        "Knob": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "KnobBorder": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.300}"
+        }
+      },
+      "Shimmer": {
+        "Shimmer": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.25}"
+        },
+        "ShimmerBackground": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.100}"
+        },
+        "ShimmerOnDark": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A15}"
+        },
+        "ShimmerOnDarkBackground": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A05}"
+        }
+      },
+      "Separator": {
+        "OnDark": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A20}"
+        },
+        "Default": {
+          "Section": {
+            "Border": {
+              "$type": "color",
+              "$value": "#00000014"
+            }
+          },
+          "Item": {
+            "Border": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.Black_A10}"
+            }
+          }
+        },
+        "Inverse": {
+          "Section": {
+            "Border": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.White_A10}"
+            },
+            "Solid": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.White}"
+            }
+          },
+          "Item": {
+            "Border": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.White_A15}"
+            }
+          }
+        }
+      },
+      "InputField": {
+        "Common": {
+          "PrefillBackground": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.Black_A05}"
+          },
+          "BorderDefault": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Border.Moderate}"
+          },
+          "BorderActive": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Border.Brand}"
+          },
+          "BorderError": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.BorderBold}"
+          }
+        },
+        "Default": {
+          "TextLabel": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "TextPlaceholder": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Muted}"
+          },
+          "TextDescription": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Secondary}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "IconDefault": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "IconAction": {
+            "$type": "color",
+            "$value": "{Semantic.Color.CTA.Icon}",
+            "$description": "Used for actionable icons which will be placed on the right"
+          }
+        },
+        "Active": {
+          "TextLabel": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "TextDescription": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Secondary}"
+          },
+          "IconDefault": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "IconAction": {
+            "$type": "color",
+            "$value": "{Semantic.Color.CTA.Icon}"
+          }
+        },
+        "Error": {
+          "TextLabel": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.TextBold}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "TextDescription": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.TextBold}"
+          },
+          "IconDefault": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "IconDescription": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.IconBold}"
+          },
+          "IconAction": {
+            "$type": "color",
+            "$value": "{Semantic.Color.CTA.Icon}"
+          }
+        },
+        "Success": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Surface.PrimaryLayer}"
+          },
+          "TextLabel": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "TextInput": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "TextDescription": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Secondary}"
+          },
+          "TextSuccess": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.TextBold}"
+          },
+          "IconSuccess": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.IconBold}"
+          },
+          "Border": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Border.Emphasis}"
+          }
+        },
+        "Disabled": {
+          "TextLabel": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Text}"
+          },
+          "TextPlaceholder": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Moderate}"
+          },
+          "TextDescription": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Text}"
+          },
+          "IconDefault": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Icon}"
+          },
+          "IconAction": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Icon}"
+          },
+          "BackgroundDisabled": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Background.Soft}"
+          },
+          "Border": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Border.Muted}"
+          }
+        },
+        "DisabledFilled": {
+          "TextLabel": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Text}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "TextDescription": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Text}"
+          },
+          "IconDefault": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Icon}"
+          },
+          "IconAction": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Icon}"
+          }
+        },
+        "PrefilledDefault": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.Black_A05}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          }
+        },
+        "PrefilledDisabled": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Background.Muted}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Text}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Muted}"
+          }
+        },
+        "PrefilledDisabledFilled": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Background.Muted}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Secondary}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Muted}"
+          }
+        }
+      },
+      "Toggle": {
+        "Android": {
+          "Default": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Base.Color.Grey.200}"
+            },
+            "Foreground": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.White}"
+            },
+            "Border": {
+              "$type": "color",
+              "$value": "{Base.Color.Grey.200}"
+            }
+          },
+          "Active": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Base.Color.Purple.900}"
+            },
+            "Foreground": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.White}"
+            }
+          },
+          "Disabled": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Base.Color.Grey.50}"
+            },
+            "Foreground": {
+              "$type": "color",
+              "$value": "{Base.Color.Grey.400}"
+            },
+            "Border": {
+              "$type": "color",
+              "$value": "{Base.Color.Grey.400}"
+            }
+          },
+          "ActiveDisabled": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Base.Color.Grey.300}"
+            },
+            "Foreground": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.White}"
+            }
+          }
+        },
+        "iOS": {
+          "Default": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Base.Color.Grey.200}"
+            },
+            "Foreground": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.White}"
+            }
+          },
+          "Active": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Base.Color.Purple.900}"
+            },
+            "Foreground": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.White}"
+            }
+          },
+          "Disabled": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Base.Color.Grey.50}"
+            },
+            "Foreground": {
+              "$type": "color",
+              "$value": "{Base.Color.Grey.400}"
+            }
+          },
+          "ActiveDisabled": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Base.Color.Grey.300}"
+            },
+            "Foreground": {
+              "$type": "color",
+              "$value": "{Base.Color.Grey.450}"
+            }
+          }
+        }
+      },
+      "Tab": {
+        "Indicator": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.1000}"
+        }
+      },
+      "TitleBar": {
+        "IconContainerBlack": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A40}"
+        },
+        "Default": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Surface.PrimaryLayer}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "TextTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "TextSubTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Secondary}"
+          },
+          "OnScrollBorder": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Border.Pale}"
+          }
+        },
+        "Transparent": {
+          "OnLightBackground": {
+            "BackgroundNone": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.White_A00}"
+            },
+            "TextSubTitle": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Text.Secondary}"
+            },
+            "TextTitle": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Text.Primary}"
+            },
+            "Icon": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Icon.Bold}"
+            }
+          },
+          "OnDarkBackground": {
+            "Background": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.Black_A00}"
+            },
+            "BackgroundNone": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.Black_A00}"
+            },
+            "IconBackground": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.Black_A60}"
+            },
+            "Icon": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Icon.Inverse}"
+            },
+            "TextTitle": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Text.Inverse}"
+            },
+            "TextSubTitle": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Text.Soft}"
+            }
+          },
+          "OnLightImage": {
+            "BackgroundNone": {
+              "$type": "color",
+              "$value": "{Base.Color.Neutral.White_A00}"
+            },
+            "Icon": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Icon.Bold}"
+            },
+            "TextTitle": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Text.Primary}"
+            },
+            "TextSubTitle": {
+              "$type": "color",
+              "$value": "{Semantic.Color.Text.Secondary}"
+            }
+          }
+        },
+        "Inverse": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Surface.PrimaryLayer}"
+          },
+          "TextTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Primary}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Bold}"
+          },
+          "TextSubTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Secondary}"
+          }
+        },
+        "Success": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.BackgroundBold}"
+          },
+          "TextSubTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Soft}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Inverse}"
+          },
+          "TextTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Inverse}"
+          }
+        },
+        "Disabled": {
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Inverse}"
+          },
+          "TextSubTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Soft}"
+          },
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Background.Emphasis}"
+          },
+          "TextTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Inverse}"
+          }
+        },
+        "Warning": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Warning.BackgroundBold}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Inverse}"
+          },
+          "TextTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Inverse}"
+          },
+          "TextSubTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Soft}"
+          }
+        },
+        "Danger": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.BackgroundBold}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Icon.Inverse}"
+          },
+          "TextTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Inverse}"
+          },
+          "TextSubTitle": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Soft}"
+          }
+        }
+      },
+      "Tags": {
+        "Default": {
+          "Background06": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Background.Emphasis}"
+          },
+          "Text05": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Inverse}"
+          },
+          "Background04": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Accent.Accent8}"
+          },
+          "Text03": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Inverse}"
+          },
+          "Background03": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Accent.Accent6}"
+          },
+          "Text06": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Inverse}"
+          },
+          "Background01": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Accent.Accent1}"
+          },
+          "Text01": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Inverse}"
+          },
+          "Text02": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Inverse}"
+          },
+          "Text04": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Inverse}"
+          },
+          "Background05": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Accent.Accent10}"
+          },
+          "Background02": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Accent.Accent10}"
+          }
+        },
+        "Disabled": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Background}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Text.Secondary}"
+          }
+        },
+        "Image": {
+          "Border": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.Black_A10}"
+          },
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Surface.PrimaryLayer}"
+          }
+        },
+        "Success": {
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.TextBold}"
+          },
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.BackgroundSubtle}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Success.IconBold}"
+          }
+        },
+        "Warning": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Warning.BackgroundSubtle}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Warning.TextBold}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Warning.IconBold}"
+          }
+        },
+        "Danger": {
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.IconBold}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.TextBold}"
+          },
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Danger.BackgroundSubtle}"
+          }
+        },
+        "Category": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Base.Color.Magenta.800}"
+          }
+        }
+      },
+      "SegmentControl": {
+        "ContainerBG": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}"
+        },
+        "SelectionBG": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Neutral.White}"
+        }
+      },
+      "DatePicker": {
+        "BackgroundSelected": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.900}"
+        },
+        "BackgroundRange": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.50}"
+        },
+        "Label": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        }
+      }
+    }
+  },
+  "Feature": {
+    "Color": {
+      "Home": {
+        "ActionStripBG": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "ActionStripBorder": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A10}"
+        },
+        "ActionStripContainerBG": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}"
+        },
+        "CCBackground": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}"
+        },
+        "StoryProgressTrack": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A40}"
+        },
+        "StoryProgressFill": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "ReferChipBG": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.50}"
+        },
+        "SMSurfaceBackground": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}"
+        },
+        "IndicatorBG": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A40}"
+        },
+        "IndicatorActive": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "Indicator": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A70}"
+        }
+      },
+      "CreditScore": {
+        "BackgroundBad": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.600_A50}"
+        },
+        "BackgroundAverage": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.450_A70}"
+        },
+        "BackgroundGood": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.600_A50}"
+        },
+        "GoodScore": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.400}"
+        },
+        "GoodScoreSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Cyan.400}"
+        },
+        "AverageScore": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.600}"
+        },
+        "AverageScoreSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.500}"
+        },
+        "LowScore": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.450}"
+        },
+        "LowScoreSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.500}"
+        }
+      },
+      "Refer": {
+        "HeroBackgroundStart": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.1000}"
+        },
+        "HeroBackgroundFade": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.600}"
+        },
+        "BorderStart": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.300}"
+        },
+        "StripBackground": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.900}"
+        },
+        "BorderChip": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.200}"
+        },
+        "EarnBackgroundStart": {
+          "$type": "color",
+          "$value": "{Base.Color.MerchandiseGold.100}"
+        },
+        "EarnBackgroundFade": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "EnvelopeFlapFront": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.400}"
+        },
+        "EnvelopeFlapBack": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.700}"
+        },
+        "EnvelopeBase": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.700}"
+        },
+        "MilestoneCardBG": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A10}"
+        },
+        "MilestoneSubtitle": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A70}"
+        },
+        "MilestoneOfferLabel": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A50}"
+        },
+        "ProgressBarBG": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A20}"
+        },
+        "ProgressBar": {
+          "$type": "color",
+          "$value": "{Base.Color.LimeGreen.300}"
+        },
+        "ExpiryLabel": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.200}"
+        }
+      },
+      "Savings": {
+        "Gold": {
+          "CardBgGradStop01": {
+            "$type": "color",
+            "$value": "{Base.Color.Gold.50}"
+          },
+          "CardBgGradStop02": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.White}"
+          },
+          "CardBgGradStop03": {
+            "$type": "color",
+            "$value": "{Base.Color.Gold.50}"
+          },
+          "CardBgGradStop04": {
+            "$type": "color",
+            "$value": "{Base.Color.Gold.50}"
+          },
+          "CardBgGradStop05": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.White}"
+          },
+          "CardBorder": {
+            "$type": "color",
+            "$value": "{Base.Color.MerchandiseGold.200}"
+          },
+          "CardOverline": {
+            "$type": "color",
+            "$value": "{Base.Color.Gold.700}"
+          },
+          "CardTitle": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.1000}"
+          },
+          "CardSubtitle": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.600}"
+          },
+          "ChangePositive": {
+            "$type": "color",
+            "$value": "{Base.Color.Green.700}"
+          },
+          "ChangeNegative": {
+            "$type": "color",
+            "$value": "{Base.Color.Red.600}"
+          },
+          "MastheadBackground": {
+            "$type": "color",
+            "$value": "{Base.Color.MerchandiseGold.100}"
+          },
+          "MastheadTitle": {
+            "$type": "color",
+            "$value": "{Base.Color.Gold.800}"
+          }
+        },
+        "Silver": {
+          "CardBgGradStop01": {
+            "$type": "color",
+            "$value": "{Base.Color.Silver.50}"
+          },
+          "CardBgGradStop02": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.White}"
+          },
+          "CardBgGradStop03": {
+            "$type": "color",
+            "$value": "{Base.Color.Silver.100}"
+          },
+          "CardBgGradStop04": {
+            "$type": "color",
+            "$value": "{Base.Color.Silver.50}"
+          },
+          "CardBgGradStop05": {
+            "$type": "color",
+            "$value": "{Base.Color.Silver.100}"
+          },
+          "CardBorder": {
+            "$type": "color",
+            "$value": "{Base.Color.Silver.200}"
+          },
+          "CardOverline": {
+            "$type": "color",
+            "$value": "{Base.Color.Silver.700}"
+          },
+          "CardTitle": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.1000}"
+          },
+          "CardSubtitle": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.600}"
+          },
+          "MastheadBackground": {
+            "$type": "color",
+            "$value": "{Base.Color.Silver.100}"
+          },
+          "MastheadTitle": {
+            "$type": "color",
+            "$value": "{Base.Color.Silver.700}"
+          }
+        },
+        "CSIP": {
+          "GoldGradStop01": {
+            "$type": "color",
+            "$value": "{Base.Color.Gold.600}"
+          },
+          "GoldGradStop02": {
+            "$type": "color",
+            "$value": "{Base.Color.Gold.500}"
+          },
+          "SilverGradStop01": {
+            "$type": "color",
+            "$value": "{Base.Color.Silver.600}"
+          },
+          "SilverGradStop02": {
+            "$type": "color",
+            "$value": "{Base.Color.Silver.500}"
+          },
+          "PlatGradStop01": {
+            "$type": "color",
+            "$value": "{Base.Color.GeekBlue.500}"
+          },
+          "PlatGradStop02": {
+            "$type": "color",
+            "$value": "{Base.Color.GeekBlue.700}"
+          }
+        }
+      },
+      "GenAI": {
+        "ChatBubbleSender": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.100}"
+        },
+        "InputBorderGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.600}"
+        },
+        "InputBorderGradStop02": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.300}"
+        },
+        "InputBorderGradStop03": {
+          "$type": "color",
+          "$value": "{Base.Color.Gold.500}"
+        },
+        "InputGlowGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.600_A20}"
+        },
+        "InputGlowGradStop02": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.300_A40}"
+        },
+        "InputGlowGradStop03": {
+          "$type": "color",
+          "$value": "{Base.Color.Gold.300_A70}"
+        },
+        "InputContainerGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A05}"
+        },
+        "InputContainerGradStop02": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White}"
+        },
+        "AIThinkingBorderGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A20}"
+        },
+        "AIThinkingBorderGradStop02": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A20}"
+        },
+        "AIThinkingBorderGradStop03": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A20}"
+        },
+        "AIThinkingGlowGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.300_A60}"
+        },
+        "AIThinkingGlowGradStop02": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.100_A70}"
+        },
+        "AIThinkingGlowGradStop03": {
+          "$type": "color",
+          "$value": "{Base.Color.Gold.200_A60}"
+        },
+        "AILoadingBorderGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.300}"
+        },
+        "AILoadingBorderGradStop02": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.300}"
+        },
+        "AILoadingBorderGradStop03": {
+          "$type": "color",
+          "$value": "{Base.Color.Gold.300}"
+        },
+        "AILoadingBorderGradStop04": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A00}"
+        },
+        "AILoadingBgGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.300}"
+        },
+        "AILoadingBgGradStop02": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.200}"
+        },
+        "AILoadingBgGradStop03": {
+          "$type": "color",
+          "$value": "{Base.Color.Yellow.100}"
+        },
+        "AILoadingBgGradStop04": {
+          "$type": "color",
+          "$value": "{Base.Color.Gold.300}"
+        },
+        "PromptCardBg": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A50}"
+        },
+        "PromptCardBorder": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.Black_A05}"
+        },
+        "SearchLabelGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.450}",
+          "$description": "Values from new base colors"
+        },
+        "SearchLabelGradStop02": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.450}",
+          "$description": "Values from new base colors"
+        },
+        "ChartBase": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.500}"
+        },
+        "ChartGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.100}"
+        },
+        "ChartGradStop02": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A00}"
+        }
+      },
+      "Rewards": {
+        "TagBG": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.50}"
+        },
+        "TagText": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.800}"
+        },
+        "SavingsText": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.600}"
+        },
+        "SavingGlow": {
+          "$type": "color",
+          "$value": "{Base.Color.Yellow.200_A20}"
+        },
+        "Milestone": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.1000}"
+          },
+          "Seperator": {
+            "$type": "color",
+            "$value": "{Base.Color.Neutral.White_A20}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Base.Color.Orange.300}"
+          },
+          "LabelPositive": {
+            "$type": "color",
+            "$value": "{Base.Color.Green.300}"
+          },
+          "LabelNegative": {
+            "$type": "color",
+            "$value": "{Base.Color.Red.400}"
+          },
+          "ProgressGrad01": {
+            "$type": "color",
+            "$value": "{Base.Color.Green.500}"
+          },
+          "ProgressGrad02": {
+            "$type": "color",
+            "$value": "{Base.Color.Green.700}"
+          },
+          "ProgressGrad03": {
+            "$type": "color",
+            "$value": "{Base.Color.Green.800}"
+          },
+          "ProgressGrad04": {
+            "$type": "color",
+            "$value": "{Base.Color.Green.200}"
+          }
+        }
+      },
+      "Insurance": {
+        "BottomFilterBG": {
+          "$type": "color",
+          "$value": "{Base.Color.Neutral.White_A80}"
+        }
+      },
+      "CX": {
+        "AggregatesHeroGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.50_A60}"
+        },
+        "AggregatesHeroGradStop02": {
+          "$type": "color",
+          "$value": "{Semantic.Color.Surface.AppBackground}"
+        }
+      },
+      "RCBP": {
+        "SuggestedBgGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.50}"
+        },
+        "SuggestedBgGradStop02": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.50}",
+          "$description": "Dark theme Hex uses a non UI color. To be updated."
+        }
+      },
+      "P2P": {
+        "SplitHeaderBg": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.500}"
+        },
+        "CardShadow": {
+          "$type": "color",
+          "$value": "{Base.Color.Brown.800}"
+        }
+      },
+      "Search": {
+        "VoiceGradStop01": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.800}"
+        },
+        "VoiceGradStop02": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.600}"
+        },
+        "VoiceShadow": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.700}"
+        }
+      }
+    }
+  },
+  "Merchandise": {
+    "Color": {
+      "Text": {
+        "$type": "color",
+        "$value": "{Base.Color.Neutral.White}"
+      },
+      "Icon": {
+        "$type": "color",
+        "$value": "{Base.Color.Neutral.White}"
+      },
+      "ResumeMasthead": {
+        "BgPink": {
+          "$type": "color",
+          "$value": "#7f004e"
+        },
+        "BgMagenta": {
+          "$type": "color",
+          "$value": "#720079"
+        },
+        "BgPurple": {
+          "$type": "color",
+          "$value": "#5500aa"
+        },
+        "BgBlue": {
+          "$type": "color",
+          "$value": "#1624b2"
+        },
+        "BgTeal": {
+          "$type": "color",
+          "$value": "#004f4a"
+        },
+        "BgGreen": {
+          "$type": "color",
+          "$value": "#08521e"
+        },
+        "BgLime": {
+          "$type": "color",
+          "$value": "#2a4e00"
+        },
+        "BgOrange": {
+          "$type": "color",
+          "$value": "#6e2900"
+        },
+        "BgCoral": {
+          "$type": "color",
+          "$value": "#881700"
+        },
+        "BgBrown": {
+          "$type": "color",
+          "$value": "#5a3a22"
+        },
+        "BgSlate": {
+          "$type": "color",
+          "$value": "#1e314d"
+        },
+        "BgGrey": {
+          "$type": "color",
+          "$value": "#262424"
+        },
+        "TextOnPink": {
+          "$type": "color",
+          "$value": "#4b002c"
+        },
+        "TextOnMagenta": {
+          "$type": "color",
+          "$value": "#430048"
+        },
+        "TextOnPurple": {
+          "$type": "color",
+          "$value": "#320066"
+        },
+        "TextOnBlue": {
+          "$type": "color",
+          "$value": "#0c0070"
+        },
+        "TextOnTeal": {
+          "$type": "color",
+          "$value": "#002c29"
+        },
+        "TextOnGreen": {
+          "$type": "color",
+          "$value": "#002b0d"
+        },
+        "TextOnLime": {
+          "$type": "color",
+          "$value": "#132c00"
+        },
+        "TextOnOrange": {
+          "$type": "color",
+          "$value": "#4e1d00"
+        },
+        "TextOnCoral": {
+          "$type": "color",
+          "$value": "#520e00"
+        },
+        "TextOnBrown": {
+          "$type": "color",
+          "$value": "#500003"
+        },
+        "TextOnSlate": {
+          "$type": "color",
+          "$value": "#102037"
+        },
+        "TextOnGrey": {
+          "$type": "color",
+          "$value": "#1a1919"
+        },
+        "TextSecondary": {
+          "$type": "color",
+          "$value": "{Base.ColorOld.Neutral.White_A80}"
+        },
+        "TextDisclaimer": {
+          "$type": "color",
+          "$value": "{Base.ColorOld.Neutral.White_A40}"
+        },
+        "BorderInsideNoPlate": {
+          "$type": "color",
+          "$value": "{Base.ColorOld.Neutral.White_A80}"
+        },
+        "BorderOutsideNoPlate": {
+          "$type": "color",
+          "$value": "{Base.ColorOld.Neutral.White_A20}"
+        },
+        "BgSymbol": {
+          "$type": "color",
+          "$value": "{Base.ColorOld.Neutral.Black_A50}"
+        },
+        "BgNumber": {
+          "$type": "color",
+          "$value": "{Base.ColorOld.Neutral.White_A10}"
+        },
+        "BgAction": {
+          "$type": "color",
+          "$value": "#f55e00"
+        },
+        "BorderAction": {
+          "$type": "color",
+          "$value": "#ff9d66"
+        }
+      },
+      "Rewards": {
+        "Solid": {
+          "Solid1": {
+            "$type": "color",
+            "$value": "{Base.Color.Purple.700}"
+          },
+          "Solid2": {
+            "$type": "color",
+            "$value": "{Base.Color.Green.600}"
+          },
+          "Solid3": {
+            "$type": "color",
+            "$value": "{Base.Color.Purple.400}"
+          },
+          "Solid4": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.450}"
+          },
+          "Solid5": {
+            "$type": "color",
+            "$value": "{Base.Color.Magenta.600}"
+          },
+          "Solid6": {
+            "$type": "color",
+            "$value": "{Base.Color.Gold.300}"
+          },
+          "Solid7": {
+            "$type": "color",
+            "$value": "{Base.Color.Purple.100}"
+          },
+          "Solid8": {
+            "$type": "color",
+            "$value": "{Base.Color.Grey.100}"
+          },
+          "Solid9": {
+            "$type": "color",
+            "$value": "{Base.Color.Red.300}"
+          },
+          "Solid10": {
+            "$type": "color",
+            "$value": "{Base.Color.Magenta.25}"
+          },
+          "Solid11": {
+            "$type": "color",
+            "$value": "{Base.Color.Gold.200}"
+          }
+        }
+      },
+      "Gold": {
+        "50": {
+          "$type": "color",
+          "$value": "{Base.Color.MerchandiseGold.50}"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{Base.Color.MerchandiseGold.100}"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{Base.Color.MerchandiseGold.200}"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "{Base.Color.MerchandiseGold.300}"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "{Base.Color.MerchandiseGold.400}"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "{Base.Color.MerchandiseGold.500}"
+        },
+        "600": {
+          "$type": "color",
+          "$value": "{Base.Color.MerchandiseGold.600}"
+        },
+        "700": {
+          "$type": "color",
+          "$value": "{Base.Color.MerchandiseGold.700}"
+        },
+        "800": {
+          "$type": "color",
+          "$value": "{Base.Color.MerchandiseGold.800}"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "{Base.Color.MerchandiseGold.900}"
+        }
+      },
+      "CardCampaign": {
+        "MastheadPurple": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.1000}"
+        },
+        "MastheadDarkGrey": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.1100}"
+        },
+        "AccentMagentaBold": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.500}"
+        },
+        "AccentMagentaSubtle": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.50}"
+        },
+        "TextSecondary": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.600}"
+        },
+        "TextMuted": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.450}"
+        },
+        "BorderMuted": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.200}"
+        },
+        "BackgroundSoft": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.50}"
+        },
+        "BackgroundDark": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.1000}"
+        },
+        "TextBenefits": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.400}"
+        },
+        "TextButton": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.500}"
+        }
+      },
+      "Background": {
+        "bg1": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.800}"
+        },
+        "bg2": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.900}"
+        },
+        "bg3": {
+          "$type": "color",
+          "$value": "{Base.Color.Orange.600}"
+        },
+        "bg4": {
+          "$type": "color",
+          "$value": "{Base.Color.Green.700}"
+        },
+        "bg5": {
+          "$type": "color",
+          "$value": "{Base.Color.Grey.900}"
+        },
+        "bg6": {
+          "$type": "color",
+          "$value": "{Base.Color.Magenta.900}"
+        },
+        "bg7": {
+          "$type": "color",
+          "$value": "{Base.Color.Purple.1000}"
+        },
+        "bg8": {
+          "$type": "color",
+          "$value": "{Base.Color.Red.700}"
+        },
+        "bg9": {
+          "$type": "color",
+          "$value": "{Base.Color.LimeGreen.900}"
+        },
+        "bg10": {
+          "$type": "color",
+          "$value": "{Base.Color.SteelBlue.900}"
+        },
+        "bg12": {
+          "$type": "color",
+          "$value": "{Base.Color.Cyan.900}"
+        },
+        "bg13": {
+          "$type": "color",
+          "$value": "{Base.Color.Yellow.700}"
+        },
+        "bg14": {
+          "$type": "color",
+          "$value": "{Base.Color.Gold.900}"
+        },
+        "bg15": {
+          "$type": "color",
+          "$value": "{Base.Color.Brown.900}"
+        },
+        "bg16": {
+          "$type": "color",
+          "$value": "{Base.Color.GeekBlue.900}"
+        }
+      },
+      "Pincode": {
+        "Brand": {
+          "$type": "color",
+          "$value": "#324cfb"
+        },
+        "TextBrand": {
+          "$type": "color",
+          "$value": "#324cfb"
+        }
+      }
+    }
+  },
+  "Legacy": {
+    "Color": {
+      "UIColor": {
+        "UIColor1": {
+          "$type": "color",
+          "$value": "#d8ccea"
+        },
+        "UIColor2": {
+          "$type": "color",
+          "$value": "#ffffff"
+        },
+        "UIColor3": {
+          "$type": "color",
+          "$value": "#a0a0a0"
+        },
+        "UIColor4": {
+          "$type": "color",
+          "$value": "#fadb14"
+        },
+        "UIColor5": {
+          "$type": "color",
+          "$value": "#feffe6"
+        },
+        "UIColor6": {
+          "$type": "color",
+          "$value": "#fff6f0"
+        },
+        "UIColor7": {
+          "$type": "color",
+          "$value": "#ffe2bd"
+        },
+        "UIColor8": {
+          "$type": "color",
+          "$value": "#fff6f0"
+        },
+        "UIColor9": {
+          "$type": "color",
+          "$value": "#a55bf2"
+        },
+        "UIColor10": {
+          "$type": "color",
+          "$value": "#ced7db"
+        },
+        "UIAppBG": {
+          "$type": "color",
+          "$value": "#f6f6f6"
+        }
+      },
+      "Constant": {
+        "Constant_1": {
+          "$type": "color",
+          "$value": "#10239e"
+        },
+        "Constant_2": {
+          "$type": "color",
+          "$value": "#e6e6e6"
+        },
+        "Constant_3": {
+          "$type": "color",
+          "$value": "#00000033"
+        },
+        "Constant_4": {
+          "$type": "color",
+          "$value": "#bdbdbd"
+        },
+        "Constant_5": {
+          "$type": "color",
+          "$value": "#ad8b00"
+        },
+        "Constant_6": {
+          "$type": "color",
+          "$value": "#6b6b6b"
+        },
+        "Constant_7": {
+          "$type": "color",
+          "$value": "#a0a0a0"
+        },
+        "Constant_8": {
+          "$type": "color",
+          "$value": "#d1d1d1"
+        },
+        "Constant_9": {
+          "$type": "color",
+          "$value": "#bdbdbd"
+        },
+        "Constant_10": {
+          "$type": "color",
+          "$value": "#424242"
+        },
+        "Constant_11": {
+          "$type": "color",
+          "$value": "#ad8b00"
+        }
+      },
+      "FAB": {
+        "Active": {
+          "Background": {
+            "$type": "color",
+            "$value": "#1f1f1f"
+          },
+          "Border": {
+            "$type": "color",
+            "$value": "#e6e6e6"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "#ffffff"
+          }
+        },
+        "Constant_4": {
+          "$type": "color",
+          "$value": "#bdbdbd"
+        },
+        "Constant_5": {
+          "$type": "color",
+          "$value": "#ad8b00"
+        },
+        "Constant_6": {
+          "$type": "color",
+          "$value": "#6b6b6b"
+        },
+        "Constant_7": {
+          "$type": "color",
+          "$value": "#a0a0a0"
+        },
+        "Constant_8": {
+          "$type": "color",
+          "$value": "#d1d1d1"
+        },
+        "Constant_9": {
+          "$type": "color",
+          "$value": "#bdbdbd"
+        },
+        "Constant_10": {
+          "$type": "color",
+          "$value": "#424242"
+        },
+        "Constant_11": {
+          "$type": "color",
+          "$value": "#ad8b00"
+        },
+        "Disabled": {
+          "Background": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Background}"
+          },
+          "Border": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Border}"
+          },
+          "Icon": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Icon}"
+          },
+          "Text": {
+            "$type": "color",
+            "$value": "{Semantic.Color.Disabled.Text}"
+          }
+        }
+      }
+    }
+  }
+}

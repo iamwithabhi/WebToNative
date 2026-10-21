@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "storybook",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\npm.cmd",
+      "runtimeArgs": ["--prefix", "components", "run", "storybook", "--", "--no-open"],
+      "port": 6006
+    },
+    {
+      "name": "tonative",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeArgs": ["component-contracts/bin/cc.js", "open", "--no-open", "--port=4321"],
+      "port": 4321
+    }
+  ]
+}

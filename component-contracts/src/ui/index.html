@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <title>ToNative</title>
+    <script>try{if(localStorage.getItem("cc-theme")==="light")document.documentElement.classList.remove("dark")}catch(e){}</script>
+    <link rel="stylesheet" href="/css/app.css">
+  </head>
+  <body>
+    <div class="app" id="app">
+      <aside class="rail" id="rail" aria-label="Components"></aside>
+      <main class="main">
+        <header class="header" id="header"></header>
+        <div class="strip" id="strip" hidden></div>
+        <div class="pane-scroll" id="pane-scroll"><div class="pane" id="pane"></div></div>
+      </main>
+      <aside class="status" id="status" aria-label="Status"></aside>
+    </div>
+    <dialog id="add-dialog" aria-labelledby="add-title"></dialog>
+    <dialog id="delete-dialog" role="alertdialog" aria-labelledby="del-title"></dialog>
+    <div class="toasts" id="toasts" aria-live="polite"></div>
+    <script type="module" src="/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+/*
+ * Counter. Semantic/Component tier tokens only — see scripts/lint-tokens.mjs.
+ *
+ * Width: 2 × size-40 (buttons) + size-24 (value) = 104px, matching the spec
+ * exactly while staying composed from tokens rather than a literal.
+ */
+
+.ds-counter {
+  /* Minimum pointer target for the step buttons. The size scale has no 44 step,
+     so 48 is used — it clears both the iOS HIG (44) and Material (48) floors. */
+  --ds-counter-touch-target: var(--semantic-size-48);
+
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: calc(2 * var(--semantic-size-40) + var(--semantic-size-24));
+  height: var(--semantic-size-32);
+  border: var(--semantic-border-width-default) solid var(--semantic-color-border-moderate);
+  border-radius: var(--semantic-border-radius-8);
+  background: var(--semantic-color-background-default);
+  -webkit-user-select: none;
+  user-select: none;
+  /* No overflow:hidden — the buttons are transparent so there is nothing to clip,
+     and clipping would cap the hit-area overlays below to the 32px box. */
+}
+
+.ds-counter[data-full-width='true'] {
+  width: 100%;
+}
+
+/* ----------------------------------------------------------------- button */
+.ds-counter__button {
+  position: relative;
+  flex: 1 1 0;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--semantic-spacing-0);
+  border: 0;
+  background: none;
+  color: var(--semantic-color-icon-brand-primary);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/*
+ * Hit area. The control is 104×32 by spec, so each button renders at 40×32 —
+ * past WCAG 2.5.8 (AA, 24×24) but under the 44/48 platform floors. This overlay
+ * lifts the pointer target to 48×48 without changing the rendered box.
+ *
+ * It overhangs ~4px beyond the control on the outer edge and ~4px into the
+ * value on the inner edge. The two overlays do not meet (they stop 16px apart),
+ * so the centre of the number is inert. Keep at least --semantic-spacing-8
+ * between a Counter and any adjacent control.
+ */
+.ds-counter__button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  min-width: var(--ds-counter-touch-target);
+  min-height: var(--ds-counter-touch-target);
+  transform: translate(-50%, -50%);
+}
+
+/* An unavailable button is not a target — do not let it swallow nearby taps. */
+.ds-counter__button[aria-disabled='true']::after {
+  content: none;
+}
+
+/* aria-disabled, not :disabled — the button stays focusable so reaching a bound
+   never drops focus to the document. */
+.ds-counter__button[aria-disabled='true'] {
+  color: var(--semantic-color-disabled-icon);
+  cursor: default;
+}
+
+.ds-counter__button:focus-visible,
+.ds-counter__value:focus-visible {
+  /* The border-width scale is 1 / 1.5 / 4 with no 2px step, so the 2px ring
+     WCAG 2.4.13 expects is composed from the default width. */
+  outline: calc(2 * var(--semantic-border-width-default)) solid var(--semantic-color-border-brand);
+  outline-offset: calc(-1 * (var(--semantic-border-width-default) + var(--semantic-spacing-2)));
+  border-radius: calc(var(--semantic-border-radius-8) - var(--semantic-spacing-2));
+}
+
+.ds-counter__icon {
+  display: block;
+  transition: transform 100ms linear;
+}
+
+.ds-counter__button:active:not([aria-disabled='true']) .ds-counter__icon {
+  transform: scale(0.9);
+}
+
+/* ------------------------------------------------------------------ value */
+.ds-counter__value {
+  flex: 0 0 var(--semantic-size-24);
+  width: var(--semantic-size-24);
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--semantic-typography-label-l-font-family);
+  font-size: var(--semantic-typography-label-l-font-size);
+  font-weight: var(--semantic-typography-label-l-font-weight);
+  line-height: var(--semantic-typography-label-l-line-height);
+  letter-spacing: var(--semantic-typography-label-l-letter-spacing);
+  color: var(--semantic-color-text-primary);
+  font-variant-numeric: tabular-nums;
+  transition: transform 100ms linear;
+}
+
+.ds-counter__value[data-pop='true'] {
+  transform: scale(1.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-counter__icon,
+  .ds-counter__value {
+    transition-duration: 0.01ms;
+  }
+}

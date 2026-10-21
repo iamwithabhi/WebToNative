@@ -1,0 +1,424 @@
+{
+  "Semantic": {
+    "Typography": {
+      "Display": {
+        "XL": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.56}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "120%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "L": {
+          "$type": "typography",
+          "$description": "For showing big amounts",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.40}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "120%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "M": {
+          "$type": "typography",
+          "$description": "For showing big amounts, smaller than Display L",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.32}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "125%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        }
+      },
+      "Heading": {
+        "H1": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.24}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "H2": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.20}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "130%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "H3": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.16}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "H4": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.14}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "130%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "H5": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.12}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "Overline": {
+          "$type": "typography",
+          "$description": "For small section headers",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.12}",
+            "fontWeight": "{Semantic.FontWeight.Medium}",
+            "letterSpacing": "16%",
+            "lineHeight": "135%",
+            "textTransform": "uppercase",
+            "textDecoration": "none"
+          }
+        }
+      },
+      "Body": {
+        "L": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.16}",
+            "fontWeight": "{Semantic.FontWeight.Regular}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "M": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.14}",
+            "fontWeight": "{Semantic.FontWeight.Regular}",
+            "letterSpacing": "0%",
+            "lineHeight": "130%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "S": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.12}",
+            "fontWeight": "{Semantic.FontWeight.Regular}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "XS": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.8}",
+            "fontWeight": "{Semantic.FontWeight.Regular}",
+            "letterSpacing": "0%",
+            "lineHeight": "125%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "Disclaimer": {
+          "$type": "typography",
+          "$description": "For use on disclaimers, TnCs only",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.10}",
+            "fontWeight": "{Semantic.FontWeight.Regular}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        }
+      },
+      "Button": {
+        "L": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.16}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "M": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.14}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "130%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "S": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.12}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "XS": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.10}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        }
+      },
+      "Link": {
+        "S": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.12}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "underline"
+          }
+        }
+      },
+      "Label": {
+        "L": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.16}",
+            "fontWeight": "{Semantic.FontWeight.Medium}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "M": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.14}",
+            "fontWeight": "{Semantic.FontWeight.Medium}",
+            "letterSpacing": "0%",
+            "lineHeight": "130%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "S": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.12}",
+            "fontWeight": "{Semantic.FontWeight.Medium}",
+            "letterSpacing": "0%",
+            "lineHeight": "130%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        }
+      },
+      "Strikethrough": {
+        "S": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.12}",
+            "fontWeight": "{Semantic.FontWeight.Regular}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "line-through"
+          }
+        },
+        "L": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.16}",
+            "fontWeight": "{Semantic.FontWeight.Regular}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "line-through"
+          }
+        }
+      },
+      "Tag": {
+        "M": {
+          "$type": "typography",
+          "$description": "For use in tags only",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.12}",
+            "fontWeight": "{Semantic.FontWeight.Medium}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "S": {
+          "$type": "typography",
+          "$description": "Smaller text for use in tags only",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.10}",
+            "fontWeight": "{Semantic.FontWeight.Medium}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "S Bold": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.10}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "1.5%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        },
+        "M Bold": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.12}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "1.5%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        }
+      },
+      "Badge": {
+        "S": {
+          "$type": "typography",
+          "$description": "Smaller text for use in only Notification Badge",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.8}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "125%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        }
+      }
+    }
+  },
+  "Feature": {
+    "Typography": {
+      "CreditScore": {
+        "ScoreDisplay": {
+          "$type": "typography",
+          "$description": "Use only for credit score",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.120}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "120%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        }
+      },
+      "ResumeMasthead": {
+        "HeaderStrike": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.20}",
+            "fontWeight": "{Semantic.FontWeight.Bold}",
+            "letterSpacing": "0%",
+            "lineHeight": "130%",
+            "textTransform": "none",
+            "textDecoration": "line-through"
+          }
+        },
+        "VehicleNumber": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Semantic.FontFamily.Default}",
+            "fontSize": "{Semantic.FontSize.20}",
+            "fontWeight": "{Semantic.FontWeight.Medium}",
+            "letterSpacing": "0%",
+            "lineHeight": "135%",
+            "textTransform": "none",
+            "textDecoration": "none"
+          }
+        }
+      }
+    }
+  }
+}

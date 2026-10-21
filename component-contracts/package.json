@@ -1,0 +1,20 @@
+{
+  "name": "component-contracts",
+  "version": "0.1.0",
+  "description": "Author platform-neutral component contracts and generate per-platform artifacts for web, iOS, and Android.",
+  "type": "module",
+  "bin": {
+    "cc": "./bin/cc.js"
+  },
+  "scripts": {
+    "start": "node bin/cc.js open",
+    "build": "node bin/cc.js build",
+    "validate": "node bin/cc.js validate",
+    "test": "node --test 'test/**/*.test.js'"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {},
+  "private": true
+}
