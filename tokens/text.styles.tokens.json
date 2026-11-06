@@ -375,50 +375,5 @@
         }
       }
     }
-  },
-  "Feature": {
-    "Typography": {
-      "CreditScore": {
-        "ScoreDisplay": {
-          "$type": "typography",
-          "$description": "Use only for credit score",
-          "$value": {
-            "fontFamily": "{Semantic.FontFamily.Default}",
-            "fontSize": "{Semantic.FontSize.120}",
-            "fontWeight": "{Semantic.FontWeight.Bold}",
-            "letterSpacing": "0%",
-            "lineHeight": "120%",
-            "textTransform": "none",
-            "textDecoration": "none"
-          }
-        }
-      },
-      "ResumeMasthead": {
-        "HeaderStrike": {
-          "$type": "typography",
-          "$value": {
-            "fontFamily": "{Semantic.FontFamily.Default}",
-            "fontSize": "{Semantic.FontSize.20}",
-            "fontWeight": "{Semantic.FontWeight.Bold}",
-            "letterSpacing": "0%",
-            "lineHeight": "130%",
-            "textTransform": "none",
-            "textDecoration": "line-through"
-          }
-        },
-        "VehicleNumber": {
-          "$type": "typography",
-          "$value": {
-            "fontFamily": "{Semantic.FontFamily.Default}",
-            "fontSize": "{Semantic.FontSize.20}",
-            "fontWeight": "{Semantic.FontWeight.Medium}",
-            "letterSpacing": "0%",
-            "lineHeight": "135%",
-            "textTransform": "none",
-            "textDecoration": "none"
-          }
-        }
-      }
-    }
   }
 }
